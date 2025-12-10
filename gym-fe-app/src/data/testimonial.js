@@ -35,14 +35,5 @@ const testimonial = [
     location: "Claifornia",
     image: "/images/transformations/transformation4.jpg",
   },
-  {
-    id: 5,
-    title: "Very Solid!!",
-    rating: 5,
-    text: "They not only understand what I say but read between the lines and also give me ideas of my own.",
-    author: "Rashed Kabir",
-    location: "Claifornia",
-    image: "/images/transformations/transformation5.png",
-  },
 ];
 export default testimonial;

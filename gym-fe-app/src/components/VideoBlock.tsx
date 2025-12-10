@@ -53,7 +53,7 @@
 //         onClick={() => setOpen(true)}
 //       >
 //         <img
-//           src="/images/icon/icon_140.svg"
+//           src="../images/icon/icon_140.svg"
 //           alt="icon"
 //           className="lazy-img"
 //         />
@@ -88,7 +88,7 @@ const VideoBlock = () => {
                 onClick={handleClick}
               >
                 <img
-                  src="/images/icon/icon_140.svg"
+                  src="../images/icon/icon_140.svg"
                   alt="icon"
                   className="lazy-img"
                 />

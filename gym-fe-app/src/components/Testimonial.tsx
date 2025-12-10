@@ -36,36 +36,9 @@ const Testimonial = () => {
   return (
     <>
       <Slider {...settings}>
-        {testimonial.map((item:any) => (
+        {testimonial.map((item: any) => (
           <div className="item row justify-center" key={item.id}>
-           <img src={item.image} alt="" height={550} width={"auto"}/> 
-            {/* <div className="feedback-block-eleven">
-              <div className="top-header d-flex align-items-center justify-content-between">
-                <div>
-                  <h3 className="tx-dark m0">{item.title}</h3>
-                  <ul className="style-none d-flex rating pt-15">
-                    {Array.from({ length: item.rating }).map((_, index) => (
-                      <li key={index}>
-                        <i className="bi bi-star-fill" />
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                <img src="images/transformations/icon_112.svg" alt="" width={50} />
-              </div>
-              <p className="tx-dark">{item.text}</p>
-              <div className="d-flex align-items-center justify-content-between">
-                <div className="cost fw-500 tx-dark fs-20">
-                  {item.author},{" "}
-                  <span className="opacity-50 fw-normal">{item.location}</span>
-                </div>
-                <img
-                  src={item.image}
-                  alt="tesimonial avatar"
-                  className="rounded-circle"
-                />
-              </div>
-            </div>  */}
+            <img src={item.image} alt={`Trasformazione ${item.id}`} height={550} width={"auto"} />
           </div>
         ))}
       </Slider>

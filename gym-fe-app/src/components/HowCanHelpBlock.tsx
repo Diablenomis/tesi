@@ -4,7 +4,7 @@ const HowCanHelpBlock = () => {
   return (
     <div className="fancy-feature-seventeen position-relative mt-4">
       <img
-        src="/images/shape/shape_80.svg"
+        src="../images/shape/shape_80.svg"
         alt="shape"
         className="lazy-img shapes shape-four"
       />

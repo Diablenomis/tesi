@@ -45,12 +45,12 @@ const FancyFeature = () => {
       </div>
 
       <img
-        src="/images/shape/shape_171.svg"
+        src="../images/shape/shape_171.svg"
         alt="shape"
         className="lazy-img shapes shape-one"
       />
       <img
-        src="/images/shape/shape_172.svg"
+        src="../images/shape/shape_172.svg"
         alt="shape"
         className="lazy-img shapes shape-two"
       />

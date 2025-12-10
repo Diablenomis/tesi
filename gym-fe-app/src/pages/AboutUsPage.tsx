@@ -191,7 +191,7 @@ export const AboutUsPage = () => {
           </div>
         </div>
         <img
-          src="/images/shape/shape_172.svg"
+          src="../images/shape/shape_172.svg"
           alt="shape"
           className="lazy-img shapes shape-one d-none d-xl-inline-block"
         />
@@ -287,12 +287,12 @@ export const AboutUsPage = () => {
               form
             </div>
             <img
-              src="/images/shape/shape_90.svg"
+              src="../images/shape/shape_90.svg"
               alt="shape"
               className="lazy-img shapes shape-one"
             />
             <img
-              src="/images/shape/shape_91.svg"
+              src="../images/shape/shape_91.svg"
               alt="shape"
               className="lazy-img shapes shape-two"
             />

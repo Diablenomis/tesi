@@ -48,12 +48,12 @@ export const ServiceDetailsPage = () => {
         </div>
 
         <img
-          src="/images/shape/shape_172.svg"
+          src="../images/shape/shape_172.svg"
           alt="shap"
           className="lazy-img shapes shape-two"
         />
         <img
-          src="/images/shape/shape_175.svg"
+          src="../images/shape/shape_175.svg"
           alt="shap"
           className="lazy-img shapes shape-three"
         />
