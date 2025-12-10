@@ -30,32 +30,46 @@ const ProductPriceList = ({
   useEffect(() => {
     CartService.getAllAbbonamenti()
       .then((response) => {
-        let temp = response.data.products;
-        temp = temp.filter((prodotto: any) =>
-          prodotto.name.startsWith(subType)
-        );
-        temp = temp.map((prodotto: any) => {
-          if (prodotto.name.startsWith(subType)) {
-            return {
-              ...prodotto,
-              name: prodotto.name.replace(subType, ""),
-            };
-          }
-          return prodotto;
+        const prodotti = response.data.products ?? [];
+        const normalizedSubType = subType.replace(/-/g, "_");
+        const prodottiFiltrati = prodotti.filter((prodotto: any) => {
+          const normalizedName = (prodotto.name || "").replace(/-/g, "_");
+          return normalizedName.startsWith(normalizedSubType);
+        });
+        const prodottiPerPrezzo = prodottiFiltrati.flatMap((prodotto: any) => {
+          const nomeSenzaPrefix = prodotto.name
+            .replace(`${subType}_`, "")
+            .replace(`${subType}-`, "")
+            .replace(subType, "")
+            .replace(`${normalizedSubType}_`, "")
+            .replace(`${normalizedSubType}-`, "")
+            .replace(normalizedSubType, "");
+          return (prodotto.prices || []).map((price: any) => ({
+            ...prodotto,
+            name: `${(nomeSenzaPrefix || prodotto.name).trim()} ${price.interval_count} ${
+              price.interval === "month"
+                ? price.interval_count > 1
+                ? "mesi"
+                : "mese"
+                : price.interval
+            }`.trim(),
+            price,
+          }));
         });
 
-        setProducts(temp);
+        setProducts(prodottiPerPrezzo);
+        console.log(prodottiPerPrezzo);
       })
       .catch((e) => {
         console.log(e);
       });
-  }, []);
+  }, [subType]);
   const colors = ["#FFF7EB", "#E2F2FD", "#FFEBEB"];
 
   useEffect(() => {
     // Crea un array di oggetti nutrizionista iniziali
     const temp: Nutrizionista[] = products.map((prodotto: any) => ({
-      prodRef: prodotto.id,
+      prodRef: prodotto.price?.id || prodotto.id,
       selected: false,
     }));
     setNutrizionistaList(temp);
@@ -79,9 +93,9 @@ const ProductPriceList = ({
         products.map((product: any, productIndex) => (
           <div
             className="col-10 col-md-3 subscription-container big-card mb-50 d-flex flex-column justify-content-evenly"
-            key={product.id}
+            key={`${product.id}-${product.price?.id ?? productIndex}`}
           >
-            <h2 className="">{product.name}</h2>
+            <h4 className="">{product.name}</h4>
             <div className="pack-details text-uppercase fs-14">
               {product.description}
             </div>
@@ -91,7 +105,7 @@ const ProductPriceList = ({
             >
               <div className="price fw-500">
                 <h3 className="m-0 p-3">
-                  €{product.prices[0].unit_amount / 100}
+                  €{product.price.unit_amount / 100}
                 </h3>
               </div>
 
@@ -100,9 +114,9 @@ const ProductPriceList = ({
                 <em className="d-block">
                   €
                   {Math.floor(
-                    product.prices[0].unit_amount /
+                    product.price.unit_amount /
                       100 /
-                      product.prices[0].interval_count
+                      product.price.interval_count
                   )}
                 </em>
               </div> */}
@@ -111,11 +125,13 @@ const ProductPriceList = ({
               <input
                 type="checkbox"
                 checked={
-                  nutrizionistaList?.find((item) => item.prodRef === product.id)
+                  nutrizionistaList?.find(
+                    (item) => item.prodRef === (product.price?.id || product.id)
+                  )
                     ?.selected ?? false
                 }
                 onChange={() => {
-                  handleCheckboxChange(product.id);
+                  handleCheckboxChange(product.price?.id || product.id);
                 }}
               />{" "}
               <b>Voglio ricevere informazioni sui piani nutrizionali (gratuitamente)</b>
@@ -125,8 +141,8 @@ const ProductPriceList = ({
               <ul className="subscription-details mb-4 text-align-left pricing-table-list-ul">
                 <li className="subscription-duration text-dark pt-10 pricing-table-list">
                 🗸 Piano di allenamento personalizzato dalla durata di{" "}
-                  {product.prices[0].interval_count}{" "}
-                  {product.prices[0].interval_count > 1 ? "mesi" : "mese"}
+                  {product.price.interval_count}{" "}
+                  {product.price.interval_count > 1 ? "mesi" : "mese"}
                 </li>
                 <li className="subscription-duration text-dark pt-10 text-align-left pricing-table-list ">
                 🗸 Compilazione di un questionario dettagliato per creare il
@@ -171,8 +187,8 @@ const ProductPriceList = ({
               <ul className="subscription-details mb-4 text-align-left pricing-table-list-ul">
                 <li className="subscription-duration text-dark pt-10 pricing-table-list">
                 🗸 Piano di allenamento personalizzato dalla durata di{" "}
-                  {product.prices[0].interval_count}{" "}
-                  {product.prices[0].interval_count > 1 ? "mesi" : "mese"}
+                  {product.price.interval_count}{" "}
+                  {product.price.interval_count > 1 ? "mesi" : "mese"}
                 </li>
                 <li className="subscription-duration text-dark pt-10">
                 🗸 Videochiamata conoscitiva per creare il piano di allenamento
@@ -216,10 +232,11 @@ const ProductPriceList = ({
             )}
             <button
               onClick={() =>
-                handleSelect(product.prices[0].id, {
+                handleSelect(product.price.id, {
                   send:
-                  nutrizionistaList?.find((item) => item.prodRef === product.id)
-                  ?.selected ?? false,
+                  nutrizionistaList?.find(
+                    (item) => item.prodRef === (product.price?.id || product.id)
+                  )?.selected ?? false,
                   name: "Maurizio Soricen",
                   email: "maurizio@getyourmovement.com",
                 })

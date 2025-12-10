@@ -33,3 +33,68 @@
 [2025-12-10 15:59:56,712] [INFO] Nessuna scheda personalizzata trovata per l'utente.
 [2025-12-10 17:22:37,030] [INFO] Nessuna scheda personalizzata trovata per l'utente.
 [2025-12-10 17:22:37,048] [INFO] Nessuna scheda personalizzata trovata per l'utente.
+[2025-12-10 18:33:17,321] [INFO] Studente Elisa Menghi ha compilato il questionario.
+[2025-12-10 18:33:17,370] [INFO] Questionario salvato.
+[2025-12-10 18:33:18,399] [INFO] [{'id': 'prod_TZzE4mU48VjUnb', 'name': 'coaching-online', 'description': None, 'prices': [{'id': 'price_1ScpGvACR9X4275efFJG4vw8', 'unit_amount': 12000, 'currency': 'eur', 'interval': 'month', 'interval_count': 6}, {'id': 'price_1ScpGfACR9X4275exvgKwtl6', 'unit_amount': 6000, 'currency': 'eur', 'interval': 'month', 'interval_count': 3}, {'id': 'price_1ScpGFACR9X4275eTSJU9Ov6', 'unit_amount': 3000, 'currency': 'eur', 'interval': 'month', 'interval_count': 1}]}, {'id': 'prod_TZzCRMXelxLdXP', 'name': 'scheda-personalizzata', 'description': None, 'prices': [{'id': 'price_1ScpFyACR9X4275ee1cnylXe', 'unit_amount': 4500, 'currency': 'eur', 'interval': 'month', 'interval_count': 6}, {'id': 'price_1ScpFoACR9X4275eR4njS320', 'unit_amount': 2500, 'currency': 'eur', 'interval': 'month', 'interval_count': 3}, {'id': 'price_1ScpDqACR9X4275eepyh0inT', 'unit_amount': 1500, 'currency': 'eur', 'interval': 'month', 'interval_count': 1}]}]
+[2025-12-10 18:48:46,693] [INFO] Studente Elisa Menghi ha compilato il questionario.
+[2025-12-10 18:48:46,745] [INFO] Questionario salvato.
+[2025-12-10 18:48:47,791] [INFO] [{'id': 'prod_TZzE4mU48VjUnb', 'name': 'coaching-online', 'description': None, 'prices': [{'id': 'price_1ScpGvACR9X4275efFJG4vw8', 'unit_amount': 12000, 'currency': 'eur', 'interval': 'month', 'interval_count': 6}, {'id': 'price_1ScpGfACR9X4275exvgKwtl6', 'unit_amount': 6000, 'currency': 'eur', 'interval': 'month', 'interval_count': 3}, {'id': 'price_1ScpGFACR9X4275eTSJU9Ov6', 'unit_amount': 3000, 'currency': 'eur', 'interval': 'month', 'interval_count': 1}]}, {'id': 'prod_TZzCRMXelxLdXP', 'name': 'scheda-personalizzata', 'description': None, 'prices': [{'id': 'price_1ScpFyACR9X4275ee1cnylXe', 'unit_amount': 4500, 'currency': 'eur', 'interval': 'month', 'interval_count': 6}, {'id': 'price_1ScpFoACR9X4275eR4njS320', 'unit_amount': 2500, 'currency': 'eur', 'interval': 'month', 'interval_count': 3}, {'id': 'price_1ScpDqACR9X4275eepyh0inT', 'unit_amount': 1500, 'currency': 'eur', 'interval': 'month', 'interval_count': 1}]}]
+[2025-12-10 18:53:41,028] [INFO] Studente Elisa Menghi ha compilato il questionario.
+[2025-12-10 18:53:41,081] [INFO] Questionario salvato.
+[2025-12-10 18:53:42,073] [INFO] [{'id': 'prod_TZzE4mU48VjUnb', 'name': 'coaching-online', 'description': None, 'prices': [{'id': 'price_1ScpGvACR9X4275efFJG4vw8', 'unit_amount': 12000, 'currency': 'eur', 'interval': 'month', 'interval_count': 6}, {'id': 'price_1ScpGfACR9X4275exvgKwtl6', 'unit_amount': 6000, 'currency': 'eur', 'interval': 'month', 'interval_count': 3}, {'id': 'price_1ScpGFACR9X4275eTSJU9Ov6', 'unit_amount': 3000, 'currency': 'eur', 'interval': 'month', 'interval_count': 1}]}, {'id': 'prod_TZzCRMXelxLdXP', 'name': 'scheda-personalizzata', 'description': None, 'prices': [{'id': 'price_1ScpFyACR9X4275ee1cnylXe', 'unit_amount': 4500, 'currency': 'eur', 'interval': 'month', 'interval_count': 6}, {'id': 'price_1ScpFoACR9X4275eR4njS320', 'unit_amount': 2500, 'currency': 'eur', 'interval': 'month', 'interval_count': 3}, {'id': 'price_1ScpDqACR9X4275eepyh0inT', 'unit_amount': 1500, 'currency': 'eur', 'interval': 'month', 'interval_count': 1}]}]
+[2025-12-10 18:58:55,479] [INFO] Studente Elisa Menghi ha compilato il questionario.
+[2025-12-10 18:58:55,534] [INFO] Questionario salvato.
+[2025-12-10 18:58:56,513] [INFO] [{'id': 'prod_TZzE4mU48VjUnb', 'name': 'coaching-online', 'description': None, 'prices': [{'id': 'price_1ScpGvACR9X4275efFJG4vw8', 'unit_amount': 12000, 'currency': 'eur', 'interval': 'month', 'interval_count': 6}, {'id': 'price_1ScpGfACR9X4275exvgKwtl6', 'unit_amount': 6000, 'currency': 'eur', 'interval': 'month', 'interval_count': 3}, {'id': 'price_1ScpGFACR9X4275eTSJU9Ov6', 'unit_amount': 3000, 'currency': 'eur', 'interval': 'month', 'interval_count': 1}]}, {'id': 'prod_TZzCRMXelxLdXP', 'name': 'scheda-personalizzata', 'description': None, 'prices': [{'id': 'price_1ScpFyACR9X4275ee1cnylXe', 'unit_amount': 4500, 'currency': 'eur', 'interval': 'month', 'interval_count': 6}, {'id': 'price_1ScpFoACR9X4275eR4njS320', 'unit_amount': 2500, 'currency': 'eur', 'interval': 'month', 'interval_count': 3}, {'id': 'price_1ScpDqACR9X4275eepyh0inT', 'unit_amount': 1500, 'currency': 'eur', 'interval': 'month', 'interval_count': 1}]}]
+[2025-12-10 18:59:38,024] [INFO] Email temporanea creata.
+[2025-12-10 18:59:38,832] [INFO] [{'id': 'prod_TZzE4mU48VjUnb', 'name': 'coaching-online', 'description': None, 'prices': [{'id': 'price_1ScpGvACR9X4275efFJG4vw8', 'unit_amount': 12000, 'currency': 'eur', 'interval': 'month', 'interval_count': 6}, {'id': 'price_1ScpGfACR9X4275exvgKwtl6', 'unit_amount': 6000, 'currency': 'eur', 'interval': 'month', 'interval_count': 3}, {'id': 'price_1ScpGFACR9X4275eTSJU9Ov6', 'unit_amount': 3000, 'currency': 'eur', 'interval': 'month', 'interval_count': 1}]}, {'id': 'prod_TZzCRMXelxLdXP', 'name': 'scheda-personalizzata', 'description': None, 'prices': [{'id': 'price_1ScpFyACR9X4275ee1cnylXe', 'unit_amount': 4500, 'currency': 'eur', 'interval': 'month', 'interval_count': 6}, {'id': 'price_1ScpFoACR9X4275eR4njS320', 'unit_amount': 2500, 'currency': 'eur', 'interval': 'month', 'interval_count': 3}, {'id': 'price_1ScpDqACR9X4275eepyh0inT', 'unit_amount': 1500, 'currency': 'eur', 'interval': 'month', 'interval_count': 1}]}]
+[2025-12-10 19:01:04,093] [INFO] Nessuna scheda personalizzata trovata per l'utente.
+[2025-12-10 19:01:04,106] [INFO] Nessuna scheda personalizzata trovata per l'utente.
+[2025-12-10 19:01:58,343] [INFO] Nessuna scheda personalizzata trovata per l'utente.
+[2025-12-10 19:01:58,359] [INFO] Nessuna scheda personalizzata trovata per l'utente.
+[2025-12-10 19:02:14,398] [INFO] {
+  "data": [],
+  "has_more": false,
+  "object": "list",
+  "url": "/v1/promotion_codes"
+}
+[2025-12-10 19:02:25,592] [INFO] Nessuna scheda personalizzata trovata per l'utente.
+[2025-12-10 19:12:38,695] [INFO] {
+  "data": [],
+  "has_more": false,
+  "object": "list",
+  "url": "/v1/promotion_codes"
+}
+[2025-12-10 19:12:43,383] [INFO] Nessuna scheda personalizzata trovata per l'utente.
+[2025-12-10 19:14:15,263] [INFO] Preparazione invio Email "Scheda Pubblicata".
+[2025-12-10 19:14:15,555] [ERROR] Email Scheda Pubblicata non inviata correttamente: 401
+{"message":"Unauthenticated."}
+[2025-12-10 19:14:23,213] [INFO] {
+  "data": [],
+  "has_more": false,
+  "object": "list",
+  "url": "/v1/promotion_codes"
+}
+[2025-12-10 19:54:53,312] [INFO] {
+  "data": [],
+  "has_more": false,
+  "object": "list",
+  "url": "/v1/promotion_codes"
+}
+[2025-12-10 20:07:24,870] [INFO] {
+  "data": [],
+  "has_more": false,
+  "object": "list",
+  "url": "/v1/promotion_codes"
+}
+[2025-12-10 20:16:11,274] [INFO] {
+  "data": [],
+  "has_more": false,
+  "object": "list",
+  "url": "/v1/promotion_codes"
+}
+[2025-12-10 20:25:53,906] [INFO] {
+  "data": [],
+  "has_more": false,
+  "object": "list",
+  "url": "/v1/promotion_codes"
+}
