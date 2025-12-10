@@ -1,0 +1,7 @@
+.venv
+.idea
+.DS_Store
+staticfiles
+__pycache__
+.python-version
+__pycache__

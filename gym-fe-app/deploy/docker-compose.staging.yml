@@ -1,0 +1,11 @@
+version: "3.9"
+
+services:
+  frontend:
+    container_name: gym_fe
+    build:
+      context: ../
+      dockerfile: ./deploy/Dockerfile.staging
+    image: gym_frontend:0.0.1
+    volumes:
+      - ./build:/app/build

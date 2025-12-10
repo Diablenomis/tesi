@@ -1,0 +1,17 @@
+version: "3.9"
+
+services:
+  frontend:
+    container_name: gym_fe
+    command: npm start
+    build:
+      context: ../
+      dockerfile: ./deploy/Dockerfile.staging_test
+    image: gym_frontend:0.0.3
+    volumes:
+      - react_build:/app/build
+    ports:
+      - "3000:3000"
+
+volumes:
+  react_build:

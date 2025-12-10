@@ -1,0 +1,1032 @@
+/* Big Monitors */
+$Bfont-size-big: 16px;
+$Bfont-size-medium: 13px;
+$Bfont-size-button: 13px;
+$Bfont-size-little: 11px;
+
+/* Medium-Big Monitors */
+$MBfont-size-big: 16px;
+$MBfont-size-medium: 13px;
+$MBfont-size-button: 13px;
+$MBfont-size-little: 11px;
+
+/* Medium Monitors */
+$Mfont-size-big: 13px;
+$Mfont-size-medium: 12px;
+$Mfont-size-button: 12px;
+$Mfont-size-little: 10px;
+
+/* Little-Medium Monitors */
+$LMfont-size-big: 13px;
+$LMfont-size-medium: 12px;
+$LMfont-size-button: 12px;
+$LMfont-size-little: 10px;
+
+/* Little Monitors */
+$Lfont-size-big: 11px;
+$Lfont-size-medium: 10px;
+$Lfont-size-button: 10px;
+$Lfont-size-little: 9px;
+
+/* Extra Little Monitors */
+$ELfont-size-big: 11px;
+$ELfont-size-medium: 10px;
+$ELfont-size-button: 10px;
+$ELfont-size-little: 9px;
+
+/* Extra Little Monitors */
+@media screen and (max-width: 360px) {
+  .homepage-card-title {
+    font-size: $ELfont-size-big;
+    font-weight: 900;
+  }
+
+  .pack-card-title {
+    font-size: $ELfont-size-big;
+  }
+
+  .padding-page-half-navbar {
+    padding-right: 0.5rem !important;
+    padding-left: 1rem !important;
+  }
+
+  .padding-page-half {
+    padding-right: 1rem !important;
+    padding-left: 1rem !important;
+  }
+
+  .padding-page-field {
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+  }
+
+  .padding-page-field-left {
+    padding-left: 0.5rem !important;
+    padding-right: 0 !important;
+  }
+
+  .padding-page-field-right {
+    padding-right: 0.5rem !important;
+    padding-left: 0 !important;
+  }
+
+  .padding-page {
+    padding-right: 2rem !important;
+    padding-left: 2rem !important;
+  }
+
+  .button-font-size {
+    font-size: $ELfont-size-button !important;
+  }
+
+  .button-font-size-delete {
+    font-size: $ELfont-size-button !important;
+  }
+
+  .button-size {
+    width: 65px !important;
+    height: 20px !important;
+  }
+
+  .button-size-sub {
+    width: 145px !important;
+    height: 20px !important;
+  }
+
+  .button-size-delete {
+    width: 60px !important;
+    height: 18px !important;
+  }
+
+  .button-size-delete-2{
+    width: 120px !important;
+    height: 18px !important;
+  }
+
+  .footer-buttons-div {
+    -ms-flex: 0 0 135px !important;
+    flex: 0 0 135px !important;
+  }
+
+  .navbar-icon {
+    -ms-flex: 0 0 46px !important;
+    flex: 0 0 46px !important;
+  }
+
+  .levels-title-div {
+    -ms-flex: 0 0 100px !important;
+    flex: 0 0 100px !important;
+  }
+
+  .footer-social-div {
+    -ms-flex: 0 0 50px !important;
+    flex: 0 0 50px !important;
+  }
+
+  .coach-card-social-div {
+    -ms-flex: 0 0 40px !important;
+    flex: 0 0 40px !important;
+  }
+
+  .footer-icon-size {
+    background-size: 20px 20px !important;
+    width: 20px !important;
+    height: 20px !important;
+  }
+
+  .coach-social-icon-size {
+    background-size: 15px 15px !important;
+    width: 15px !important;
+    height: 15px !important;
+  }
+
+  .pack-card-level-icon-size {
+    -ms-flex: 0 0 20px !important;
+    flex: 0 0 20px !important;
+  }
+
+  .homepage-card-color {
+    background-color: #e8f2ff;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+    padding: 0;
+    width: 100%;
+  }
+
+  .homepage-card-title-top {
+    position: relative;
+    top: -6px;
+  }
+
+  .pack-card-description {
+    font-size: $ELfont-size-medium;
+    font-weight: 500;
+    position: absolute;
+    top: 0;
+  }
+
+  .pack-card-footer-title {
+    font-size: $ELfont-size-medium;
+    font-weight: 500;
+  }
+
+  .info-card-title {
+    font-size: $ELfont-size-big;
+    font-weight: 900;
+  }
+
+  .info-card-sub {
+    font-size: $ELfont-size-medium;
+    font-weight: 900;
+  }
+
+  .info-card-contact {
+    font-size: $ELfont-size-medium;
+    font-weight: 700;
+  }
+
+  .sign-card-title {
+    font-size: $ELfont-size-big;
+    font-weight: 900;
+  }
+
+  .sign-card-sign-label-size {
+    font-size: $ELfont-size-medium;
+    font-weight: 500;
+  }
+
+  .exe-desc-label-size {
+    font-size: $ELfont-size-little;
+    font-weight: 500;
+  }
+}
+
+/* Little Monitors */
+@media screen and (min-width: 361px) and (max-width: 500px) {
+  .homepage-card-title {
+    font-size: $Lfont-size-big;
+    font-weight: 900;
+  }
+
+  .pack-card-title {
+    font-size: $Lfont-size-big;
+  }
+
+  .padding-page-half-navbar {
+    padding-right: 0.5rem !important;
+    padding-left: 1rem !important;
+  }
+
+  .padding-page-half {
+    padding-right: 1rem !important;
+    padding-left: 1rem !important;
+  }
+
+  .padding-page-field {
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+  }
+
+  .padding-page-field-left {
+    padding-left: 0.5rem !important;
+    padding-right: 0 !important;
+  }
+
+  .padding-page-field-right {
+    padding-right: 0.5rem !important;
+    padding-left: 0 !important;
+  }
+
+  .padding-page {
+    padding-right: 2rem !important;
+    padding-left: 2rem !important;
+  }
+
+  .button-font-size {
+    font-size: $Lfont-size-button !important;
+  }
+
+  .button-font-size-delete {
+    font-size: $Lfont-size-button !important;
+  }
+
+  .button-size {
+    width: 85px !important;
+    height: 30px !important;
+  }
+
+  .button-size-sub {
+    width: 145px !important;
+    height: 30px !important;
+  }
+
+  .button-size-delete {
+    width: 75px !important;
+    height: 25px !important;
+  }
+
+  .button-size-delete-2{
+    width: 150px !important;
+    height: 25px !important;
+  }
+
+  .footer-buttons-div {
+    -ms-flex: 0 0 175px !important;
+    flex: 0 0 175px !important;
+  }
+
+  .navbar-icon {
+    -ms-flex: 0 0 46px !important;
+    flex: 0 0 46px !important;
+  }
+
+  .levels-title-div {
+    -ms-flex: 0 0 100px !important;
+    flex: 0 0 100px !important;
+  }
+
+  .footer-social-div {
+    -ms-flex: 0 0 70px !important;
+    flex: 0 0 70px !important;
+  }
+
+  .coach-card-social-div {
+    -ms-flex: 0 0 60px !important;
+    flex: 0 0 60px !important;
+  }
+
+  .footer-icon-size {
+    background-size: 30px 30px !important;
+    width: 30px !important;
+    height: 30px !important;
+  }
+
+  .coach-social-icon-size {
+    background-size: 25px 25px !important;
+    width: 25px !important;
+    height: 25px !important;
+  }
+
+  .pack-card-level-icon-size {
+    -ms-flex: 0 0 30px !important;
+    flex: 0 0 30px !important;
+  }
+
+  .homepage-card-color {
+    background-color: #e8f2ff;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+    padding: 8px 0;
+    width: 100%;
+  }
+
+  .pack-card-description {
+    font-size: $Lfont-size-medium;
+    font-weight: 500;
+    position: absolute;
+    top: 0;
+  }
+
+  .pack-card-footer-title {
+    font-size: $Lfont-size-medium;
+    font-weight: 500;
+  }
+
+  .info-card-title {
+    font-size: $Lfont-size-big;
+    font-weight: 900;
+  }
+
+  .info-card-sub {
+    font-size: $Lfont-size-medium;
+    font-weight: 900;
+  }
+
+  .info-card-contact {
+    font-size: $Lfont-size-medium;
+    font-weight: 700;
+  }
+
+  .sign-card-title {
+    font-size: $Lfont-size-big;
+    font-weight: 900;
+  }
+
+  .sign-card-sign-label-size {
+    font-size: $Lfont-size-medium;
+    font-weight: 500;
+  }
+
+  .exe-desc-label-size {
+    font-size: $Lfont-size-little;
+    font-weight: 500;
+  }
+}
+
+/* Little-Medium Monitors */
+@media screen and (min-width: 501px) and (max-width: 750px) {
+  .homepage-card-title {
+    font-size: $LMfont-size-big;
+    font-weight: 900;
+  }
+
+  .pack-card-title {
+    font-size: $LMfont-size-big;
+  }
+
+  .padding-page-half-navbar {
+    padding-right: 0.5rem !important;
+    padding-left: 1rem !important;
+  }
+
+  .padding-page-half {
+    padding-right: 1rem !important;
+    padding-left: 1rem !important;
+  }
+
+  .padding-page-field {
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+  }
+
+  .padding-page-field-left {
+    padding-left: 0.5rem !important;
+    padding-right: 0 !important;
+  }
+
+  .padding-page-field-right {
+    padding-right: 0.5rem !important;
+    padding-left: 0 !important;
+  }
+
+  .padding-page {
+    padding-right: 2rem !important;
+    padding-left: 2rem !important;
+  }
+
+  .button-font-size {
+    font-size: $LMfont-size-button !important;
+  }
+
+  .button-font-size-delete {
+    font-size: $LMfont-size-button !important;
+  }
+
+  .button-size {
+    width: 90px !important;
+    height: 30px !important;
+  }
+
+  .button-size-delete {
+    width: 80px !important;
+    height: 25px !important;
+  }
+
+  .button-size-sub {
+    width: 145px !important;
+    height: 25px !important;
+  }
+
+  .button-size-delete-2{
+    width: 160px !important;
+    height: 25px !important;
+  }
+
+  .navbar-icon {
+    -ms-flex: 0 0 55px !important;
+    flex: 0 0 55px !important;
+  }
+
+  .levels-title-div {
+    -ms-flex: 0 0 100px !important;
+    flex: 0 0 100px !important;
+  }
+
+  .footer-social-div {
+    -ms-flex: 0 0 70px !important;
+    flex: 0 0 70px !important;
+  }
+
+  .coach-card-social-div {
+    -ms-flex: 0 0 60px !important;
+    flex: 0 0 60px !important;
+  }
+
+  .footer-icon-size {
+    background-size: 30px 30px !important;
+    width: 30px !important;
+    height: 30px !important;
+  }
+
+  .coach-social-icon-size {
+    background-size: 25px 25px !important;
+    width: 25px !important;
+    height: 25px !important;
+  }
+
+  .pack-card-level-icon-size {
+    -ms-flex: 0 0 30px !important;
+    flex: 0 0 30px !important;
+  }
+
+  .homepage-card-color {
+    background-color: #e8f2ff;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+    padding: 8px 0;
+    width: 100%;
+  }
+
+  .footer-buttons-div {
+    -ms-flex: 0 0 205px !important;
+    flex: 0 0 205px !important;
+  }
+
+  .pack-card-description {
+    font-size: $LMfont-size-medium;
+    font-weight: 500;
+    position: absolute;
+    top: 0;
+  }
+
+  .pack-card-footer-title {
+    font-size: $LMfont-size-medium;
+    font-weight: 500;
+  }
+
+  .info-card-title {
+    font-size: $LMfont-size-big;
+    font-weight: 900;
+  }
+
+  .info-card-sub {
+    font-size: $LMfont-size-medium;
+    font-weight: 900;
+  }
+
+  .info-card-contact {
+    font-size: $LMfont-size-medium;
+    font-weight: 700;
+  }
+
+  .sign-card-title {
+    font-size: $LMfont-size-big;
+    font-weight: 900;
+  }
+
+  .sign-card-sign-label-size {
+    font-size: $LMfont-size-medium;
+    font-weight: 500;
+  }
+
+  .exe-desc-label-size {
+    font-size: $LMfont-size-little;
+    font-weight: 500;
+  }
+
+  .price-size{
+    -ms-flex: 0 0 180px !important;
+    flex: 0 0 180px !important;
+  }
+}
+
+/* Medium Monitors */
+@media screen and (min-width: 751px) and (max-width: 840px) {
+  .homepage-card-title {
+    font-size: $Mfont-size-big;
+    font-weight: 900;
+  }
+
+  .pack-card-title {
+    font-size: $Mfont-size-big;
+  }
+
+  .padding-page-half-navbar {
+    padding-right: 0.5rem !important;
+    padding-left: 1rem !important;
+  }
+
+  .padding-page-half {
+    padding-right: 1rem !important;
+    padding-left: 1rem !important;
+  }
+
+  .padding-page-field {
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+  }
+
+  .padding-page-field-left {
+    padding-left: 0.5rem !important;
+    padding-right: 0 !important;
+  }
+
+  .padding-page-field-right {
+    padding-right: 0.5rem !important;
+    padding-left: 0 !important;
+  }
+
+  .padding-page {
+    padding-right: 2rem !important;
+    padding-left: 2rem !important;
+  }
+
+  .button-font-size {
+    font-size: $Mfont-size-button !important;
+  }
+
+  .button-font-size-delete {
+    font-size: $Mfont-size-button !important;
+  }
+
+  .button-size {
+    width: 95px !important;
+    height: 35px !important;
+  }
+
+  .button-size-sub {
+    width: 145px !important;
+    height: 35px !important;
+  }
+
+  .button-size-delete {
+    width: 130px !important;
+    height: 28px !important;
+  }
+
+  .button-size-delete-2{
+    width: 200px !important;
+    height: 28px !important;
+  }
+
+  .navbar-icon {
+    -ms-flex: 0 0 55px !important;
+    flex: 0 0 55px !important;
+  }
+
+  .levels-title-div {
+    -ms-flex: 0 0 100px !important;
+    flex: 0 0 100px !important;
+  }
+
+  .footer-social-div {
+    -ms-flex: 0 0 90px !important;
+    flex: 0 0 90px !important;
+  }
+
+  .coach-card-social-div {
+    -ms-flex: 0 0 80px !important;
+    flex: 0 0 80px !important;
+  }
+
+  .footer-icon-size {
+    background-size: 35px 35px !important;
+    width: 35px !important;
+    height: 35px !important;
+  }
+
+  .coach-social-icon-size {
+    background-size: 30px 30px !important;
+    width: 30px !important;
+    height: 30px !important;
+  }
+
+  .pack-card-level-icon-size {
+    -ms-flex: 0 0 35px !important;
+    flex: 0 0 35px !important;
+  }
+
+  .homepage-card-color {
+    background-color: #e8f2ff;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+    padding: 8px 0;
+    width: 100%;
+  }
+
+  .footer-buttons-div {
+    -ms-flex: 0 0 325px !important;
+    flex: 0 0 325px !important;
+  }
+
+  .pack-card-description {
+    font-size: $Mfont-size-medium;
+    font-weight: 500;
+    position: absolute;
+    top: 0;
+  }
+
+  .pack-card-footer-title {
+    font-size: $Mfont-size-medium;
+    font-weight: 500;
+  }
+
+  .info-card-title {
+    font-size: $Mfont-size-big;
+    font-weight: 900;
+  }
+
+  .info-card-sub {
+    font-size: $Mfont-size-medium;
+    font-weight: 900;
+  }
+
+  .info-card-contact {
+    font-size: $Mfont-size-medium;
+    font-weight: 700;
+  }
+
+  .sign-card-title {
+    font-size: $Mfont-size-big;
+    font-weight: 900;
+  }
+
+  .sign-card-sign-label-size {
+    font-size: $Mfont-size-medium;
+    font-weight: 500;
+  }
+
+  .exe-desc-label-size {
+    font-size: $Mfont-size-little;
+    font-weight: 500;
+  }
+
+  .price-size{
+    -ms-flex: 0 0 180px !important;
+    flex: 0 0 180px !important;
+  }
+}
+
+/* Medium-Big Monitors */
+@media screen and (min-width: 841px) and (max-width: 1200px) {
+  .homepage-card-title {
+    font-size: $MBfont-size-big;
+    font-weight: 900;
+  }
+
+  .pack-card-title {
+    font-size: $MBfont-size-big;
+  }
+
+  .padding-page-half-navbar {
+    padding-right: 1rem !important;
+    padding-left: 2rem !important;
+  }
+
+  .padding-page-half {
+    padding-right: 2rem !important;
+    padding-left: 2rem !important;
+  }
+
+  .padding-page-field {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+
+  .padding-page-field-left {
+    padding-left: 1rem !important;
+    padding-right: 0 !important;
+  }
+
+  .padding-page-field-right {
+    padding-right: 1rem !important;
+    padding-left: 0 !important;
+  }
+
+  .padding-page {
+    padding-right: 4rem !important;
+    padding-left: 4rem !important;
+  }
+
+  .button-font-size {
+    font-size: $MBfont-size-button !important;
+  }
+
+  .button-font-size-delete {
+    font-size: $MBfont-size-button !important;
+  }
+
+  .button-size {
+    width: 95px !important;
+    height: 35px !important;
+  }
+
+  .button-size-sub {
+    width: 145px !important;
+    height: 35px !important;
+  }
+
+  .button-size-delete {
+    width: 130px !important;
+    height: 28px !important;
+  }
+
+  .button-size-delete-2{
+    width: 200px !important;
+    height: 28px !important;
+  }
+
+  .navbar-icon {
+    -ms-flex: 0 0 55px !important;
+    flex: 0 0 55px !important;
+  }
+
+  .levels-title-div {
+    -ms-flex: 0 0 100px !important;
+    flex: 0 0 100px !important;
+  }
+
+  .footer-social-div {
+    -ms-flex: 0 0 90px !important;
+    flex: 0 0 90px !important;
+  }
+
+  .coach-card-social-div {
+    -ms-flex: 0 0 80px !important;
+    flex: 0 0 80px !important;
+  }
+
+  .footer-icon-size {
+    background-size: 35px 35px !important;
+    width: 35px !important;
+    height: 35px !important;
+  }
+
+  .coach-social-icon-size {
+    background-size: 30px 30px !important;
+    width: 30px !important;
+    height: 30px !important;
+  }
+
+  .pack-card-level-icon-size {
+    -ms-flex: 0 0 35px !important;
+    flex: 0 0 35px !important;
+  }
+
+  .homepage-card-color {
+    background-color: #e8f2ff;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+    padding: 16px 0;
+    width: 100%;
+  }
+
+  .footer-buttons-div {
+    -ms-flex: 0 0 325px !important;
+    flex: 0 0 325px !important;
+  }
+
+  .pack-card-description {
+    font-size: $MBfont-size-medium;
+    font-weight: 500;
+    position: absolute;
+    top: 0;
+  }
+
+  .pack-card-footer-title {
+    font-size: $MBfont-size-medium;
+    font-weight: 500;
+  }
+
+  .info-card-title {
+    font-size: $MBfont-size-big;
+    font-weight: 900;
+  }
+
+  .info-card-sub {
+    font-size: $MBfont-size-medium;
+    font-weight: 900;
+  }
+
+  .info-card-contact {
+    font-size: $MBfont-size-medium;
+    font-weight: 700;
+  }
+
+  .sign-card-title {
+    font-size: $MBfont-size-big;
+    font-weight: 900;
+  }
+
+  .sign-card-sign-label-size {
+    font-size: $MBfont-size-medium;
+    font-weight: 500;
+  }
+
+  .exe-desc-label-size {
+    font-size: $MBfont-size-little;
+    font-weight: 500;
+  }
+
+  .price-size{
+    -ms-flex: 0 0 230px !important;
+    flex: 0 0 230px !important;
+  }
+}
+
+/* Big Monitors */
+@media screen and (min-width: 1201px) {
+  .homepage-card-title {
+    font-size: $Bfont-size-big;
+    font-weight: 900;
+  }
+
+  .pack-card-title {
+    font-size: $Bfont-size-big;
+  }
+
+  .padding-page-half-navbar {
+    padding-right: 1rem !important;
+    padding-left: 2rem !important;
+  }
+
+  .padding-page-half {
+    padding-right: 2rem !important;
+    padding-left: 2rem !important;
+  }
+
+  .padding-page-field {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+
+  .padding-page-field-left {
+    padding-left: 1rem !important;
+    padding-right: 0 !important;
+  }
+
+  .padding-page-field-right {
+    padding-right: 1rem !important;
+    padding-left: 0 !important;
+  }
+
+  .padding-page {
+    padding-right: 4rem !important;
+    padding-left: 4rem !important;
+  }
+
+  .button-font-size {
+    font-size: $Bfont-size-button !important;
+  }
+
+  .button-font-size-delete {
+    font-size: $Bfont-size-button !important;
+  }
+
+  .button-size {
+    width: 95px !important;
+    height: 35px !important;
+  }
+
+  .button-size-sub {
+    width: 145px !important;
+    height: 35px !important;
+  }
+
+  .button-size-delete {
+    width: 130px !important;
+    height: 28px !important;
+  }
+
+  .button-size-delete-2{
+    width: 200px !important;
+    height: 28px !important;
+  }
+
+  .navbar-icon {
+    -ms-flex: 0 0 55px !important;
+    flex: 0 0 55px !important;
+  }
+
+  .levels-title-div {
+    -ms-flex: 0 0 100px !important;
+    flex: 0 0 100px !important;
+  }
+
+  .footer-social-div {
+    -ms-flex: 0 0 90px !important;
+    flex: 0 0 90px !important;
+  }
+
+  .coach-card-social-div {
+    -ms-flex: 0 0 80px !important;
+    flex: 0 0 80px !important;
+  }
+
+  .footer-icon-size {
+    background-size: 35px 35px !important;
+    width: 35px !important;
+    height: 35px !important;
+  }
+
+  .coach-social-icon-size {
+    background-size: 30px 30px !important;
+    width: 30px !important;
+    height: 30px !important;
+  }
+
+  .pack-card-level-icon-size {
+    -ms-flex: 0 0 35px !important;
+    flex: 0 0 35px !important;
+  }
+
+  .homepage-card-color {
+    background-color: #e8f2ff;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+    padding: 16px 0;
+    width: 100%;
+  }
+
+  .footer-buttons-div {
+    -ms-flex: 0 0 325px !important;
+    flex: 0 0 325px !important;
+  }
+
+  .pack-card-description {
+    font-size: $Bfont-size-medium;
+    font-weight: 500;
+    position: absolute;
+    top: 0;
+  }
+
+  .pack-card-footer-title {
+    font-size: $Bfont-size-medium;
+    font-weight: 500;
+  }
+
+  .info-card-title {
+    font-size: $Bfont-size-big;
+    font-weight: 900;
+  }
+
+  .info-card-sub {
+    font-size: $Bfont-size-medium;
+    font-weight: 900;
+  }
+
+  .info-card-contact {
+    font-size: $Bfont-size-medium;
+    font-weight: 700;
+  }
+
+  .sign-card-title {
+    font-size: $Bfont-size-big;
+    font-weight: 900;
+  }
+
+  .sign-card-sign-label-size {
+    font-size: $Bfont-size-medium;
+    font-weight: 500;
+  }
+
+  .exe-desc-label-size {
+    font-size: $Bfont-size-little;
+    font-weight: 500;
+  }
+
+  .price-size{
+    -ms-flex: 0 0 250px !important;
+    flex: 0 0 250px !important;
+  }
+}

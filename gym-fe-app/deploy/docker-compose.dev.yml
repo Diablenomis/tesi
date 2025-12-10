@@ -1,0 +1,13 @@
+version: "3.9"
+
+services:
+  frontend_dev:
+    container_name: gym_fe_dev
+    build:
+      context: ../
+      dockerfile: ./deploy/Dockerfile.dev
+    image: gym_frontend:0.0.1
+    volumes:
+      - ../src:/app-fe/src
+    ports:
+      - "3000:3000"

@@ -1,0 +1,104 @@
+.pricing-section-four .wrapper {
+    max-width: 1744px;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+  .pricing-table-area-four .pr-table-wrapper {
+    border: 1px solid #e3e3e3;
+    padding: 30px 35px 40px;
+    margin-top: 40px;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+  }
+  .pricing-table-area-four .pr-table-wrapper:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border: 2px solid #000;
+    z-index: -1;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+  }
+  .pricing-table-area-four .pr-table-wrapper .pack-name {
+    font-size: 28px;
+  }
+  .pricing-table-area-four .pr-table-wrapper .pack-details {
+    color: #878787;
+    letter-spacing: 2px;
+    padding: 5px 0 35px;
+  }
+  .pricing-table-area-four .pr-table-wrapper .top-banner {
+    padding: 9px 5px 10px 25px;
+    color: #000;
+    text-align: left;
+  }
+  .pricing-table-area-four .pr-table-wrapper .price {
+    font-size: 40px;
+    padding: 0 22px 0 0;
+  }
+  .pricing-table-area-four .pr-table-wrapper .price sup {
+    font-size: 20px;
+    top: -13px;
+    left: -4px;
+  }
+  .pricing-table-area-four .pr-table-wrapper .top-banner span {
+    font-size: 22px;
+  }
+  .pricing-table-area-four .pr-table-wrapper .top-banner em {
+    font-size: 14px;
+    font-style: normal;
+    margin-top: -2px;
+  }
+  .pricing-table-area-four .pr-table-wrapper .pr-feature {
+    text-align: left;
+    padding: 50px 0 57px 23px;
+  }
+  .pricing-table-area-four .pr-table-wrapper .pr-feature li {
+    font-size: 18px;
+    position: relative;
+    line-height: 42px;
+    color: rgba(0, 0, 0, 0.7);
+    padding-left: 30px;
+  }
+  .pricing-table-area-four .pr-table-wrapper .pr-feature li:before {
+    content: "\f633";
+    font-family: bootstrap-icons !important;
+    font-size: 13px;
+    position: absolute;
+    left: 0;
+    top: 3px;
+    color: #000;
+  }
+  .pricing-table-area-four .pr-table-wrapper .trial-button {
+    display: block;
+    font-size: 16px;
+    font-weight: 500;
+    color: #000;
+    line-height: 52px;
+    border: 2px solid #000;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+  }
+  .pricing-table-area-four .pr-table-wrapper .btn-fourteen {
+    line-height: 56px;
+    font-size: 16px;
+  }
+  .pricing-table-area-four .pr-table-wrapper:hover:before,
+  .pricing-table-area-four .pr-table-wrapper.active:before {
+    opacity: 1;
+  }
+  .pricing-table-area-four .pr-table-wrapper .trial-button:hover,
+  .pricing-table-area-four .pr-table-wrapper.active .trial-button {
+    background: #000;
+    color: #fff;
+  }
+  .pricing-section-four .consult-text {
+    background: #f2f2f2;
+    border-radius: 30px;
+    padding: 5px 25px;
+  }

@@ -1,0 +1,65 @@
+:root {
+  --blue: #3369d6;
+  --indigo: #5603ad;
+  --purple: #801096;
+  --pink: #e36397;
+  --red: #f03;
+  --orange: #ff3b00;
+  --yellow: #ffd600;
+  --green: #00c759;
+  --teal: #73e9ef;
+  --cyan: #2bffc6;
+  --white: #fff;
+  --gray: #6c757d;
+  --gray-dark: #343a40;
+  --light: #dee2e6;
+  --lighter: #f8f9fa;
+  --primary: #288cff;
+  --secondary: #e8f2ff;
+  --success: #00c759;
+  --info: #73e9ef;
+  --warning: #ff3b00;
+  --danger: #f03;
+  --light: #e9ecef;
+  --dark: #343a40;
+  --tertiary: #192b3f;
+  --breakpoint-xs: 0;
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+  --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol";
+  --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html {
+  font-family: sans-serif;
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -ms-overflow-style: scrollbar;
+  -webkit-tap-highlight-color: transparent;
+}
+@-ms-viewport {
+  width: device-width;
+}
+article,
+aside,
+dialog,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section {
+  display: block;
+}
