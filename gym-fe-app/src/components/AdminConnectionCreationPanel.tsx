@@ -14,12 +14,9 @@ import {
   SelectChangeEvent,
   styled,
   TextField,
-  Typography,
-  Stack,
-  Divider,
   Tooltip,
 } from "@mui/material";
-import { ChangeEvent, useEffect, useRef, useState, useMemo } from "react";
+import { ChangeEvent, useEffect, useRef, useState } from "react";
 import { isMobile } from "react-device-detect";
 import {
   initialConnection,
@@ -88,32 +85,6 @@ export const AdminConnectionCreationPanel: React.FC = () => {
     number: 1,
     days: [],
   });
-  const weeksCount = useMemo(() => weekList.length, [weekList]);
-  const daysCount = useMemo(
-    () =>
-      weekList.reduce(
-        (acc: number, week: IWeek) => acc + (week.days ? week.days.length : 0),
-        0
-      ),
-    [weekList]
-  );
-  const exercisesCount = useMemo(
-    () =>
-      weekList.reduce((accWeek: number, week: IWeek) => {
-        return (
-          accWeek +
-          week.days.reduce((accDay: number, day: IDay) => {
-            return (
-              accDay +
-              day.sections.reduce((accSec: number, sec: ISection) => {
-                return accSec + sec.exercises.length;
-              }, 0)
-            );
-          }, 0)
-        );
-      }, 0),
-    [weekList]
-  );
   const places = ["casa", "palestra", "parco", "homefitNexus"];
   useEffect(() => {
     getConnectionList();
@@ -997,76 +968,6 @@ export const AdminConnectionCreationPanel: React.FC = () => {
     },
   }));
 
-  const PageWrapper = styled(Box)(() => ({
-    minHeight: "100vh",
-    background: "linear-gradient(180deg, #f9fbff 0%, #f4f8ff 100%)",
-    padding: isMobile ? "16px" : "28px",
-  }));
-
-  const Content = styled(Box)(() => ({
-    maxWidth: 1200,
-    margin: "0 auto",
-  }));
-
-  const Card = styled(Box)(() => ({
-    background: "#ffffff",
-    borderRadius: 18,
-    boxShadow: "0 20px 46px rgba(0,0,0,0.1)",
-    padding: isMobile ? 12 : 20,
-  }));
-
-  const HeaderBar = styled(Box)(() => ({
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "space-between",
-    borderRadius: 14,
-    background: "#ffffff",
-    boxShadow: "0 12px 30px rgba(0,0,0,0.05)",
-    padding: isMobile ? "12px 16px" : "18px 22px",
-    marginBottom: isMobile ? 12 : 16,
-  }));
-
-  const InfoStrip = styled(Stack)(() => ({
-    background: "#f6f9fb",
-    border: "1px solid #e6ecf2",
-    borderRadius: 14,
-    padding: isMobile ? "10px 12px" : "12px 16px",
-    marginBottom: isMobile ? 12 : 16,
-    boxShadow: "0 12px 28px rgba(0,0,0,0.05)",
-  }));
-
-  const Pill = styled(Box)(() => ({
-    display: "inline-flex",
-    alignItems: "center",
-    gap: 6,
-    background: "#ffffff",
-    color: "#192b3f",
-    border: "1px solid #e1e6ec",
-    padding: "6px 12px",
-    borderRadius: 12,
-    fontWeight: 600,
-    fontSize: 13,
-    boxShadow: "0 6px 16px rgba(0,0,0,0.05)",
-  }));
-
-  const DayCard = styled(Box)(() => ({
-    background: "#f9fbff",
-    borderRadius: 16,
-    border: "1px solid #e6ecf2",
-    boxShadow: "0 14px 32px rgba(0,0,0,0.08)",
-    padding: isMobile ? 12 : 18,
-    marginBottom: 16,
-  }));
-
-  const SectionShell = styled(Box)(() => ({
-    background: "#ffffff",
-    borderRadius: 14,
-    border: "1px solid #e6ecf2",
-    boxShadow: "0 10px 24px rgba(0,0,0,0.06)",
-    padding: isMobile ? 10 : 14,
-    marginBottom: 12,
-  }));
-
   const modalStyle = {
     position: "absolute" as "absolute",
     top: "50%",
@@ -1081,76 +982,59 @@ export const AdminConnectionCreationPanel: React.FC = () => {
   };
 
   return (
-    <PageWrapper>
-      <Content>
-        <Card className="col-12 m-0 row padding-page-half justify-content-between pb-3">
-          <HeaderBar className="col-12 mb-2">
-            <div className="col-6 m-0 p-0">
-              <Typography variant="h6" fontWeight={800} color="#192b3f" className="m-0">
-                Crea un collegamento
-              </Typography>
+    <div className="col-12 no-pm">
+      <div className="panel col-12 m-0 row padding-page-half justify-content-between pb-3 zoom-in">
+        <div className="col-6 m-0 p-0 mt-3">
+          <span className="text-font-big">Crea un collegamento</span>
+        </div>
+        <div className="col-6 m-0 mt-3 text-align-center">
+          <div className="col-12 row no-pm justify-content-center">
+            <div className="col navbar-icon my-auto p-0">
+              <Tooltip title={"Tutorial"}>
+                <IconButton
+                  onClick={() => {
+                    setIsPersonalizzata(false);
+                  }}
+                  size={isMobile ? "small" : "medium"}
+                >
+                  <img
+                    alt="Male"
+                    className="navbar-img-little"
+                    src={
+                      isPersonalizzata
+                        ? SchedaTutorialBlackIconUrl
+                        : SchedaBaseIcon
+                    }
+                  />
+                </IconButton>
+              </Tooltip>
             </div>
-            <div className="col-6 m-0 text-align-center">
-              <div className="col-12 row no-pm justify-content-center">
-                <div className="col navbar-icon my-auto p-0">
-                  <Tooltip title={"Tutorial"}>
-                    <IconButton
-                      onClick={() => {
-                        setIsPersonalizzata(false);
-                      }}
-                      size={isMobile ? "small" : "medium"}
-                    >
-                      <img
-                        alt="Male"
-                        className="navbar-img-little"
-                        src={
-                          isPersonalizzata
-                            ? SchedaTutorialBlackIconUrl
-                            : SchedaBaseIcon
-                        }
-                      />
-                    </IconButton>
-                  </Tooltip>
-                </div>
-                <div className="col navbar-icon my-auto p-0">
-                  <Tooltip title="Personalizzata">
-                    <IconButton
-                      onClick={() => {
-                        setIsPersonalizzata(true);
-                      }}
-                      size={isMobile ? "small" : "medium"}
-                    >
-                      <img
-                        alt="personalizzata"
-                        className="navbar-img-little"
-                        src={
-                          isPersonalizzata
-                            ? SchedaPersIcon
-                            : SchedaPersonalizzataBlackIconUrl
-                        }
-                      />
-                    </IconButton>
-                  </Tooltip>
-                </div>
+            <div className="col navbar-icon my-auto p-0">
+              <Tooltip title="Personalizzata">
+                <IconButton
+                  onClick={() => {
+                    setIsPersonalizzata(true);
+                  }}
+                  size={isMobile ? "small" : "medium"}
+                >
+                  <img
+                    alt="personalizzata"
+                    className="navbar-img-little"
+                    src={
+                      isPersonalizzata
+                        ? SchedaPersIcon
+                        : SchedaPersonalizzataBlackIconUrl
+                    }
+                  />
+                </IconButton>
+              </Tooltip>
+            </div>
 
-                <span className="m-auto sign-card-sign-label-size">
-                  {isPersonalizzata ? "Personalizzata" : "Tutorial"}
-                </span>
-              </div>
-            </div>
-          </HeaderBar>
-          <InfoStrip
-            direction={isMobile ? "column" : "row"}
-            spacing={isMobile ? 1 : 2}
-            justifyContent="space-between"
-            alignItems={isMobile ? "flex-start" : "center"}
-            className="col-12"
-          >
-            <Pill>Tipo: {isPersonalizzata ? "Personalizzata" : "Tutorial"}</Pill>
-            <Pill>Volume: {weeksCount} sett. · {daysCount} giorni</Pill>
-            <Pill>Totale esercizi: {exercisesCount}</Pill>
-            <Pill>Stato: {isPublished ? "Pubblicata" : "Bozza"}</Pill>
-          </InfoStrip>
+            <span className="m-auto sign-card-sign-label-size">
+              {isPersonalizzata ? "Personalizzata" : "Tutorial"}
+            </span>
+          </div>
+        </div>
         {isPersonalizzata ? (
           <div className="row col-12 m-0 p-0 mt-3">
             <div className="col-6 m-0 p-0 text-align-left">
@@ -1405,9 +1289,9 @@ export const AdminConnectionCreationPanel: React.FC = () => {
                   {connectionWeek &&
                     connectionWeek.days &&
                     connectionWeek.days.map((day, indexDay) => (
-                      <DayCard
+                      <div
                         key={indexDay}
-                        className="row padding-page-field col-12 m-0 mt-2 mb-2"
+                        className="row padding-page-field col-12 m-0 section-container mt-2 mb-2"
                       >
                         <div className="col-6 m-0 padding-page-field mt-4">
                           <span className="text-font-big">
@@ -1467,7 +1351,7 @@ export const AdminConnectionCreationPanel: React.FC = () => {
                               + Esercizio
                             </ColoredButton>
                           </div>
-                          <div className="col-4 m-0 p-0">
+                          <div className="col-4 m-0 p-0 ">
                             <ColoredButton
                               className="button-size-delete-2 button-font-size-delete"
                               onClick={() =>
@@ -1482,7 +1366,10 @@ export const AdminConnectionCreationPanel: React.FC = () => {
                         {day.sections[0] &&
                           day.sections[0].exercises.map(
                             (exercise, indexExercise) => (
-                              <SectionShell className="col-12 mb-2" key={indexExercise}>
+                              <div
+                                className="col-12 section-container mb-2"
+                                key={indexExercise}
+                              >
                                 {exercise &&
                                 exercise.super_series &&
                                 exercise.super_series.length === 0 ? (
@@ -2202,7 +2089,7 @@ export const AdminConnectionCreationPanel: React.FC = () => {
                                       )}
                                   </div>
                                 )}
-                              </SectionShell>
+                              </div>
                             )
                           )}
                         <div className="col-12  row mt-4 mb-2 m-0 p-0 text-align-center">
@@ -2258,7 +2145,10 @@ export const AdminConnectionCreationPanel: React.FC = () => {
                         {day.sections[1] &&
                           day.sections[1].exercises.map(
                             (exercise, indexExercise) => (
-                              <SectionShell className="col-12 mb-2" key={indexExercise}>
+                              <div
+                                className="col-12 section-container mb-2"
+                                key={indexExercise}
+                              >
                                 {exercise &&
                                 exercise.super_series &&
                                 exercise.super_series.length === 0 ? (
@@ -2977,7 +2867,7 @@ export const AdminConnectionCreationPanel: React.FC = () => {
                                       )}
                                   </div>
                                 )}
-                              </SectionShell>
+                              </div>
                             )
                           )}
 
@@ -3033,7 +2923,10 @@ export const AdminConnectionCreationPanel: React.FC = () => {
                         {day.sections[2] &&
                           day.sections[2].exercises.map(
                             (exercise, indexExercise) => (
-                              <SectionShell className="col-12 mb-2" key={indexExercise}>
+                              <div
+                                className="col-12 section-container mb-2"
+                                key={indexExercise}
+                              >
                                 {exercise &&
                                 exercise.super_series &&
                                 exercise.super_series.length === 0 ? (
@@ -3752,7 +3645,7 @@ export const AdminConnectionCreationPanel: React.FC = () => {
                                       )}
                                   </div>
                                 )}
-                              </SectionShell>
+                              </div>
                             )
                           )}
                         <div className="col-12 mt-4 mb-2 m-0 p-0 text-align-center">
@@ -3765,7 +3658,7 @@ export const AdminConnectionCreationPanel: React.FC = () => {
                             - Training day
                           </ColoredButtonDelete>
                         </div>
-                      </DayCard>
+                      </div>
                     ))}
 
                   {/* <div className="col-12 mt-4 mb-2 m-0 p-0 text-align-center">
@@ -3821,8 +3714,7 @@ export const AdminConnectionCreationPanel: React.FC = () => {
             </ColoredButton>
           </div>
         )}
-        </Card>
-      </Content>
+      </div>
       <Modal open={deleteWeek !== -1} onClose={() => setDeleteWeek(-1)}>
         <Box sx={modalStyle}>
           <span>Vuoi eliminare la settimana?</span>
@@ -3844,6 +3736,6 @@ export const AdminConnectionCreationPanel: React.FC = () => {
           {message}
         </Alert>
       )}
-    </PageWrapper>
+    </div>
   );
 };
