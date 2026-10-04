@@ -1,0 +1,41 @@
+{
+  "checked_at": "2026-10-03T14:26:25.403149+00:00",
+  "step": 1,
+  "read_only": true,
+  "video_url_present": true,
+  "video_tested": false,
+  "uploaded_files": 0,
+  "authentication": {
+    "http_status": 200,
+    "scope": "private edit upload public",
+    "authenticated_user_present": true
+  },
+  "account": {
+    "http_status": 200,
+    "account": "starter",
+    "upload_quota": {
+      "space": {
+        "free": 2199006579929,
+        "max": 2199023255552,
+        "used": 16675623,
+        "showing": "lifetime",
+        "unit": "video_size"
+      },
+      "periodic": {
+        "period": null,
+        "unit": null,
+        "free": null,
+        "max": null,
+        "used": null,
+        "reset_date": null
+      },
+      "lifetime": {
+        "unit": "video_size",
+        "free": 2199006579929,
+        "max": 2199023255552,
+        "used": 16675623
+      },
+      "restricted": null
+    }
+  }
+}

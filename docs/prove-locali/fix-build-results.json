@@ -1,0 +1,32 @@
+{
+  "backend": {
+    "dockerfile": "docker/backend/Dockerfile",
+    "image": "fitnexus-backend-buildcheck:local",
+    "image_id": "sha256:d20dc40557efad461b4658d5b12cd6bc6dae0a95c7ef042ac4ffc12fb30e2405",
+    "build_exit": 0,
+    "pip_check": "No broken requirements found.",
+    "django_check": "System check identified no issues (0 silenced).",
+    "runtime_checks_network": "none; QA settings"
+  },
+  "frontend": {
+    "dockerfile": "docker/nginx/Dockerfile",
+    "image": "fitnexus-frontend-buildcheck:local",
+    "image_id": "sha256:92e59503ae681a0e17ce85efb05354791af3a213d796bc2631944b21de3b39ab",
+    "build_exit": 0,
+    "install": "npm ci, unchanged package-lock.json",
+    "typescript_no_emit_exit": 0,
+    "TSC_COMPILE_ON_ERROR": false,
+    "eslint": "disabled by existing Dockerfile",
+    "nginx_config_check": "PASS",
+    "http_get_root": 200,
+    "runtime_checks_network": "none"
+  },
+  "remaining_warnings": [
+    "third-party missing source map @react-aria/ssr",
+    "outdated Browserslist database",
+    "Babel preset dependency warning",
+    "bundle size",
+    "npm ci reports 82 dependency vulnerabilities; no audit remediation performed"
+  ],
+  "scope": "Build and isolated smoke checks of project Dockerfiles; original compose production configuration not started; no provider integration tests"
+}

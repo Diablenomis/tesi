@@ -1,0 +1,20 @@
+{
+  "passed": 13,
+  "checks": [
+    "legacy payment intent",
+    "modern multiple paid references",
+    "modern unexpanded payments",
+    "zero-value invoice reference",
+    "legacy 1 months",
+    "modern 1 months",
+    "legacy 3 months",
+    "modern 3 months",
+    "legacy 6 months",
+    "modern 6 months",
+    "expanded legacy price",
+    "yearly recurrence",
+    "weekly recurrence rejected explicitly"
+  ],
+  "stripe_calls": "mocked",
+  "database_writes": 0
+}

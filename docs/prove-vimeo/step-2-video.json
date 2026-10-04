@@ -1,0 +1,23 @@
+{
+  "step": 2,
+  "checked_at": "2026-10-03T18:34:05.780821+00:00",
+  "read_only": true,
+  "uploaded_files": 0,
+  "browser_playback_tested": false,
+  "video": {
+    "http_status": 200,
+    "status": "available",
+    "transcode_status": "complete",
+    "upload_status": "complete",
+    "privacy_view": "nobody",
+    "privacy_embed": "public",
+    "duration_seconds": 116,
+    "is_playable": true
+  },
+  "oembed": {
+    "http_status": 404,
+    "type": null,
+    "iframe_returned": false,
+    "referrer_used": "http://localhost:3000/"
+  }
+}

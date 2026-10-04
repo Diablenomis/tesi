@@ -1,0 +1,16 @@
+{
+  "context": "player ufficiale aperto separatamente, non iframe nella scheda",
+  "playing": {
+    "time": 11.85547,
+    "paused": false,
+    "readyState": 4
+  },
+  "paused": [
+    {
+      "duration": 116.43333799999998,
+      "paused": true,
+      "readyState": 4,
+      "time": 31.300915
+    }
+  ]
+}

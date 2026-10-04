@@ -1,0 +1,7 @@
+2026-10-04 — richiesta diagnostica GET del player, con Referer localhost:3000
+HTTP 401
+Pagina di verifica sicurezza Vimeo/Cloudflare, contenente:
+We couldn't verify the security of your connection.
+Access to this content has been restricted. Contact your internet service provider for help.
+
+Questa risposta appartiene alla richiesta diagnostica HTTP, non dimostra da sola la causa del riquadro vuoto nel browser. Nessun tentativo di aggirare la verifica effettuato.

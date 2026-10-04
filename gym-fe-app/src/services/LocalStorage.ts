@@ -14,7 +14,7 @@ export const getStorageValue = (key: string) => {
   return saved;
 };
 
-export const setLoginLS = (value: any) => {
+export const setLoginLS = (value: any, reload = true) => {
   localStorage.setItem(LS_USER, value.email);
   localStorage.setItem(LS_ACCESS_TOKEN, value.tokens.access);
   localStorage.setItem(LS_REFRESH_TOKEN, value.tokens.refresh);
@@ -41,10 +41,10 @@ export const setLoginLS = (value: any) => {
   } else {
     localStorage.setItem(LS_IS_CUSTOMER, "no");
   }
-  window.location.reload();
+  if (reload) window.location.reload();
 };
 
-export const setLogoutLS = () => {
+export const setLogoutLS = (reload = true) => {
   localStorage.removeItem(LS_USER);
   localStorage.removeItem(LS_ACCESS_TOKEN);
   localStorage.removeItem(LS_REFRESH_TOKEN);
@@ -52,5 +52,5 @@ export const setLogoutLS = () => {
   localStorage.removeItem(LS_IS_ADMIN);
   localStorage.removeItem(LS_IS_COACH);
   localStorage.removeItem(LS_IS_CUSTOMER);
-  window.location.reload();
+  if (reload) window.location.reload();
 };

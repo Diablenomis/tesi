@@ -1,0 +1,174 @@
+{
+  "date": "2026-10-02T17:51:35.820887",
+  "engine": "sqlite",
+  "transport": "local email collector",
+  "fixture_cleanup": "transaction rolled back",
+  "results": [
+    {
+      "case": "weekly due tokens only",
+      "actual": [
+        "settimanale-boundary",
+        "settimanale-today"
+      ],
+      "expected": [
+        "settimanale-boundary",
+        "settimanale-today"
+      ],
+      "outcome": "PASS"
+    },
+    {
+      "case": "weekly email count",
+      "actual": 2,
+      "expected": 2,
+      "outcome": "PASS"
+    },
+    {
+      "case": "weekly recipient settimanale-today",
+      "actual": "weeklye22e3a1d838b@example.test",
+      "expected": "weeklye22e3a1d838b@example.test",
+      "outcome": "PASS"
+    },
+    {
+      "case": "weekly template settimanale-today",
+      "actual": "jpzkmgq68y24059v",
+      "expected": "jpzkmgq68y24059v",
+      "outcome": "PASS"
+    },
+    {
+      "case": "weekly recipient settimanale-boundary",
+      "actual": "weeklye22e3a1d838b@example.test",
+      "expected": "weeklye22e3a1d838b@example.test",
+      "outcome": "PASS"
+    },
+    {
+      "case": "weekly template settimanale-boundary",
+      "actual": "jpzkmgq68y24059v",
+      "expected": "jpzkmgq68y24059v",
+      "outcome": "PASS"
+    },
+    {
+      "case": "monthly due tokens only",
+      "actual": [
+        "mensile-boundary",
+        "mensile-today"
+      ],
+      "expected": [
+        "mensile-boundary",
+        "mensile-today"
+      ],
+      "outcome": "PASS"
+    },
+    {
+      "case": "monthly email count",
+      "actual": 2,
+      "expected": 2,
+      "outcome": "PASS"
+    },
+    {
+      "case": "monthly recipient mensile-today",
+      "actual": "monthlye22e3a1d838b@example.test",
+      "expected": "monthlye22e3a1d838b@example.test",
+      "outcome": "PASS"
+    },
+    {
+      "case": "monthly template mensile-today",
+      "actual": "vywj2lp6q7k47oqz",
+      "expected": "vywj2lp6q7k47oqz",
+      "outcome": "PASS"
+    },
+    {
+      "case": "monthly recipient mensile-boundary",
+      "actual": "monthlye22e3a1d838b@example.test",
+      "expected": "monthlye22e3a1d838b@example.test",
+      "outcome": "PASS"
+    },
+    {
+      "case": "monthly template mensile-boundary",
+      "actual": "vywj2lp6q7k47oqz",
+      "expected": "vywj2lp6q7k47oqz",
+      "outcome": "PASS"
+    },
+    {
+      "case": "combined due tokens only",
+      "actual": [
+        "mensile-boundary",
+        "mensile-today",
+        "settimanale-boundary",
+        "settimanale-today"
+      ],
+      "expected": [
+        "mensile-boundary",
+        "mensile-today",
+        "settimanale-boundary",
+        "settimanale-today"
+      ],
+      "outcome": "PASS"
+    },
+    {
+      "case": "combined email count",
+      "actual": 4,
+      "expected": 4,
+      "outcome": "PASS"
+    },
+    {
+      "case": "combined recipient settimanale-today",
+      "actual": "weeklye22e3a1d838b@example.test",
+      "expected": "weeklye22e3a1d838b@example.test",
+      "outcome": "PASS"
+    },
+    {
+      "case": "combined template settimanale-today",
+      "actual": "jpzkmgq68y24059v",
+      "expected": "jpzkmgq68y24059v",
+      "outcome": "PASS"
+    },
+    {
+      "case": "combined recipient settimanale-boundary",
+      "actual": "weeklye22e3a1d838b@example.test",
+      "expected": "weeklye22e3a1d838b@example.test",
+      "outcome": "PASS"
+    },
+    {
+      "case": "combined template settimanale-boundary",
+      "actual": "jpzkmgq68y24059v",
+      "expected": "jpzkmgq68y24059v",
+      "outcome": "PASS"
+    },
+    {
+      "case": "combined recipient mensile-today",
+      "actual": "monthlye22e3a1d838b@example.test",
+      "expected": "monthlye22e3a1d838b@example.test",
+      "outcome": "PASS"
+    },
+    {
+      "case": "combined template mensile-today",
+      "actual": "vywj2lp6q7k47oqz",
+      "expected": "vywj2lp6q7k47oqz",
+      "outcome": "PASS"
+    },
+    {
+      "case": "combined recipient mensile-boundary",
+      "actual": "monthlye22e3a1d838b@example.test",
+      "expected": "monthlye22e3a1d838b@example.test",
+      "outcome": "PASS"
+    },
+    {
+      "case": "combined template mensile-boundary",
+      "actual": "vywj2lp6q7k47oqz",
+      "expected": "vywj2lp6q7k47oqz",
+      "outcome": "PASS"
+    },
+    {
+      "case": "invitation does not consume response token",
+      "actual": true,
+      "expected": true,
+      "outcome": "PASS"
+    },
+    {
+      "case": "monthly fixture has no form",
+      "actual": null,
+      "expected": null,
+      "outcome": "PASS"
+    }
+  ]
+}

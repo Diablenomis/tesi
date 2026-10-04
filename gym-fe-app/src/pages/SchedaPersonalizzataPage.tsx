@@ -1,4 +1,5 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import { SignCard } from "../components/SignCard";
 import { NavBar } from "../components/NavBar";
 import {
   formQuestions,
@@ -15,7 +16,7 @@ import {
   SCHEDA_PERSONALIZZATA_PATH,
 } from "../constants/PathConstants";
 import { FormUserCard } from "../components/FormUserCard";
-import { Alert, Pagination } from "@mui/material";
+import { Alert, Button, Pagination } from "@mui/material";
 import PackService from "../services/PackService";
 import { useLocation, useNavigate } from "react-router-dom";
 import DefaultHeader from "../components/DefaultHeader";
@@ -27,6 +28,9 @@ const SchedaPersonalizzataPage: React.FC = () => {
   const [message, setMessage] = useState("");
   const [isMessageError, setIsMessageError] = useState<boolean>(false);
   const [isLoading, setIsLoading] = useState<boolean>(false);
+  const [needsLogin, setNeedsLogin] = useState(false);
+  const [showLogin, setShowLogin] = useState(false);
+  const formOwner = useRef(getStorageValue(LS_USER));
   const [userForm, setUserForm] = useState<
     { question: string; answer: string; order: number }[]
   >([]);
@@ -61,14 +65,9 @@ const SchedaPersonalizzataPage: React.FC = () => {
   };
 
   const handleSelectOption = (question: string, answer: string) => {
-    let userFormUpdated: { question: string; answer: string; order: number }[] =
-      JSON.parse(JSON.stringify(userForm));
-    userFormUpdated.forEach((element) => {
-      if (element.question === question) {
-        element.answer = answer;
-      }
-    });
-    setUserForm(userFormUpdated);
+    setUserForm((current) => current.map((element) =>
+      element.question === question ? { ...element, answer } : element
+    ));
   };
 
   const handleChangeStep = (
@@ -81,12 +80,13 @@ const SchedaPersonalizzataPage: React.FC = () => {
   const navigate = useNavigate();
 
   const sendForm = () => {
+    if (isLoading) return;
+    if (needsLogin) { setShowLogin(true); return; }
     let isOkay = verifyUserForm();
     if (isOkay) {
-      userForm.sort((a, b) => a.order - b.order);
-
-      console.log(userForm);
-      PackService.sendSurvey(userForm)
+      const payload = [...userForm].sort((a, b) => a.order - b.order);
+      setIsLoading(true);
+      PackService.sendSurvey(payload)
         .then((response) => {
           setIsMessageError(false);
           setMessage("Form inviata");
@@ -95,13 +95,16 @@ const SchedaPersonalizzataPage: React.FC = () => {
             setMessage("");
           }, 4000);
         })
-        .catch((e: Error) => {
+        .catch((e: any) => {
           setIsMessageError(true);
-          setMessage(e.message);
-          setTimeout(() => {
-            setMessage("");
-          }, 4000);
-        });
+          if (e.response?.status === 401) {
+            setNeedsLogin(true);
+            setMessage("Sessione scaduta. Accedi di nuovo: le risposte restano in questa pagina.");
+          } else {
+            setMessage("Invio non riuscito. Le risposte sono conservate: puoi riprovare.");
+          }
+        })
+        .finally(() => setIsLoading(false));
     }
   };
 
@@ -138,6 +141,20 @@ const SchedaPersonalizzataPage: React.FC = () => {
     <>
       <Seo pageTitle="Schede personalizzate" />
       <DefaultHeader />
+      <SignCard show={showLogin} onHide={() => setShowLogin(false)}
+        onAuthenticated={(email) => {
+          if (email !== formOwner.current) {
+            buildUserForm();
+            setStep(1);
+            setMessage("Account cambiato: compila un nuovo questionario.");
+          } else {
+            setMessage("Accesso riuscito. Puoi inviare nuovamente il questionario.");
+          }
+          formOwner.current = email;
+          setNeedsLogin(false);
+          setShowLogin(false);
+          setIsMessageError(false);
+        }} />
       <div style={{ height: "200px" }}></div>
       <div className="content-container">
         {isUserLoggedIn ? (
@@ -165,6 +182,7 @@ const SchedaPersonalizzataPage: React.FC = () => {
           severity={isMessageError ? "error" : "success"}
         >
           {message}
+          {needsLogin && <Button onClick={() => setShowLogin(true)}>Accedi di nuovo</Button>}
         </Alert>
       )}
     </>

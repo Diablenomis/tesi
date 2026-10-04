@@ -1,0 +1,45 @@
+ 
+ -------------- qa-beat-verification@aa2597fe51b1 v5.4.0 (opalescent)
+--- ***** ----- 
+-- ******* ---- Linux-6.18.40.1-microsoft-standard-WSL2-x86_64-with-glibc2.34 2026-10-03 10:39:53
+- *** --- * --- 
+- ** ---------- [config]
+- ** ---------- .> app:         gym:0x7b08ff40a5b0
+- ** ---------- .> transport:   redis://redis:6379/0
+- ** ---------- .> results:     redis://redis:6379/0
+- *** --- * --- .> concurrency: 1 (prefork)
+-- ******* ---- .> task events: OFF (enable -E to monitor tasks in this worker)
+--- ***** ----- 
+ -------------- [queues]
+                .> qa-beat-verification exchange=qa-beat-verification(direct) key=qa-beat-verification
+                
+
+[tasks]
+  . scheda_tutorial.tasks.my_task
+
+/usr/local/lib/python3.8/site-packages/celery/platforms.py:829: SecurityWarning: You're running the worker with superuser privileges: this is
+absolutely not recommended!
+
+Please specify a different user using the --uid option.
+
+User information: uid=0 euid=0 gid=0 egid=0
+
+  warnings.warn(SecurityWarning(ROOT_DISCOURAGED.format(
+[2026-10-03 10:39:54,071: WARNING/MainProcess] /usr/local/lib/python3.8/site-packages/celery/worker/consumer/consumer.py:508: CPendingDeprecationWarning: The broker_connection_retry configuration setting will no longer determine
+whether broker connection retries are made during startup in Celery 6.0 and above.
+If you wish to retain the existing behavior for retrying connections on startup,
+you should set broker_connection_retry_on_startup to True.
+  warnings.warn(
+
+[2026-10-03 10:39:54,087: INFO/MainProcess] Connected to redis://redis:6379/0
+[2026-10-03 10:39:54,088: WARNING/MainProcess] /usr/local/lib/python3.8/site-packages/celery/worker/consumer/consumer.py:508: CPendingDeprecationWarning: The broker_connection_retry configuration setting will no longer determine
+whether broker connection retries are made during startup in Celery 6.0 and above.
+If you wish to retain the existing behavior for retrying connections on startup,
+you should set broker_connection_retry_on_startup to True.
+  warnings.warn(
+
+[2026-10-03 10:39:54,091: INFO/MainProcess] mingle: searching for neighbors
+[2026-10-03 10:39:55,106: INFO/MainProcess] mingle: all alone
+[2026-10-03 10:39:55,137: INFO/MainProcess] qa-beat-verification@aa2597fe51b1 ready.
+[2026-10-03 10:40:18,656: INFO/MainProcess] Task scheda_tutorial.tasks.my_task[a01af03d-baf5-4c95-b5e3-c3bfb2abc1b2] received
+[2026-10-03 10:40:18,841: INFO/ForkPoolWorker-1] Task scheda_tutorial.tasks.my_task[a01af03d-baf5-4c95-b5e3-c3bfb2abc1b2] succeeded in 0.18279782199897454s: None

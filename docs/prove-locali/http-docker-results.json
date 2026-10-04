@@ -1,0 +1,58 @@
+[
+  {
+    "test": "Login tramite HTTP loopback",
+    "status": 200,
+    "pass": true
+  },
+  {
+    "test": "Consultazione tramite HTTP loopback",
+    "status": 200,
+    "pass": true,
+    "response": {
+      "data": {
+        "id": "545b21d9-9b23-45a7-b57e-17533b2e553d",
+        "name": "Scheda QA aggiornata",
+        "weeks": [
+          {
+            "name": "Settimana 1",
+            "number": 1,
+            "days": [
+              {
+                "name": "Giorno 1",
+                "number": 1,
+                "sections": [
+                  {
+                    "name": "Allenamento",
+                    "order": 1,
+                    "exercises": [
+                      {
+                        "exe": {
+                          "id": 1,
+                          "name": "Squat QA locale",
+                          "video": ""
+                        },
+                        "order": 1,
+                        "repetitions": "12",
+                        "series": 3,
+                        "stop": 60,
+                        "load": "Corpo libero",
+                        "intensity": 5,
+                        "description": "Esercizio fittizio per test locale",
+                        "super_series": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "test": "Consultazione HTTP senza token",
+    "status": 401,
+    "pass": true
+  }
+]

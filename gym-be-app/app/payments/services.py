@@ -21,6 +21,48 @@ protocol = os.getenv('PROTOCOL_URL', 'http://')
 domain_url = os.getenv('DOMAIN_URL', 'localhost')
 
 
+def invoice_payment_reference(invoice):
+    """Support both legacy invoices and the Basil/Clover payments collection."""
+    legacy = invoice.get('payment_intent')
+    if legacy:
+        return legacy.get('id') if isinstance(legacy, dict) else legacy
+    payments = invoice.get('payments')
+    if payments is None:
+        payments = stripe.Invoice.retrieve(invoice['id'], expand=['payments']).get('payments', {})
+    references = []
+    for item in (payments or {}).get('data', []):
+        if item.get('status') != 'paid':
+            continue
+        payment = item.get('payment') or {}
+        reference = payment.get('payment_intent') or payment.get('charge')
+        if isinstance(reference, dict):
+            reference = reference.get('id')
+        if reference and reference not in references:
+            references.append(reference)
+    # The invoice itself remains a reference for zero-value or credit-paid invoices.
+    return ', '.join(references) or invoice['id']
+
+
+def invoice_subscription_months(invoice):
+    """Resolve recurrence from legacy plan data or the current line price ID."""
+    line = invoice['lines']['data'][0]
+    recurring = line.get('plan')
+    if not recurring:
+        price = line.get('price') or (line.get('pricing') or {}).get('price_details', {}).get('price')
+        if isinstance(price, str):
+            price = stripe.Price.retrieve(price)
+        recurring = (price or {}).get('recurring')
+    if not recurring:
+        raise ValueError('Invoice line has no recurring subscription price')
+    interval = recurring.get('interval')
+    count = recurring['interval_count']
+    if interval == 'month':
+        return count
+    if interval == 'year':
+        return count * 12
+    raise ValueError('Monthly feedback requires a monthly or yearly subscription')
+
+
 def primo_pagamento(invoice):
     customer = stripe.Customer.retrieve(invoice['customer']) # Recupera il cliente tramite l'ID
     line_items = invoice['lines']['data'] # Nome del prodotto acquistato
@@ -60,7 +102,7 @@ def pagamento_ricorrente(invoice):
 def pagamento_effettuato(user_rep, invoice, customer, products):
     customer_name = customer['name']
     customer_email = customer['email']
-    payment_intent_id = invoice['payment_intent'] # ID del PaymentIntent (codice transazione)
+    payment_intent_id = invoice_payment_reference(invoice)
     amount_paid = invoice['amount_paid'] / 100  # Importo pagato (in centesimi, convertito in euro)
     purchase_date = datetime.fromtimestamp(invoice['created']).strftime('%Y-%m-%d %H:%M:%S') # Data di acquisto (convertita da timestamp UNIX)
     
@@ -206,7 +248,7 @@ def operations_coaching(temp_email, product):
     
 # Crea il numero di feedback idoneo per l'acquisto dell'utente
 def create_feedback_mensile(invoice, primo, user):
-    mesi_iscrizione = invoice['lines']['data'][0]['plan']['interval_count'] # Recupera il numero di mesi a cui si è iscritto l'utente
+    mesi_iscrizione = invoice_subscription_months(invoice)
     # Controllo se è un pagamento ricorrrente e nel caso positivo domani invio il feedback
     if not primo:
         token = secrets.token_hex(16)

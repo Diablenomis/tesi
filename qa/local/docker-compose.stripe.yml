@@ -1,0 +1,10 @@
+# Explicit opt-in overlay. The original offline configuration remains unchanged.
+services:
+  backend:
+    entrypoint: [python, /workspace/qa/local/stripe_boot.py]
+    env_file: [../../.local-test-artifacts/stripe-test.env]
+    networks: [offline, ingress]
+  nginx:
+    volumes:
+      - ../../.local-test-artifacts/frontend-stripe-build:/usr/share/nginx/html:ro
+      - ./nginx.stripe.conf:/etc/nginx/conf.d/default.conf:ro

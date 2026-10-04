@@ -1,0 +1,39 @@
+- banner:
+  - link "logo":
+    - /url: /
+    - img "logo"
+  - link "":
+    - /url: /profile
+    - generic: 
+  - link "Contattaci":
+    - /url: /#contact-us
+  - navigation:
+    - list:
+      - link "Home":
+        - /url: /
+      - link "Servizi":
+        - /url: /serveces-details
+      - link "Team":
+        - /url: /team
+      - link "Cos'è FitNexus":
+        - /url: /about-us
+- img "logo"
+- heading "Contattaci" [level=3]
+- paragraph: info@fitnexus.com
+- paragraph: "P.IVA: 17723831008"
+- heading "Links" [level=5]
+- list:
+  - link "Home":
+    - /url: /
+  - link "Cos'è FitNexus":
+    - /url: /about-us
+  - link "Il nostro team":
+    - /url: /team
+  - link "Servizi":
+    - /url: /serveces-details
+- heading "Services" [level=5]
+- list:
+  - link "Schede personalizzate":
+    - /url: /serveces-details#1
+  - link "Coaching online":
+    - /url: /serveces-details#2

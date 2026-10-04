@@ -1,0 +1,7 @@
+SERVICE      STATE     STATUS
+backend      exited    Exited (137) 2 seconds ago
+celery       exited    Exited (137) 11 hours ago
+celerybeat   exited    Exited (0) 11 hours ago
+mysql        exited    Exited (137) 1 second ago
+nginx        exited    Exited (0) 5 seconds ago
+redis        exited    Exited (0) 2 seconds ago

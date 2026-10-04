@@ -1,0 +1,72 @@
+{
+  "catalog_http_status": 200,
+  "catalog": {
+    "products": [
+      {
+        "id": "prod_TZzCRMXelxLdXP",
+        "name": "scheda-personalizzata",
+        "description": null,
+        "prices": [
+          {
+            "id": "price_1ScpFyACR9X4275ee1cnylXe",
+            "unit_amount": 4500,
+            "currency": "eur",
+            "interval": "month",
+            "interval_count": 6
+          },
+          {
+            "id": "price_1ScpFoACR9X4275eR4njS320",
+            "unit_amount": 2500,
+            "currency": "eur",
+            "interval": "month",
+            "interval_count": 3
+          },
+          {
+            "id": "price_1ScpDqACR9X4275eepyh0inT",
+            "unit_amount": 1500,
+            "currency": "eur",
+            "interval": "month",
+            "interval_count": 1
+          }
+        ]
+      },
+      {
+        "id": "prod_TZzE4mU48VjUnb",
+        "name": "coaching-online",
+        "description": null,
+        "prices": [
+          {
+            "id": "price_1ScpGvACR9X4275efFJG4vw8",
+            "unit_amount": 12000,
+            "currency": "eur",
+            "interval": "month",
+            "interval_count": 6
+          },
+          {
+            "id": "price_1ScpGfACR9X4275exvgKwtl6",
+            "unit_amount": 6000,
+            "currency": "eur",
+            "interval": "month",
+            "interval_count": 3
+          },
+          {
+            "id": "price_1ScpGFACR9X4275eTSJU9Ov6",
+            "unit_amount": 3000,
+            "currency": "eur",
+            "interval": "month",
+            "interval_count": 1
+          }
+        ]
+      }
+    ]
+  },
+  "valid_local_signature_http_status": 200,
+  "invalid_local_signature_http_status": 400,
+  "email_collector_active": true,
+  "stripe_sdk_version": "5.2.0",
+  "stripe_sdk_api_version": null,
+  "test_backend_key_loaded": true,
+  "return_base_url": "http://localhost:3000",
+  "checkout_sessions_created": 0,
+  "external_webhook_delivery_tested": false
+}

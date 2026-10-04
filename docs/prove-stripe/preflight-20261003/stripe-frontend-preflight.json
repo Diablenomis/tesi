@@ -1,0 +1,9 @@
+{
+  "frontend_http_status": 200,
+  "configured_public_key_in_served_bundle": true,
+  "private_key_absent_from_served_bundle": true,
+  "signing_secret_absent_from_served_bundle": true,
+  "csp_allows_stripe_js": true,
+  "catalog_without_auth_http_status": 401,
+  "browser_checkout_tested": false
+}

@@ -1,0 +1,96 @@
+{
+  "run": "qa-beat-20261003T103948Z",
+  "task_id": "a01af03d-baf5-4c95-b5e3-c3bfb2abc1b2",
+  "task": "scheda_tutorial.tasks.my_task",
+  "trigger": "Celery Beat DatabaseScheduler, ClockedSchedule one_off, dedicated Redis queue",
+  "state": "SUCCESS",
+  "date_done": "2026-10-03 10:40:18.838001+00:00",
+  "checks": [
+    {
+      "test": "Redis result backend reports SUCCESS",
+      "actual": "SUCCESS",
+      "expected": "SUCCESS",
+      "pass": true
+    },
+    {
+      "test": "task return value",
+      "actual": null,
+      "expected": null,
+      "pass": true
+    },
+    {
+      "test": "exactly two invitations captured",
+      "actual": 2,
+      "expected": 2,
+      "pass": true
+    },
+    {
+      "test": "only due weekly and monthly invitations",
+      "actual": [
+        "monthly",
+        "weekly"
+      ],
+      "expected": [
+        "monthly",
+        "weekly"
+      ],
+      "pass": true
+    },
+    {
+      "test": "weekly recipient",
+      "actual": "cliente@example.test",
+      "expected": "cliente@example.test",
+      "pass": true
+    },
+    {
+      "test": "weekly template",
+      "actual": "jpzkmgq68y24059v",
+      "expected": "jpzkmgq68y24059v",
+      "pass": true
+    },
+    {
+      "test": "monthly recipient",
+      "actual": "cliente@example.test",
+      "expected": "cliente@example.test",
+      "pass": true
+    },
+    {
+      "test": "monthly template",
+      "actual": "vywj2lp6q7k47oqz",
+      "expected": "vywj2lp6q7k47oqz",
+      "pass": true
+    },
+    {
+      "test": "invitation does not consume response tokens",
+      "actual": 2,
+      "expected": 2,
+      "pass": true
+    },
+    {
+      "test": "monthly fixture has no form",
+      "actual": null,
+      "expected": null,
+      "pass": true
+    }
+  ],
+  "messages": [
+    {
+      "kind": "weekly",
+      "recipient": "cliente@example.test",
+      "template": "jpzkmgq68y24059v",
+      "transport": "local collector; acceptance simulated as 202"
+    },
+    {
+      "kind": "monthly",
+      "recipient": "cliente@example.test",
+      "template": "vywj2lp6q7k47oqz",
+      "transport": "local collector; acceptance simulated as 202"
+    }
+  ],
+  "schedule_after_execution": {
+    "enabled": true,
+    "one_off": true,
+    "total_run_count": 0
+  },
+  "external_email_delivery_tested": false
+}

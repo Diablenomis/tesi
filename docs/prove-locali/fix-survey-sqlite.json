@@ -1,0 +1,229 @@
+{
+  "date": "2026-10-02T17:57:33.727418",
+  "engine": "sqlite",
+  "fixture_cleanup": "transaction rolled back",
+  "results": [
+    {
+      "case": "missing list response",
+      "actual": 400,
+      "expected": 400,
+      "outcome": "PASS"
+    },
+    {
+      "case": "missing list no writes",
+      "actual": [
+        0,
+        0
+      ],
+      "expected": [
+        0,
+        0
+      ],
+      "outcome": "PASS"
+    },
+    {
+      "case": "empty list response",
+      "actual": 400,
+      "expected": 400,
+      "outcome": "PASS"
+    },
+    {
+      "case": "empty list no writes",
+      "actual": [
+        0,
+        0
+      ],
+      "expected": [
+        0,
+        0
+      ],
+      "outcome": "PASS"
+    },
+    {
+      "case": "null list response",
+      "actual": 400,
+      "expected": 400,
+      "outcome": "PASS"
+    },
+    {
+      "case": "null list no writes",
+      "actual": [
+        0,
+        0
+      ],
+      "expected": [
+        0,
+        0
+      ],
+      "outcome": "PASS"
+    },
+    {
+      "case": "wrong list type response",
+      "actual": 400,
+      "expected": 400,
+      "outcome": "PASS"
+    },
+    {
+      "case": "wrong list type no writes",
+      "actual": [
+        0,
+        0
+      ],
+      "expected": [
+        0,
+        0
+      ],
+      "outcome": "PASS"
+    },
+    {
+      "case": "missing answer response",
+      "actual": 400,
+      "expected": 400,
+      "outcome": "PASS"
+    },
+    {
+      "case": "missing answer no writes",
+      "actual": [
+        0,
+        0
+      ],
+      "expected": [
+        0,
+        0
+      ],
+      "outcome": "PASS"
+    },
+    {
+      "case": "missing question response",
+      "actual": 400,
+      "expected": 400,
+      "outcome": "PASS"
+    },
+    {
+      "case": "missing question no writes",
+      "actual": [
+        0,
+        0
+      ],
+      "expected": [
+        0,
+        0
+      ],
+      "outcome": "PASS"
+    },
+    {
+      "case": "null answer response",
+      "actual": 400,
+      "expected": 400,
+      "outcome": "PASS"
+    },
+    {
+      "case": "null answer no writes",
+      "actual": [
+        0,
+        0
+      ],
+      "expected": [
+        0,
+        0
+      ],
+      "outcome": "PASS"
+    },
+    {
+      "case": "wrong answer type response",
+      "actual": 400,
+      "expected": 400,
+      "outcome": "PASS"
+    },
+    {
+      "case": "wrong answer type no writes",
+      "actual": [
+        0,
+        0
+      ],
+      "expected": [
+        0,
+        0
+      ],
+      "outcome": "PASS"
+    },
+    {
+      "case": "blank only response",
+      "actual": 400,
+      "expected": 400,
+      "outcome": "PASS"
+    },
+    {
+      "case": "blank only no writes",
+      "actual": [
+        0,
+        0
+      ],
+      "expected": [
+        0,
+        0
+      ],
+      "outcome": "PASS"
+    },
+    {
+      "case": "unnamed only response",
+      "actual": 400,
+      "expected": 400,
+      "outcome": "PASS"
+    },
+    {
+      "case": "unnamed only no writes",
+      "actual": [
+        0,
+        0
+      ],
+      "expected": [
+        0,
+        0
+      ],
+      "outcome": "PASS"
+    },
+    {
+      "case": "invalid later entry response",
+      "actual": 400,
+      "expected": 400,
+      "outcome": "PASS"
+    },
+    {
+      "case": "invalid later entry no writes",
+      "actual": [
+        0,
+        0
+      ],
+      "expected": [
+        0,
+        0
+      ],
+      "outcome": "PASS"
+    },
+    {
+      "case": "valid with optional blanks",
+      "actual": 201,
+      "expected": 201,
+      "outcome": "PASS"
+    },
+    {
+      "case": "all entries persisted",
+      "actual": 3,
+      "expected": 3,
+      "outcome": "PASS"
+    },
+    {
+      "case": "answer persisted",
+      "actual": "70",
+      "expected": "70",
+      "outcome": "PASS"
+    },
+    {
+      "case": "anonymous still rejected",
+      "actual": 401,
+      "expected": 401,
+      "outcome": "PASS"
+    }
+  ]
+}

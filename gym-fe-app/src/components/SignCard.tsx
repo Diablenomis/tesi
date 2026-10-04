@@ -41,7 +41,7 @@ import { useNavigate } from "react-router-dom";
 import { HOMEPAGE_PATH } from "../constants/PathConstants";
 import dayjs from "dayjs";
 
-export const SignCard: React.FC<ISignCard> = ({ show, onHide }) => {
+export const SignCard: React.FC<ISignCard> = ({ show, onHide, onAuthenticated }) => {
   const [isLogin, setIsLogin] = useState<boolean>(true);
   const [isResetPsw, setIsResetPsw] = useState<boolean>(false);
   const [loginUser, setLoginUser] = useState<ILoginUser>(initialLoginUser);
@@ -144,7 +144,8 @@ export const SignCard: React.FC<ISignCard> = ({ show, onHide }) => {
     if (loginUser.username == "") {
       UserService.logInEmail(loginEmail)
         .then((response) => {
-          setLoginLS(response.data);
+          setLoginLS(response.data, !onAuthenticated);
+          onAuthenticated?.(response.data.email);
         })
         .catch((e: any) => {
           setIsMessageError(true);
@@ -166,7 +167,8 @@ export const SignCard: React.FC<ISignCard> = ({ show, onHide }) => {
     } else {
       UserService.logInUsername(loginUsername)
         .then((response) => {
-          setLoginLS(response.data);
+          setLoginLS(response.data, !onAuthenticated);
+          onAuthenticated?.(response.data.email);
         })
         .catch((e: any) => {
           setIsMessageError(true);

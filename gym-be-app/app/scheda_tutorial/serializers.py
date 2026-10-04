@@ -641,14 +641,20 @@ class LevelCourseCoachSerializer(serializers.ModelSerializer):
 
 
 class ListSurveySerializer(serializers.Serializer):
-    question = serializers.CharField(required=True)
-    answer = serializers.CharField(required=True)
+    # The frontend includes optional answers and unused question placeholders.
+    question = serializers.CharField(required=True, allow_blank=True)
+    answer = serializers.CharField(required=True, allow_blank=True)
 
     class Meta:
         fields = ['question', 'answer']
 
 class SurveySerializer(serializers.Serializer):
-    survey = ListSurveySerializer(many=True, required=False)
+    survey = ListSurveySerializer(many=True, required=True, allow_empty=False)
+
+    def validate_survey(self, value):
+        if not any(item['question'].strip() and item['answer'].strip() for item in value):
+            raise serializers.ValidationError('Inserire almeno una risposta al questionario.')
+        return value
 
     class Meta:
         fields = ['survey']

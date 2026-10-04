@@ -1,5 +1,4 @@
 import { useEffect, useMemo, useState } from "react";
-import Vimeo from "@u-wave/react-vimeo";
 import {
   Alert,
   Box,
@@ -17,7 +16,7 @@ import {
 import { useParams } from "react-router-dom";
 import jsPDF from "jspdf";
 import html2canvas from "html2canvas";
-import { LS_USER, LS_USER_TYPE, BASE_VIDEO_URL } from "../constants/TypeConstants";
+import { LS_USER, LS_USER_TYPE } from "../constants/TypeConstants";
 import { IPackPers } from "../models/Pack";
 import PackService from "../services/PackService";
 import { getStorageValue } from "../services/LocalStorage";
@@ -97,11 +96,17 @@ const SchedaPersDetailUserPage: React.FC = () => {
         return;
       }
 
-      const canvas = await html2canvas(element);
+      const canvas = await html2canvas(element, {
+        onclone: (clonedDocument) => {
+          // Export the final layout, without restarting the entrance animation.
+          const sheet = clonedDocument.getElementById("scheda");
+          if (sheet) sheet.style.animation = "none";
+        },
+      });
       const imgData = canvas.toDataURL("image/png");
 
       const pdf = new jsPDF({
-        orientation: "portrait",
+        orientation: canvas.width > canvas.height ? "landscape" : "portrait",
         unit: "px",
         format: [canvas.width, canvas.height],
       });
@@ -397,10 +402,16 @@ const SchedaPersDetailUserPage: React.FC = () => {
                               mb={1}
                             >
                               {renderExerciseName(exercise.exe.name)}
+                              {exercise.exe.video && (
+                                <Button data-html2canvas-ignore="true" onClick={() => showExercise(exercise.exe.video)}>
+                                  Guarda video
+                                </Button>
+                              )}
                             </Stack>
 
                             <Stack
                               direction={isMobile ? "column" : "row"}
+                              flexWrap="wrap"
                               gap={1}
                               mb={exercise.description !== "" ? 1.5 : 0}
                             >
@@ -521,10 +532,16 @@ const SchedaPersDetailUserPage: React.FC = () => {
                                       mb={1}
                                     >
                                       {renderExerciseName(supSer.exe.name)}
+                                      {supSer.exe.video && (
+                                        <Button data-html2canvas-ignore="true" onClick={() => showExercise(supSer.exe.video)}>
+                                          Guarda video
+                                        </Button>
+                                      )}
                                     </Stack>
 
                                     <Stack
                                       direction={isMobile ? "column" : "row"}
+                                      flexWrap="wrap"
                                       gap={1}
                                     >
                                       <StatBox>
@@ -648,14 +665,13 @@ const SchedaPersDetailUserPage: React.FC = () => {
               <div className="col-12 py-0 m-0 mt-3 mb-3 row pack-card-body padding-page-field">
                 <div className="no-pm col">
                   <div className="d-flex align-items-center justify-content-center col-12 no-pm">
-                    <Vimeo
-                      video={BASE_VIDEO_URL + videoIndex}
-                      loop={false}
-                      autoplay={false}
-                      responsive={true}
-                      controls={true}
-                      muted={false}
-                      className="home-page-intro-video"
+                    {/* Embed directly: hidden-on-Vimeo videos may not expose oEmbed. */}
+                    <iframe
+                      title="Video esercizio"
+                      src={`https://player.vimeo.com/video/${encodeURIComponent(videoIndex)}?dnt=1`}
+                      allow="autoplay; fullscreen; picture-in-picture; encrypted-media"
+                      allowFullScreen
+                      style={{ width: "100%", aspectRatio: "16 / 9", border: 0 }}
                     />
                   </div>
                 </div>

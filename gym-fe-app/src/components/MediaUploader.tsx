@@ -1,79 +1,44 @@
-import { useEffect, useState } from "react";
-import { useSearchParams } from "react-router-dom";
-import { VIMEO_UPLOAD_REDIRECT } from "../constants/PathConstants";
-import VideoService from "../services/VideoService";
+import { useState } from "react";
+import VideoService, { VideoUploadTicket } from "../services/VideoService";
 
 const MediaUploader: React.FC = () => {
-  const [videoInput, setVideoInput] = useState<string>("");
-  const [idVideo, setIdVideo] = useState<string>("");
-  const [searchParams, setSearchParams] = useSearchParams();
-
-  useEffect(() => {
-    let paramUrl = searchParams.get("video_uri");
-    setIdVideo(paramUrl !== null ? paramUrl.replace("/videos/", "") : "");
-  }, []);
-
-  const handleChange = async (eventObject: any) => {
-    const file = eventObject.target.files[0];
-    const fileName = file.name;
-    const fileSize = file.size.toString();
-    const data = {
-      upload: {
-        approach: "post",
-        size: fileSize,
-        redirect_url: VIMEO_UPLOAD_REDIRECT,
-      },
-      name: fileName,
-    };
-
-    VideoService.uploadVideo(data)
-      .then((response: any) => {
-        let inputHtml = response.data.upload.form
-          .replace('<label for="file">File:</label>', "")
-          .replace('<input type="file" name="file_data" id="file">', "")
-          .replace('<input type="submit" name="submit" value="Submit">', "")
-          .replace(
-            "<br>",
-            '<label class="custom-file-upload"><input onChange="bho()" class="" type="file" name="file_data" id="file"/></label><br><label class="custom-file-upload mt-2"><input class="custom-file-upload-input" type="submit" name="submit" value="Submit"/>CONFERMA</label>'
-          );
-        setVideoInput(inputHtml);
-      })
-      .catch((e: Error) => {
-        console.error(e);
-      });
+  const [file, setFile] = useState<File | null>(null);
+  const [ticket, setTicket] = useState<VideoUploadTicket | null>(null);
+  const [busy, setBusy] = useState(false);
+  const [progress, setProgress] = useState(0);
+  const [done, setDone] = useState(false);
+  const [error, setError] = useState("");
+  const upload = async () => {
+    if (!file || busy) return;
+    setBusy(true); setError("");
+    try {
+      const active = ticket || (await VideoService.createUpload(file)).data;
+      setTicket(active);
+      await VideoService.transfer(active, file, setProgress);
+      setDone(true);
+    } catch (e: any) {
+      setError(e.response?.data?.error || e.message || "Caricamento non riuscito.");
+    } finally { setBusy(false); }
   };
-
-  return (
-    <div className="panel col-12 m-0 p-0 row zoom-in">
-      <div className="col-12 padding-page-half m-0 row">
-        <div className="col-12 p-0 m-0 mt-3">
-          <span className="text-font-big">Carica il tuo video</span>
-        </div>
-        {idVideo !== "" && (
-          <div className="col-12 p-0 m-0">
-            <span className="text-font-medium">
-              L'id del tuo ultimo video caricato è: {idVideo}
-            </span>
-          </div>
-        )}
-        <div className="col-12 p-0 m-0 mt-3 mb-3">
-          <label className="custom-file-upload">
-            <input
-              onChange={handleChange}
-              type="file"
-              className="custom-file-upload-input"
-            />
-            Seleziona File
-          </label>
-        </div>
-        {videoInput !== "" && (
-          <div className="col-12 m-0 p-0 mb-3">
-            <div dangerouslySetInnerHTML={{ __html: videoInput }}></div>
-          </div>
-        )}
-      </div>
-    </div>
-  );
+  return <section className="panel col-12 p-4" aria-label="Caricamento video">
+    <h2>Carica il tuo video</h2>
+    <label>Seleziona video
+      <input type="file" accept="video/*" disabled={busy} onChange={event => {
+        setFile(event.target.files?.[0] || null);
+        setTicket(null); setDone(false); setError(""); setProgress(0);
+      }} />
+    </label>
+    {file && <p>{file.name}</p>}
+    <button type="button" disabled={!file || busy || done} onClick={upload}>
+      {busy ? "Caricamento in corso…" : ticket && !done ? "Riprova caricamento" : "Carica su Vimeo"}
+    </button>
+    {busy && <p role="status">Caricamento: {progress}%</p>}
+    {error && <p role="alert">{error}</p>}
+    {done && ticket && <div role="status">
+      <p>Caricamento completato. Vimeo sta elaborando il video.</p>
+      <p>ID video: {ticket.video_id}</p>
+      {ticket.link && <a href={ticket.link} target="_blank" rel="noreferrer">Apri su Vimeo</a>}
+    </div>}
+  </section>;
 };
-
 export default MediaUploader;

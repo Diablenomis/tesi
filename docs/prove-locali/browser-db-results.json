@@ -1,0 +1,47 @@
+{
+  "survey": {
+    "created_at": "2026-10-02 10:28:59.200596+00:00",
+    "question_count": 48,
+    "selected_answers": [
+      {
+        "question": "Dove ti allenerai",
+        "answer": "Casa"
+      },
+      {
+        "question": "Attualmente ti alleni?",
+        "answer": "no"
+      },
+      {
+        "question": "Altezza",
+        "answer": "175"
+      },
+      {
+        "question": "Peso",
+        "answer": "70"
+      }
+    ]
+  },
+  "browser_form": [
+    {
+      "name": "Scheda QA browser",
+      "published": true
+    }
+  ],
+  "browser_feedback": [
+    {
+      "inviato": true,
+      "critici": "Risposta fittizia QA browser 1",
+      "forti": "Risposta fittizia QA browser 2",
+      "ese_differenti": "Risposta fittizia QA browser 3",
+      "tempistiche_ok": "Risposta fittizia QA browser 4",
+      "altro": "Risposta fittizia QA browser 5"
+    }
+  ],
+  "beat": [
+    {
+      "enabled": false,
+      "total_run_count": 441,
+      "last_run_at": null
+    }
+  ]
+}

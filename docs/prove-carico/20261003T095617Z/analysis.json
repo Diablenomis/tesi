@@ -1,0 +1,267 @@
+{
+  "integrity": "PASS: CSV counts, error counts and percentile values match summary",
+  "resource_attribution": "Only sample intervals fully inside each phase; next sample start bounds the preceding collection end",
+  "measured_requests": 8409,
+  "measured_errors": 0,
+  "all_requests_including_warmup_recovery": 9107,
+  "all_errors": 0,
+  "monitor_failures": 0,
+  "resources": [
+    {
+      "phase": "read_1",
+      "service": "backend",
+      "samples": 5,
+      "cpu_mean_percent": 76.18,
+      "cpu_max_percent": 77.22,
+      "memory_max_mib": 162.7
+    },
+    {
+      "phase": "read_1",
+      "service": "mysql",
+      "samples": 5,
+      "cpu_mean_percent": 16.7,
+      "cpu_max_percent": 20.59,
+      "memory_max_mib": 467.2
+    },
+    {
+      "phase": "read_1",
+      "service": "nginx",
+      "samples": 5,
+      "cpu_mean_percent": 2.36,
+      "cpu_max_percent": 2.44,
+      "memory_max_mib": 10.91
+    },
+    {
+      "phase": "read_1",
+      "service": "redis",
+      "samples": 5,
+      "cpu_mean_percent": 0.16,
+      "cpu_max_percent": 0.17,
+      "memory_max_mib": 8.238
+    },
+    {
+      "phase": "read_5",
+      "service": "backend",
+      "samples": 5,
+      "cpu_mean_percent": 218.44,
+      "cpu_max_percent": 221.31,
+      "memory_max_mib": 166.7
+    },
+    {
+      "phase": "read_5",
+      "service": "mysql",
+      "samples": 5,
+      "cpu_mean_percent": 29.95,
+      "cpu_max_percent": 34.14,
+      "memory_max_mib": 468.1
+    },
+    {
+      "phase": "read_5",
+      "service": "nginx",
+      "samples": 5,
+      "cpu_mean_percent": 4.57,
+      "cpu_max_percent": 4.72,
+      "memory_max_mib": 11.6
+    },
+    {
+      "phase": "read_5",
+      "service": "redis",
+      "samples": 5,
+      "cpu_mean_percent": 0.2,
+      "cpu_max_percent": 0.22,
+      "memory_max_mib": 8.238
+    },
+    {
+      "phase": "read_10",
+      "service": "backend",
+      "samples": 5,
+      "cpu_mean_percent": 223.18,
+      "cpu_max_percent": 225.11,
+      "memory_max_mib": 167.1
+    },
+    {
+      "phase": "read_10",
+      "service": "mysql",
+      "samples": 5,
+      "cpu_mean_percent": 29.56,
+      "cpu_max_percent": 33.7,
+      "memory_max_mib": 468.4
+    },
+    {
+      "phase": "read_10",
+      "service": "nginx",
+      "samples": 5,
+      "cpu_mean_percent": 4.4,
+      "cpu_max_percent": 4.59,
+      "memory_max_mib": 12.09
+    },
+    {
+      "phase": "read_10",
+      "service": "redis",
+      "samples": 5,
+      "cpu_mean_percent": 0.23,
+      "cpu_max_percent": 0.26,
+      "memory_max_mib": 8.238
+    },
+    {
+      "phase": "read_20",
+      "service": "backend",
+      "samples": 5,
+      "cpu_mean_percent": 223.45,
+      "cpu_max_percent": 227.35,
+      "memory_max_mib": 167.0
+    },
+    {
+      "phase": "read_20",
+      "service": "mysql",
+      "samples": 5,
+      "cpu_mean_percent": 29.26,
+      "cpu_max_percent": 33.93,
+      "memory_max_mib": 468.2
+    },
+    {
+      "phase": "read_20",
+      "service": "nginx",
+      "samples": 5,
+      "cpu_mean_percent": 4.14,
+      "cpu_max_percent": 4.26,
+      "memory_max_mib": 12.21
+    },
+    {
+      "phase": "read_20",
+      "service": "redis",
+      "samples": 5,
+      "cpu_mean_percent": 0.22,
+      "cpu_max_percent": 0.25,
+      "memory_max_mib": 8.238
+    },
+    {
+      "phase": "login_1",
+      "service": "backend",
+      "samples": 5,
+      "cpu_mean_percent": 91.93,
+      "cpu_max_percent": 92.65,
+      "memory_max_mib": 167.0
+    },
+    {
+      "phase": "login_1",
+      "service": "mysql",
+      "samples": 5,
+      "cpu_mean_percent": 5.92,
+      "cpu_max_percent": 9.77,
+      "memory_max_mib": 469.1
+    },
+    {
+      "phase": "login_1",
+      "service": "nginx",
+      "samples": 5,
+      "cpu_mean_percent": 0.24,
+      "cpu_max_percent": 0.28,
+      "memory_max_mib": 11.58
+    },
+    {
+      "phase": "login_1",
+      "service": "redis",
+      "samples": 5,
+      "cpu_mean_percent": 0.17,
+      "cpu_max_percent": 0.19,
+      "memory_max_mib": 8.23
+    },
+    {
+      "phase": "login_5",
+      "service": "backend",
+      "samples": 5,
+      "cpu_mean_percent": 346.29,
+      "cpu_max_percent": 363.53,
+      "memory_max_mib": 167.0
+    },
+    {
+      "phase": "login_5",
+      "service": "mysql",
+      "samples": 5,
+      "cpu_mean_percent": 9.98,
+      "cpu_max_percent": 13.23,
+      "memory_max_mib": 469.1
+    },
+    {
+      "phase": "login_5",
+      "service": "nginx",
+      "samples": 5,
+      "cpu_mean_percent": 0.71,
+      "cpu_max_percent": 0.76,
+      "memory_max_mib": 11.22
+    },
+    {
+      "phase": "login_5",
+      "service": "redis",
+      "samples": 5,
+      "cpu_mean_percent": 0.22,
+      "cpu_max_percent": 0.24,
+      "memory_max_mib": 8.188
+    },
+    {
+      "phase": "login_10",
+      "service": "backend",
+      "samples": 5,
+      "cpu_mean_percent": 371.51,
+      "cpu_max_percent": 386.84,
+      "memory_max_mib": 166.9
+    },
+    {
+      "phase": "login_10",
+      "service": "mysql",
+      "samples": 5,
+      "cpu_mean_percent": 10.76,
+      "cpu_max_percent": 15.46,
+      "memory_max_mib": 469.5
+    },
+    {
+      "phase": "login_10",
+      "service": "nginx",
+      "samples": 5,
+      "cpu_mean_percent": 0.68,
+      "cpu_max_percent": 0.87,
+      "memory_max_mib": 10.94
+    },
+    {
+      "phase": "login_10",
+      "service": "redis",
+      "samples": 5,
+      "cpu_mean_percent": 0.24,
+      "cpu_max_percent": 0.3,
+      "memory_max_mib": 8.105
+    },
+    {
+      "phase": "read_recovery",
+      "service": "backend",
+      "samples": 1,
+      "cpu_mean_percent": 75.82,
+      "cpu_max_percent": 75.82,
+      "memory_max_mib": 166.6
+    },
+    {
+      "phase": "read_recovery",
+      "service": "mysql",
+      "samples": 1,
+      "cpu_mean_percent": 15.4,
+      "cpu_max_percent": 15.4,
+      "memory_max_mib": 472.0
+    },
+    {
+      "phase": "read_recovery",
+      "service": "nginx",
+      "samples": 1,
+      "cpu_mean_percent": 2.32,
+      "cpu_max_percent": 2.32,
+      "memory_max_mib": 11.19
+    },
+    {
+      "phase": "read_recovery",
+      "service": "redis",
+      "samples": 1,
+      "cpu_mean_percent": 0.15,
+      "cpu_max_percent": 0.15,
+      "memory_max_mib": 8.047
+    }
+  ]
+}

@@ -3,12 +3,12 @@ import {
   PayPalButtonsComponentProps,
   PayPalScriptProvider,
   usePayPalScriptReducer,
+  ScriptProviderProps,
 } from "@paypal/react-paypal-js";
-import { PayPalScriptOptions } from "@paypal/paypal-js/types/script-options";
 import { Alert, CircularProgress } from "@mui/material";
 import { useState } from "react";
 
-const paypalScriptOptions: PayPalScriptOptions = {
+const paypalScriptOptions: ScriptProviderProps["options"] = {
   "client-id":
     "AUwpgXVQMW0BHSMwenpDD3ZgdVyVHGsoIHKuzu5l4e9HlRHwmRn08JULC7Jxhc8KDCfTym8RaENlFPy9",
   currency: "EUR",

@@ -1,0 +1,7 @@
+NAME                       IMAGE                       COMMAND                  SERVICE      CREATED        STATUS                  PORTS
+fitnexus-qa-backend-1      fitnexus-backend-qa:local   "python /workspace/q…"   backend      21 hours ago   Up 21 hours             
+fitnexus-qa-celery-1       fitnexus-backend-qa:local   "python /workspace/q…"   celery       21 hours ago   Up 21 hours             
+fitnexus-qa-celerybeat-1   fitnexus-backend-qa:local   "python /workspace/q…"   celerybeat   21 hours ago   Up 21 hours             
+fitnexus-qa-mysql-1        mysql:8                     "docker-entrypoint.s…"   mysql        21 hours ago   Up 21 hours (healthy)   3306/tcp, 33060/tcp
+fitnexus-qa-nginx-1        nginx:stable-alpine         "/docker-entrypoint.…"   nginx        21 hours ago   Up 21 hours             127.0.0.1:8000->8000/tcp, 127.0.0.1:3000->80/tcp
+fitnexus-qa-redis-1        redis:alpine                "docker-entrypoint.s…"   redis        21 hours ago   Up 21 hours             6379/tcp

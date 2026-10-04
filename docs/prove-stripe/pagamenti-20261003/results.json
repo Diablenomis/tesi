@@ -1,0 +1,387 @@
+{
+  "run": "stripe-20261003",
+  "cases": [
+    {
+      "kind": "scheda",
+      "months": 1,
+      "email": "stripe-qa-scheda-1-20261003@example.test",
+      "user_id": 12,
+      "price_id": "price_1ScpDqACR9X4275eepyh0inT",
+      "amount": 1500,
+      "status": "complete",
+      "checkout_http_status": 200,
+      "session_id": "cs_test_b1ViLKvLrQx24fl9qNlu5ElmKqazKDjPSaYC1viH3H6Ub1oxPTw1Th6dYk",
+      "payment_status": "paid",
+      "customer_id": "cus_VNDUE5Th8SYoAz",
+      "subscription_id": "sub_1UMT7SACR9X4275edHAQG4hM",
+      "amount_total": 1500,
+      "livemode": false,
+      "subscription_status": "active",
+      "invoice_id": "in_1UMT7QACR9X4275e7m0IlDM4",
+      "invoice_status": "paid",
+      "amount_paid": 1500,
+      "invoice_billing_reason": "subscription_create",
+      "feedback_count": 0,
+      "coach_selection_pending": false,
+      "local_messages": [
+        {
+          "time": "2026-10-03T13:36:59.051500+00:00",
+          "subject": "PAGAMENTO EFFETTUATO",
+          "template_id": "0p7kx4xxe8749yjr",
+          "recipients": [
+            {
+              "name": "Stripeqa Stripeqa",
+              "email": "stripe-qa-scheda-1-20261003@example.test"
+            }
+          ]
+        },
+        {
+          "time": "2026-10-03T13:36:59.065604+00:00",
+          "subject": "Questionario Utente",
+          "template_id": "z3m5jgr8y2mldpyo",
+          "recipients": [
+            {
+              "name": "Get Your Movement",
+              "email": "team@example.test"
+            }
+          ]
+        },
+        {
+          "time": "2026-10-03T13:36:59.076752+00:00",
+          "subject": "ISTRUZIONI SCHEDA PERSONALIZZATA",
+          "template_id": "3zxk54vjkq64jy6v",
+          "recipients": [
+            {
+              "name": "Stripeqa Scheda1",
+              "email": "stripe-qa-scheda-1-20261003@example.test"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "scheda",
+      "months": 3,
+      "email": "stripe-qa-scheda-3-20261003@example.test",
+      "user_id": 13,
+      "price_id": "price_1ScpFoACR9X4275eR4njS320",
+      "amount": 2500,
+      "status": "complete",
+      "checkout_http_status": 200,
+      "session_id": "cs_test_b1Ju31cIQvLQEYe79NAR721vjTAJdXwBGmSxEe977xviw0vXZkQoMRJmss",
+      "payment_status": "paid",
+      "customer_id": "cus_VNDXpSQZ2WIjqz",
+      "subscription_id": "sub_1UMTBKACR9X4275eLTx9Nrsg",
+      "amount_total": 2500,
+      "livemode": false,
+      "subscription_status": "active",
+      "invoice_id": "in_1UMTBHACR9X4275evBRT1ZTj",
+      "invoice_status": "paid",
+      "amount_paid": 2500,
+      "invoice_billing_reason": "subscription_create",
+      "feedback_count": 2,
+      "coach_selection_pending": false,
+      "local_messages": [
+        {
+          "time": "2026-10-03T13:40:58.486357+00:00",
+          "subject": "PAGAMENTO EFFETTUATO",
+          "template_id": "0p7kx4xxe8749yjr",
+          "recipients": [
+            {
+              "name": "Stripeqa Stripeqa",
+              "email": "stripe-qa-scheda-3-20261003@example.test"
+            }
+          ]
+        },
+        {
+          "time": "2026-10-03T13:40:58.502937+00:00",
+          "subject": "Questionario Utente",
+          "template_id": "z3m5jgr8y2mldpyo",
+          "recipients": [
+            {
+              "name": "Get Your Movement",
+              "email": "team@example.test"
+            }
+          ]
+        },
+        {
+          "time": "2026-10-03T13:40:58.512688+00:00",
+          "subject": "ISTRUZIONI SCHEDA PERSONALIZZATA",
+          "template_id": "3zxk54vjkq64jy6v",
+          "recipients": [
+            {
+              "name": "Stripeqa Scheda3",
+              "email": "stripe-qa-scheda-3-20261003@example.test"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "scheda",
+      "months": 6,
+      "email": "stripe-qa-scheda-6-20261003@example.test",
+      "user_id": 14,
+      "price_id": "price_1ScpFyACR9X4275ee1cnylXe",
+      "amount": 4500,
+      "status": "complete",
+      "checkout_http_status": 200,
+      "session_id": "cs_test_b1dxX41petVejFXufbU7PdIqQLxO06DWQsyygl2Lc3Icz7LgACWOEWsZ9X",
+      "payment_status": "paid",
+      "customer_id": "cus_VNDXuhDHhm23rl",
+      "subscription_id": "sub_1UMTC1ACR9X4275erp0eAbYX",
+      "amount_total": 4500,
+      "livemode": false,
+      "subscription_status": "active",
+      "invoice_id": "in_1UMTBzACR9X4275eAkfPa1Ha",
+      "invoice_status": "paid",
+      "amount_paid": 4500,
+      "invoice_billing_reason": "subscription_create",
+      "feedback_count": 5,
+      "coach_selection_pending": false,
+      "local_messages": [
+        {
+          "time": "2026-10-03T13:41:41.575127+00:00",
+          "subject": "PAGAMENTO EFFETTUATO",
+          "template_id": "0p7kx4xxe8749yjr",
+          "recipients": [
+            {
+              "name": "Stripeqa Stripeqa",
+              "email": "stripe-qa-scheda-6-20261003@example.test"
+            }
+          ]
+        },
+        {
+          "time": "2026-10-03T13:41:41.598086+00:00",
+          "subject": "Questionario Utente",
+          "template_id": "z3m5jgr8y2mldpyo",
+          "recipients": [
+            {
+              "name": "Get Your Movement",
+              "email": "team@example.test"
+            }
+          ]
+        },
+        {
+          "time": "2026-10-03T13:41:41.607614+00:00",
+          "subject": "ISTRUZIONI SCHEDA PERSONALIZZATA",
+          "template_id": "3zxk54vjkq64jy6v",
+          "recipients": [
+            {
+              "name": "Stripeqa Scheda6",
+              "email": "stripe-qa-scheda-6-20261003@example.test"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "coaching",
+      "months": 1,
+      "email": "stripe-qa-coaching-1-20261003@example.test",
+      "user_id": 15,
+      "price_id": "price_1ScpGFACR9X4275eTSJU9Ov6",
+      "amount": 3000,
+      "status": "complete",
+      "checkout_http_status": 200,
+      "session_id": "cs_test_b1ePgVCJeYtn6fRr6fg1Z2CXSK3lwIvFdIfiPxJDc3YYkMoSNDZypUsqJa",
+      "payment_status": "paid",
+      "customer_id": "cus_VNDXqmgJHLByxV",
+      "subscription_id": "sub_1UMTCXACR9X4275e3QDVkJDA",
+      "amount_total": 3000,
+      "livemode": false,
+      "subscription_status": "active",
+      "invoice_id": "in_1UMTCWACR9X4275edMHsaTUF",
+      "invoice_status": "paid",
+      "amount_paid": 3000,
+      "invoice_billing_reason": "subscription_create",
+      "feedback_count": 0,
+      "coach_selection_pending": false,
+      "local_messages": [
+        {
+          "time": "2026-10-03T13:42:18.184986+00:00",
+          "subject": "PAGAMENTO EFFETTUATO",
+          "template_id": "0p7kx4xxe8749yjr",
+          "recipients": [
+            {
+              "name": "Stripeqa Stripeqa",
+              "email": "stripe-qa-coaching-1-20261003@example.test"
+            }
+          ]
+        },
+        {
+          "time": "2026-10-03T13:42:18.193777+00:00",
+          "subject": "ISTRUZIONI COACHING ONLINE",
+          "template_id": "neqvygmkxwz40p7w",
+          "recipients": [
+            {
+              "name": "Stripeqa Coaching1",
+              "email": "stripe-qa-coaching-1-20261003@example.test"
+            }
+          ]
+        },
+        {
+          "time": "2026-10-03T13:42:18.204166+00:00",
+          "subject": "RICHIESTA COACHING ONLINE",
+          "template_id": "z86org836z04ew13",
+          "recipients": [
+            {
+              "name": "Get Your Movement",
+              "email": "team@example.test"
+            }
+          ]
+        },
+        {
+          "time": "2026-10-03T13:42:18.214009+00:00",
+          "subject": "RICHIESTA COACHING ONLINE",
+          "template_id": "z86org836z04ew13",
+          "recipients": [
+            {
+              "name": "Stripeqa Coaching1",
+              "email": "stripe-coach@example.test"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "coaching",
+      "months": 3,
+      "email": "stripe-qa-coaching-3-20261003@example.test",
+      "user_id": 16,
+      "price_id": "price_1ScpGfACR9X4275exvgKwtl6",
+      "amount": 6000,
+      "status": "complete",
+      "checkout_http_status": 200,
+      "session_id": "cs_test_b1My4YYjS69cqyiRtjoSe9CbcegRf1yLA8cGcm9PekQVw2urJkvFlPc63h",
+      "payment_status": "paid",
+      "customer_id": "cus_VNDX97MDUdpYuC",
+      "subscription_id": "sub_1UMTD0ACR9X4275es03r9XGU",
+      "amount_total": 6000,
+      "livemode": false,
+      "subscription_status": "active",
+      "invoice_id": "in_1UMTCyACR9X4275eqivFDx8Z",
+      "invoice_status": "paid",
+      "amount_paid": 6000,
+      "invoice_billing_reason": "subscription_create",
+      "feedback_count": 0,
+      "coach_selection_pending": false,
+      "local_messages": [
+        {
+          "time": "2026-10-03T13:42:41.944068+00:00",
+          "subject": "PAGAMENTO EFFETTUATO",
+          "template_id": "0p7kx4xxe8749yjr",
+          "recipients": [
+            {
+              "name": "Stripeqa Stripeqa",
+              "email": "stripe-qa-coaching-3-20261003@example.test"
+            }
+          ]
+        },
+        {
+          "time": "2026-10-03T13:42:41.957908+00:00",
+          "subject": "ISTRUZIONI COACHING ONLINE",
+          "template_id": "neqvygmkxwz40p7w",
+          "recipients": [
+            {
+              "name": "Stripeqa Coaching3",
+              "email": "stripe-qa-coaching-3-20261003@example.test"
+            }
+          ]
+        },
+        {
+          "time": "2026-10-03T13:42:41.966965+00:00",
+          "subject": "RICHIESTA COACHING ONLINE",
+          "template_id": "z86org836z04ew13",
+          "recipients": [
+            {
+              "name": "Get Your Movement",
+              "email": "team@example.test"
+            }
+          ]
+        },
+        {
+          "time": "2026-10-03T13:42:41.975925+00:00",
+          "subject": "RICHIESTA COACHING ONLINE",
+          "template_id": "z86org836z04ew13",
+          "recipients": [
+            {
+              "name": "Stripeqa Coaching3",
+              "email": "stripe-coach@example.test"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "coaching",
+      "months": 6,
+      "email": "stripe-qa-coaching-6-20261003@example.test",
+      "user_id": 17,
+      "price_id": "price_1ScpGvACR9X4275efFJG4vw8",
+      "amount": 12000,
+      "status": "complete",
+      "checkout_http_status": 200,
+      "session_id": "cs_test_b1g8EP23LPOQJU6xWrfIFqHYxP3KDjCsP2phQxxirypULCQiKhBH14g3t3",
+      "payment_status": "paid",
+      "customer_id": "cus_VNDXtRKM5mZdbp",
+      "subscription_id": "sub_1UMTDYACR9X4275ebHb7wUFs",
+      "amount_total": 12000,
+      "livemode": false,
+      "subscription_status": "active",
+      "invoice_id": "in_1UMTDWACR9X4275ef0uQzKnc",
+      "invoice_status": "paid",
+      "amount_paid": 12000,
+      "invoice_billing_reason": "subscription_create",
+      "feedback_count": 0,
+      "coach_selection_pending": false,
+      "local_messages": [
+        {
+          "time": "2026-10-03T13:43:19.198322+00:00",
+          "subject": "PAGAMENTO EFFETTUATO",
+          "template_id": "0p7kx4xxe8749yjr",
+          "recipients": [
+            {
+              "name": "Stripeqa Stripeqa",
+              "email": "stripe-qa-coaching-6-20261003@example.test"
+            }
+          ]
+        },
+        {
+          "time": "2026-10-03T13:43:19.209025+00:00",
+          "subject": "ISTRUZIONI COACHING ONLINE",
+          "template_id": "neqvygmkxwz40p7w",
+          "recipients": [
+            {
+              "name": "Stripeqa Coaching6",
+              "email": "stripe-qa-coaching-6-20261003@example.test"
+            }
+          ]
+        },
+        {
+          "time": "2026-10-03T13:43:19.220468+00:00",
+          "subject": "RICHIESTA COACHING ONLINE",
+          "template_id": "z86org836z04ew13",
+          "recipients": [
+            {
+              "name": "Get Your Movement",
+              "email": "team@example.test"
+            }
+          ]
+        },
+        {
+          "time": "2026-10-03T13:43:19.231158+00:00",
+          "subject": "RICHIESTA COACHING ONLINE",
+          "template_id": "z86org836z04ew13",
+          "recipients": [
+            {
+              "name": "Stripeqa Coaching6",
+              "email": "stripe-coach@example.test"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "snapshot_at": "2026-10-03T13:46:18.711114+00:00"
+}

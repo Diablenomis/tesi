@@ -1,0 +1,16 @@
+Django==3.2.9
+djangorestframework==3.13.1
+djangorestframework-simplejwt==5.2.2
+django-cors-headers==3.13.0
+drf-yasg==1.20.0
+django-rest-swagger==2.2.0
+django-celery-beat==2.6.0
+celery==5.4.0
+redis==5.0.4
+PyMySQL==1.0.2
+PyJWT==2.4.0
+stripe==5.2.0
+whitenoise==6.2.0
+mailersend==0.5.0
+cryptography==41.0.1
+gunicorn==23.0.0

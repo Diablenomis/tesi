@@ -25,22 +25,14 @@ class StaffAllButEditOrReadOnly(permissions.BasePermission):
         return False
 
 class IsTrainer(permissions.BasePermission):
-
-    edit_methods = ("PUT", "PATCH")
-    methods = ()
+    """Require a trainer or superuser before invoking a management endpoint."""
 
     def has_permission(self, request, view):
-        if request.user.is_authenticated:
-            return True
+        return bool(request.user.is_authenticated and
+                    (request.user.is_trainer or request.user.is_superuser))
 
     def has_object_permission(self, request, view, obj):
-        if request.user.is_superuser:
-            return True
-
-        if request.user.is_trainer:
-            return True
-
-        return False
+        return self.has_permission(request, view)
     
 class IsAdmin(permissions.BasePermission):
 

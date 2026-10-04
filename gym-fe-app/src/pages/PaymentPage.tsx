@@ -13,9 +13,8 @@ import { useLocation } from "react-router-dom";
 import Pricing from "../components/Pricing";
 import UserService from "../services/UserService";
 
-const stripePromise = loadStripe(
-  "pk_test_51ScYghACR9X4275ewckZ3SM1CZv62ULCamVgtjNr9bcypUDitalHzyibjKHhHjTBwQFE8gdGUj9SgurolDvbRC3X00gfhJA6rR"
-);
+const stripePublicKey = process.env.REACT_APP_STRIPE_PUBLISHABLE_KEY;
+const stripePromise = stripePublicKey ? loadStripe(stripePublicKey) : null;
 
 const PaymentPage: React.FC = () => {
   const location = useLocation();

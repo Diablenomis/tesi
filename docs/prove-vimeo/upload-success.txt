@@ -1,0 +1,12 @@
+Carica il tuo video
+Seleziona video
+
+video.mp4
+
+Carica su Vimeo
+
+Caricamento completato. Vimeo sta elaborando il video.
+
+ID video: 1232641850
+
+Apri su Vimeo

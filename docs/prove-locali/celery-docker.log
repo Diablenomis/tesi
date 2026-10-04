@@ -1,0 +1,70 @@
+celery-1      | [2026-10-02 10:29:33,303: ERROR/ForkPoolWorker-1] Task scheda_tutorial.tasks.my_task[c79e8fce-5d56-4392-8756-f038e4ca0061] raised unexpected: AttributeError("'NoneType' object has no attribute 'user'")
+celerybeat-1  | [2026-10-02 10:24:13,109: INFO/MainProcess] Scheduler: Sending due task QA local scheduling (scheda_tutorial.tasks.my_task)
+celery-1      | Traceback (most recent call last):
+celerybeat-1  | [2026-10-02 10:24:23,113: INFO/MainProcess] Scheduler: Sending due task QA local scheduling (scheda_tutorial.tasks.my_task)
+celery-1      |   File "/usr/local/lib/python3.8/site-packages/celery/app/trace.py", line 453, in trace_task
+celerybeat-1  | [2026-10-02 10:24:33,114: INFO/MainProcess] Scheduler: Sending due task QA local scheduling (scheda_tutorial.tasks.my_task)
+celerybeat-1  | [2026-10-02 10:24:43,120: INFO/MainProcess] Scheduler: Sending due task QA local scheduling (scheda_tutorial.tasks.my_task)
+celerybeat-1  | [2026-10-02 10:24:53,124: INFO/MainProcess] Scheduler: Sending due task QA local scheduling (scheda_tutorial.tasks.my_task)
+celerybeat-1  | [2026-10-02 10:25:03,139: INFO/MainProcess] Scheduler: Sending due task QA local scheduling (scheda_tutorial.tasks.my_task)
+celerybeat-1  | [2026-10-02 10:25:13,146: INFO/MainProcess] Scheduler: Sending due task QA local scheduling (scheda_tutorial.tasks.my_task)
+celerybeat-1  | [2026-10-02 10:25:23,151: INFO/MainProcess] Scheduler: Sending due task QA local scheduling (scheda_tutorial.tasks.my_task)
+celerybeat-1  | [2026-10-02 10:25:33,160: INFO/MainProcess] Scheduler: Sending due task QA local scheduling (scheda_tutorial.tasks.my_task)
+celerybeat-1  | [2026-10-02 10:25:43,192: INFO/MainProcess] Scheduler: Sending due task QA local scheduling (scheda_tutorial.tasks.my_task)
+celerybeat-1  | [2026-10-02 10:25:53,196: INFO/MainProcess] Scheduler: Sending due task QA local scheduling (scheda_tutorial.tasks.my_task)
+celerybeat-1  | [2026-10-02 10:26:03,198: INFO/MainProcess] Scheduler: Sending due task QA local scheduling (scheda_tutorial.tasks.my_task)
+celerybeat-1  | [2026-10-02 10:26:13,204: INFO/MainProcess] Scheduler: Sending due task QA local scheduling (scheda_tutorial.tasks.my_task)
+celerybeat-1  | [2026-10-02 10:26:23,207: INFO/MainProcess] Scheduler: Sending due task QA local scheduling (scheda_tutorial.tasks.my_task)
+celerybeat-1  | [2026-10-02 10:26:33,209: INFO/MainProcess] Scheduler: Sending due task QA local scheduling (scheda_tutorial.tasks.my_task)
+celerybeat-1  | [2026-10-02 10:26:43,213: INFO/MainProcess] Scheduler: Sending due task QA local scheduling (scheda_tutorial.tasks.my_task)
+celerybeat-1  | [2026-10-02 10:26:53,228: INFO/MainProcess] Scheduler: Sending due task QA local scheduling (scheda_tutorial.tasks.my_task)
+celerybeat-1  | [2026-10-02 10:27:03,228: INFO/MainProcess] Scheduler: Sending due task QA local scheduling (scheda_tutorial.tasks.my_task)
+celerybeat-1  | [2026-10-02 10:27:13,228: INFO/MainProcess] Scheduler: Sending due task QA local scheduling (scheda_tutorial.tasks.my_task)
+celerybeat-1  | [2026-10-02 10:27:23,228: INFO/MainProcess] Scheduler: Sending due task QA local scheduling (scheda_tutorial.tasks.my_task)
+celerybeat-1  | [2026-10-02 10:27:33,230: INFO/MainProcess] Scheduler: Sending due task QA local scheduling (scheda_tutorial.tasks.my_task)
+celerybeat-1  | [2026-10-02 10:27:43,233: INFO/MainProcess] Scheduler: Sending due task QA local scheduling (scheda_tutorial.tasks.my_task)
+celerybeat-1  | [2026-10-02 10:27:53,234: INFO/MainProcess] Scheduler: Sending due task QA local scheduling (scheda_tutorial.tasks.my_task)
+celerybeat-1  | [2026-10-02 10:28:03,235: INFO/MainProcess] Scheduler: Sending due task QA local scheduling (scheda_tutorial.tasks.my_task)
+celerybeat-1  | [2026-10-02 10:28:13,238: INFO/MainProcess] Scheduler: Sending due task QA local scheduling (scheda_tutorial.tasks.my_task)
+celerybeat-1  | [2026-10-02 10:28:23,242: INFO/MainProcess] Scheduler: Sending due task QA local scheduling (scheda_tutorial.tasks.my_task)
+celerybeat-1  | [2026-10-02 10:28:33,243: INFO/MainProcess] Scheduler: Sending due task QA local scheduling (scheda_tutorial.tasks.my_task)
+celerybeat-1  | [2026-10-02 10:28:43,255: INFO/MainProcess] Scheduler: Sending due task QA local scheduling (scheda_tutorial.tasks.my_task)
+celerybeat-1  | [2026-10-02 10:28:53,260: INFO/MainProcess] Scheduler: Sending due task QA local scheduling (scheda_tutorial.tasks.my_task)
+celerybeat-1  | [2026-10-02 10:29:03,262: INFO/MainProcess] Scheduler: Sending due task QA local scheduling (scheda_tutorial.tasks.my_task)
+celery-1      |     R = retval = fun(*args, **kwargs)
+celerybeat-1  | [2026-10-02 10:29:13,269: INFO/MainProcess] Scheduler: Sending due task QA local scheduling (scheda_tutorial.tasks.my_task)
+celerybeat-1  | [2026-10-02 10:29:23,272: INFO/MainProcess] Scheduler: Sending due task QA local scheduling (scheda_tutorial.tasks.my_task)
+celery-1      |   File "/usr/local/lib/python3.8/site-packages/celery/app/trace.py", line 736, in __protected_call__
+celery-1      |     return self.run(*args, **kwargs)
+celery-1      |   File "/workspace/gym-be-app/app/scheda_tutorial/tasks.py", line 27, in my_task
+celery-1      |     feedback_settimanale()
+celerybeat-1  | [2026-10-02 10:29:33,277: INFO/MainProcess] Scheduler: Sending due task QA local scheduling (scheda_tutorial.tasks.my_task)
+celerybeat-1  | [2026-10-02 10:29:43,278: INFO/MainProcess] Scheduler: Sending due task QA local scheduling (scheda_tutorial.tasks.my_task)
+celerybeat-1  | [2026-10-02 10:29:53,278: INFO/MainProcess] Scheduler: Sending due task QA local scheduling (scheda_tutorial.tasks.my_task)
+celery-1      |   File "/workspace/gym-be-app/app/scheda_tutorial/tasks.py", line 38, in feedback_settimanale
+celery-1      |     logger.info('Esecuzione per l\'uente: ' + feed.form.user.email + ' - ' + feed.form.name)
+celery-1      | AttributeError: 'NoneType' object has no attribute 'user'
+celery-1      | [2026-10-02 10:29:43,282: INFO/MainProcess] Task scheda_tutorial.tasks.my_task[fd091a41-73e1-4b97-8d8e-fcd1682767ec] received
+celery-1      | [2026-10-02 10:29:43,294: ERROR/ForkPoolWorker-1] Task scheda_tutorial.tasks.my_task[fd091a41-73e1-4b97-8d8e-fcd1682767ec] raised unexpected: AttributeError("'NoneType' object has no attribute 'user'")
+celery-1      | Traceback (most recent call last):
+celery-1      |   File "/usr/local/lib/python3.8/site-packages/celery/app/trace.py", line 453, in trace_task
+celery-1      |     R = retval = fun(*args, **kwargs)
+celery-1      |   File "/usr/local/lib/python3.8/site-packages/celery/app/trace.py", line 736, in __protected_call__
+celery-1      |     return self.run(*args, **kwargs)
+celery-1      |   File "/workspace/gym-be-app/app/scheda_tutorial/tasks.py", line 27, in my_task
+celery-1      |     feedback_settimanale()
+celery-1      |   File "/workspace/gym-be-app/app/scheda_tutorial/tasks.py", line 38, in feedback_settimanale
+celery-1      |     logger.info('Esecuzione per l\'uente: ' + feed.form.user.email + ' - ' + feed.form.name)
+celery-1      | AttributeError: 'NoneType' object has no attribute 'user'
+celery-1      | [2026-10-02 10:29:53,281: INFO/MainProcess] Task scheda_tutorial.tasks.my_task[41bca040-605f-43a0-ac93-f9ca2b6ff484] received
+celery-1      | [2026-10-02 10:29:53,292: ERROR/ForkPoolWorker-1] Task scheda_tutorial.tasks.my_task[41bca040-605f-43a0-ac93-f9ca2b6ff484] raised unexpected: AttributeError("'NoneType' object has no attribute 'user'")
+celery-1      | Traceback (most recent call last):
+celery-1      |   File "/usr/local/lib/python3.8/site-packages/celery/app/trace.py", line 453, in trace_task
+celery-1      |     R = retval = fun(*args, **kwargs)
+celery-1      |   File "/usr/local/lib/python3.8/site-packages/celery/app/trace.py", line 736, in __protected_call__
+celery-1      |     return self.run(*args, **kwargs)
+celery-1      |   File "/workspace/gym-be-app/app/scheda_tutorial/tasks.py", line 27, in my_task
+celery-1      |     feedback_settimanale()
+celery-1      |   File "/workspace/gym-be-app/app/scheda_tutorial/tasks.py", line 38, in feedback_settimanale
+celery-1      |     logger.info('Esecuzione per l\'uente: ' + feed.form.user.email + ' - ' + feed.form.name)
+celery-1      | AttributeError: 'NoneType' object has no attribute 'user'

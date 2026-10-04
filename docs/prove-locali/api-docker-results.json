@@ -1,0 +1,407 @@
+{
+  "run": "20261001-130558",
+  "database_engine": "django.db.backends.mysql",
+  "transport": "APIClient / original Django URL routing",
+  "emails": "MailerSend send replaced with local collector",
+  "outbox_count": 10,
+  "external_network_attempts": [],
+  "results": [
+    {
+      "id": "REG-01",
+      "test": "Registrazione con dati validi; email intercettata",
+      "outcome": "PASS",
+      "expected_status": 201,
+      "actual_status": 201,
+      "detail": "",
+      "response": null
+    },
+    {
+      "id": "REG-02",
+      "test": "Registrazione duplicata",
+      "outcome": "PASS",
+      "expected_status": 400,
+      "actual_status": 400,
+      "detail": "",
+      "response": {
+        "email": [
+          "user with this email already exists."
+        ],
+        "username": [
+          "user with this username already exists."
+        ]
+      }
+    },
+    {
+      "id": "REG-03",
+      "test": "Registrazione incompleta",
+      "outcome": "PASS",
+      "expected_status": 400,
+      "actual_status": 400,
+      "detail": "",
+      "response": {
+        "username": [
+          "This field is required."
+        ],
+        "password": [
+          "This field is required."
+        ],
+        "name": [
+          "This field is required."
+        ],
+        "surname": [
+          "This field is required."
+        ],
+        "gender": [
+          "This field is required."
+        ],
+        "bday": [
+          "This field is required."
+        ]
+      }
+    },
+    {
+      "id": "AUTH-01",
+      "test": "Login prima della verifica email",
+      "outcome": "PASS",
+      "expected_status": 401,
+      "actual_status": 401,
+      "detail": "",
+      "response": {
+        "detail": "Email is not verified"
+      }
+    },
+    {
+      "id": "EMAIL-01",
+      "test": "Attivazione usando il token generato dalla registrazione",
+      "outcome": "PASS",
+      "expected_status": 200,
+      "actual_status": 200,
+      "detail": "",
+      "response": null,
+      "verified_in_database": true,
+      "local_emails": 2
+    },
+    {
+      "id": "EMAIL-02",
+      "test": "Token email non valido",
+      "outcome": "PASS",
+      "expected_status": 400,
+      "actual_status": 400,
+      "detail": "",
+      "response": {
+        "error": "Invalid token"
+      }
+    },
+    {
+      "id": "EMAIL-03",
+      "test": "Token email scaduto",
+      "outcome": "PASS",
+      "expected_status": 400,
+      "actual_status": 400,
+      "detail": "",
+      "response": {
+        "error": "Activation Expired"
+      }
+    },
+    {
+      "id": "AUTH-02",
+      "test": "Login dopo verifica",
+      "outcome": "PASS",
+      "expected_status": 200,
+      "actual_status": 200,
+      "detail": "",
+      "response": null,
+      "access_token_returned": true,
+      "refresh_token_returned": true
+    },
+    {
+      "id": "AUTH-03",
+      "test": "Password errata",
+      "outcome": "PASS",
+      "expected_status": 401,
+      "actual_status": 401,
+      "detail": "",
+      "response": {
+        "detail": "Invalid credentials, try again"
+      }
+    },
+    {
+      "id": "AUTH-04",
+      "test": "Login con username",
+      "outcome": "PASS",
+      "expected_status": 200,
+      "actual_status": 200,
+      "detail": "",
+      "response": null
+    },
+    {
+      "id": "SURVEY-01",
+      "test": "Invio questionario senza login",
+      "outcome": "PASS",
+      "expected_status": 401,
+      "actual_status": 401,
+      "detail": "",
+      "response": {
+        "detail": "Authentication credentials were not provided."
+      }
+    },
+    {
+      "id": "SURVEY-02",
+      "test": "Invio questionario locale",
+      "outcome": "PASS",
+      "expected_status": 201,
+      "actual_status": 201,
+      "detail": "",
+      "response": null
+    },
+    {
+      "id": "SURVEY-03",
+      "test": "Questionario vuoto autenticato: dovrebbe essere rifiutato",
+      "outcome": "FAIL",
+      "expected_status": 400,
+      "actual_status": 201,
+      "detail": "",
+      "response": null
+    },
+    {
+      "id": "FORM-01",
+      "test": "Creazione scheda da trainer",
+      "outcome": "PASS",
+      "expected_status": 201,
+      "actual_status": 201,
+      "detail": "",
+      "response": null
+    },
+    {
+      "id": "FORM-02",
+      "test": "Bozza non visibile al proprietario",
+      "outcome": "PASS",
+      "expected_status": 404,
+      "actual_status": 404,
+      "detail": "",
+      "response": {
+        "error": "Scheda non presente"
+      }
+    },
+    {
+      "id": "FORM-03",
+      "test": "Pubblicazione da trainer",
+      "outcome": "PASS",
+      "expected_status": 200,
+      "actual_status": 200,
+      "detail": "",
+      "response": null
+    },
+    {
+      "id": "FORM-04",
+      "test": "Consultazione e integrità dei parametri esercizio",
+      "outcome": "PASS",
+      "expected_status": 200,
+      "actual_status": 200,
+      "detail": "",
+      "response": null,
+      "exercise": {
+        "exe": {
+          "id": 1,
+          "name": "Squat QA locale",
+          "video": ""
+        },
+        "order": 1,
+        "repetitions": "10",
+        "series": 3,
+        "stop": 60,
+        "load": "Corpo libero",
+        "intensity": 5,
+        "description": "Esercizio fittizio per test locale",
+        "super_series": []
+      },
+      "publication_feedback_count": 1
+    },
+    {
+      "id": "FORM-05",
+      "test": "Scheda altrui non visibile tramite API personale",
+      "outcome": "PASS",
+      "expected_status": 404,
+      "actual_status": 404,
+      "detail": "",
+      "response": {
+        "error": "Scheda non presente"
+      }
+    },
+    {
+      "id": "FORM-06",
+      "test": "Consultazione senza login",
+      "outcome": "PASS",
+      "expected_status": 401,
+      "actual_status": 401,
+      "detail": "",
+      "response": {
+        "detail": "Authentication credentials were not provided."
+      }
+    },
+    {
+      "id": "FORM-07",
+      "test": "Aggiornamento scheda pubblicata",
+      "outcome": "PASS",
+      "expected_status": 200,
+      "actual_status": 200,
+      "detail": "",
+      "response": null
+    },
+    {
+      "id": "FORM-08",
+      "test": "Ritiro da trainer",
+      "outcome": "PASS",
+      "expected_status": 200,
+      "actual_status": 200,
+      "detail": "",
+      "response": null
+    },
+    {
+      "id": "FORM-09",
+      "test": "Scheda ritirata non visibile",
+      "outcome": "PASS",
+      "expected_status": 404,
+      "actual_status": 404,
+      "detail": "",
+      "response": {
+        "error": "Scheda non presente"
+      }
+    },
+    {
+      "id": "FORM-10",
+      "test": "Ripubblicazione da trainer",
+      "outcome": "PASS",
+      "expected_status": 200,
+      "actual_status": 200,
+      "detail": "",
+      "response": null
+    },
+    {
+      "id": "FEED-01",
+      "test": "Validazione token feedback",
+      "outcome": "PASS",
+      "expected_status": 200,
+      "actual_status": 200,
+      "detail": "",
+      "response": null
+    },
+    {
+      "id": "FEED-02",
+      "test": "Invio feedback con email intercettata",
+      "outcome": "PASS",
+      "expected_status": 202,
+      "actual_status": 202,
+      "detail": "",
+      "response": null
+    },
+    {
+      "id": "FEED-03",
+      "test": "Riutilizzo feedback completato",
+      "outcome": "PASS",
+      "expected_status": 400,
+      "actual_status": 400,
+      "detail": "",
+      "response": "Token non valido"
+    },
+    {
+      "id": "FEED-04",
+      "test": "Token feedback inesistente",
+      "outcome": "PASS",
+      "expected_status": 400,
+      "actual_status": 400,
+      "detail": "",
+      "response": "Token non valido"
+    },
+    {
+      "id": "TASK-01",
+      "test": "Invito settimanale in scadenza, esecuzione sincrona del task",
+      "outcome": "FAIL",
+      "expected_emails_min": 1,
+      "actual_emails": 0
+    },
+    {
+      "id": "TASK-02",
+      "test": "Task complessivo con feedback mensile in scadenza",
+      "outcome": "FAIL",
+      "detail": "AttributeError: 'NoneType' object has no attribute 'user'"
+    },
+    {
+      "id": "TASK-03",
+      "test": "Funzione mensile invocata separatamente",
+      "outcome": "PASS",
+      "actual_emails": 1
+    },
+    {
+      "id": "FEED-05",
+      "test": "Errore trasporto email simulato dopo compilazione",
+      "outcome": "PASS",
+      "expected_status": 500,
+      "actual_status": 500,
+      "detail": "",
+      "response": "Errore nell'invio dell'email",
+      "inviato": false,
+      "responses_persisted": true
+    },
+    {
+      "id": "PERM-01",
+      "test": "Cliente ordinario tenta creazione scheda: atteso divieto",
+      "outcome": "FAIL",
+      "expected_status": 403,
+      "actual_status": 201,
+      "detail": "",
+      "response": null
+    },
+    {
+      "id": "PERM-02",
+      "test": "Cliente ordinario legge dettaglio gestionale altrui: atteso divieto",
+      "outcome": "PASS",
+      "expected_status": 403,
+      "actual_status": 403,
+      "detail": "",
+      "response": {
+        "detail": "You do not have permission to perform this action."
+      }
+    },
+    {
+      "id": "PERM-03",
+      "test": "Cliente ordinario modifica scheda altrui: atteso divieto",
+      "outcome": "FAIL",
+      "expected_status": 403,
+      "actual_status": 200,
+      "detail": "",
+      "response": null
+    },
+    {
+      "id": "PERM-04",
+      "test": "Cliente ordinario ritira scheda altrui: atteso divieto",
+      "outcome": "FAIL",
+      "expected_status": 403,
+      "actual_status": 200,
+      "detail": "",
+      "response": null
+    },
+    {
+      "id": "AUTH-05",
+      "test": "Rinnovo token lato API",
+      "outcome": "PASS",
+      "expected_status": 200,
+      "actual_status": 200,
+      "detail": "",
+      "response": null,
+      "response_keys": [
+        "access"
+      ]
+    },
+    {
+      "id": "AUTH-06",
+      "test": "Logout API e revoca refresh",
+      "outcome": "PASS",
+      "expected_status": 204,
+      "actual_status": 204,
+      "detail": "",
+      "response": null,
+      "refresh_after_logout": 401
+    }
+  ]
+}

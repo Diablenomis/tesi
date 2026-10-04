@@ -43,6 +43,7 @@ export interface ICartPackCard {
 export interface ISignCard {
   show: boolean;
   onHide: () => void;
+  onAuthenticated?: (email: string) => void;
 }
 
 export interface ICoachModalCard {

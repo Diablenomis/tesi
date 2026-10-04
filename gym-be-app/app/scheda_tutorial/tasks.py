@@ -30,10 +30,10 @@ def my_task():
     
 
 def feedback_settimanale():
-    # Filter for dates less than 7 days from today
+    # Weekly invitations due today or yesterday, excluding completed feedback.
     a_data = date.today()
     da_data = date.today() - timedelta(days=1)
-    feedbacks = Feedback.objects.filter(tipo='mensile', da_inviare__range=[da_data, a_data], inviato=False)
+    feedbacks = Feedback.objects.filter(tipo='settimanale', da_inviare__range=[da_data, a_data], inviato=False)
     for feed in feedbacks:
         logger.info('Esecuzione per l\'uente: ' + feed.form.user.email + ' - ' + feed.form.name)
         recipients = [

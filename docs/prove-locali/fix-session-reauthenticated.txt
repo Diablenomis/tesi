@@ -1,0 +1,82 @@
+- banner:
+  - link "logo":
+    - /url: /
+    - img "logo"
+  - link "":
+    - /url: /profile
+    - generic: 
+  - link "Contattaci":
+    - /url: /#contact-us
+  - navigation:
+    - list:
+      - link "Home":
+        - /url: /
+      - link "Servizi":
+        - /url: /serveces-details
+      - link "Team":
+        - /url: /team
+      - link "Cos'è FitNexus":
+        - /url: /about-us
+- generic: Pagina 1
+- generic: COMPILARE QUESTIONARIO
+- generic: Altezza *
+- generic: Altezza
+- textbox "Altezza": "175"
+- paragraph: cm
+- generic: Altezza
+- generic: Peso *
+- generic: Peso
+- textbox "Peso": "70"
+- paragraph: kg
+- generic: Peso
+- generic: Eventuali dolori frequenti/problemi posturali/infortuni/patologie
+- textbox
+- generic: Stile di vita *
+- combobox "Sedentaria/o (0 allenamenti)"
+- textbox: "Sedentari{sex} (0 allenamenti)"
+- generic: Attualmente ti alleni? *
+- button "Sì":
+  - img "si"
+- button "No":
+  - img "no"
+- generic: Livello stress quotidiano *
+- slider "Temperature": "2"
+- generic: Quante ore dormi al giorno? *
+- slider "Temperature": "2"
+- generic: Ti sei mai allenata/o in passato? *
+- button "Sì":
+  - img "si"
+- button "No":
+  - img "no"
+- navigation "pagination navigation":
+  - list:
+    - button "Go to previous page" [disabled]:
+    - button "page 1": "1"
+    - button "Go to page 2": "2"
+    - button "Go to page 3": "3"
+    - button "Go to page 4": "4"
+    - button "Go to page 5": "5"
+    - button "Go to page 6": "6"
+    - button "Go to next page":
+- img "logo"
+- heading "Contattaci" [level=3]
+- paragraph: info@fitnexus.com
+- paragraph: "P.IVA: 17723831008"
+- heading "Links" [level=5]
+- list:
+  - link "Home":
+    - /url: /
+  - link "Cos'è FitNexus":
+    - /url: /about-us
+  - link "Il nostro team":
+    - /url: /team
+  - link "Servizi":
+    - /url: /serveces-details
+- heading "Services" [level=5]
+- list:
+  - link "Schede personalizzate":
+    - /url: /serveces-details#1
+  - link "Coaching online":
+    - /url: /serveces-details#2
+- alert:
+  - generic: Accesso riuscito. Puoi inviare nuovamente il questionario.

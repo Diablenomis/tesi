@@ -1,0 +1,17 @@
+.git
+.local-test-*
+Elaborato
+docs
+**/node_modules
+**/build
+**/__pycache__
+**/*.pyc
+**/.venv
+**/venv
+**/.env
+**/.env.*
+**/*.env
+**/logs
+**/*.log
+**/*.sqlite3
+docker/nginx/certs

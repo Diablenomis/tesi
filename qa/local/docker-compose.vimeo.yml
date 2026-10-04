@@ -1,0 +1,8 @@
+services:
+  backend:
+    env_file: [../../.local-test-artifacts/vimeo-test.env]
+    networks: [offline, ingress]
+  nginx:
+    volumes:
+      - ../../.local-test-artifacts/frontend-vimeo-build:/usr/share/nginx/html:ro
+      - ./nginx.vimeo.conf:/etc/nginx/conf.d/default.conf:ro

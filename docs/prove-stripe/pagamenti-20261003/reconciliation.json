@@ -1,0 +1,334 @@
+{
+  "checked_at": "2026-10-03T13:45:55.235008+00:00",
+  "cases": [
+    {
+      "kind": "scheda",
+      "months": 1,
+      "checks": {
+        "session_complete": true,
+        "payment_paid": true,
+        "subscription_active": true,
+        "invoice_paid": true,
+        "amount_correct": true,
+        "test_mode": true,
+        "first_invoice": true,
+        "three_correlated_webhooks": true,
+        "no_webhook_http_errors": true,
+        "feedback_count_correct": true,
+        "local_email_count_correct": true,
+        "coach_selection_consumed": true
+      },
+      "outcome": "PASS",
+      "events": [
+        {
+          "event_id": "evt_1UMT7UACR9X4275eGJ1VrJoy",
+          "type": "checkout.session.completed",
+          "object_id": "cs_test_b1ViLKvLrQx24fl9qNlu5ElmKqazKDjPSaYC1viH3H6Ub1oxPTw1Th6dYk",
+          "customer_id": "cus_VNDUE5Th8SYoAz",
+          "created": 1791034616,
+          "api_version": "2025-11-17.clover",
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_id": "evt_1UMT7UACR9X4275eEN1IoOBt",
+          "type": "customer.subscription.created",
+          "object_id": "sub_1UMT7SACR9X4275edHAQG4hM",
+          "customer_id": "cus_VNDUE5Th8SYoAz",
+          "created": 1791034615,
+          "api_version": "2025-11-17.clover",
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_id": "evt_1UMT7UACR9X4275eSYRhJWp9",
+          "type": "invoice.payment_succeeded",
+          "object_id": "in_1UMT7QACR9X4275e7m0IlDM4",
+          "customer_id": "cus_VNDUE5Th8SYoAz",
+          "created": 1791034615,
+          "api_version": "2025-11-17.clover",
+          "http_statuses": [
+            200
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "scheda",
+      "months": 3,
+      "checks": {
+        "session_complete": true,
+        "payment_paid": true,
+        "subscription_active": true,
+        "invoice_paid": true,
+        "amount_correct": true,
+        "test_mode": true,
+        "first_invoice": true,
+        "three_correlated_webhooks": true,
+        "no_webhook_http_errors": true,
+        "feedback_count_correct": true,
+        "local_email_count_correct": true,
+        "coach_selection_consumed": true
+      },
+      "outcome": "PASS",
+      "events": [
+        {
+          "event_id": "evt_1UMTBLACR9X4275e3g8apeBa",
+          "type": "checkout.session.completed",
+          "object_id": "cs_test_b1Ju31cIQvLQEYe79NAR721vjTAJdXwBGmSxEe977xviw0vXZkQoMRJmss",
+          "customer_id": "cus_VNDXpSQZ2WIjqz",
+          "created": 1791034855,
+          "api_version": "2025-11-17.clover",
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_id": "evt_1UMTBMACR9X4275eUcDMNM6h",
+          "type": "customer.subscription.created",
+          "object_id": "sub_1UMTBKACR9X4275eLTx9Nrsg",
+          "customer_id": "cus_VNDXpSQZ2WIjqz",
+          "created": 1791034854,
+          "api_version": "2025-11-17.clover",
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_id": "evt_1UMTBMACR9X4275eoFOfGN1c",
+          "type": "invoice.payment_succeeded",
+          "object_id": "in_1UMTBHACR9X4275evBRT1ZTj",
+          "customer_id": "cus_VNDXpSQZ2WIjqz",
+          "created": 1791034854,
+          "api_version": "2025-11-17.clover",
+          "http_statuses": [
+            200
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "scheda",
+      "months": 6,
+      "checks": {
+        "session_complete": true,
+        "payment_paid": true,
+        "subscription_active": true,
+        "invoice_paid": true,
+        "amount_correct": true,
+        "test_mode": true,
+        "first_invoice": true,
+        "three_correlated_webhooks": true,
+        "no_webhook_http_errors": true,
+        "feedback_count_correct": true,
+        "local_email_count_correct": true,
+        "coach_selection_consumed": true
+      },
+      "outcome": "PASS",
+      "events": [
+        {
+          "event_id": "evt_1UMTC3ACR9X4275e8oAKGeVr",
+          "type": "checkout.session.completed",
+          "object_id": "cs_test_b1dxX41petVejFXufbU7PdIqQLxO06DWQsyygl2Lc3Icz7LgACWOEWsZ9X",
+          "customer_id": "cus_VNDXuhDHhm23rl",
+          "created": 1791034899,
+          "api_version": "2025-11-17.clover",
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_id": "evt_1UMTC3ACR9X4275eQNkoGnR5",
+          "type": "customer.subscription.created",
+          "object_id": "sub_1UMTC1ACR9X4275erp0eAbYX",
+          "customer_id": "cus_VNDXuhDHhm23rl",
+          "created": 1791034898,
+          "api_version": "2025-11-17.clover",
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_id": "evt_1UMTC3ACR9X4275eZMILylzR",
+          "type": "invoice.payment_succeeded",
+          "object_id": "in_1UMTBzACR9X4275eAkfPa1Ha",
+          "customer_id": "cus_VNDXuhDHhm23rl",
+          "created": 1791034898,
+          "api_version": "2025-11-17.clover",
+          "http_statuses": [
+            200
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "coaching",
+      "months": 1,
+      "checks": {
+        "session_complete": true,
+        "payment_paid": true,
+        "subscription_active": true,
+        "invoice_paid": true,
+        "amount_correct": true,
+        "test_mode": true,
+        "first_invoice": true,
+        "three_correlated_webhooks": true,
+        "no_webhook_http_errors": true,
+        "feedback_count_correct": true,
+        "local_email_count_correct": true,
+        "coach_selection_consumed": true
+      },
+      "outcome": "PASS",
+      "events": [
+        {
+          "event_id": "evt_1UMTCZACR9X4275efvoTJG5W",
+          "type": "checkout.session.completed",
+          "object_id": "cs_test_b1ePgVCJeYtn6fRr6fg1Z2CXSK3lwIvFdIfiPxJDc3YYkMoSNDZypUsqJa",
+          "customer_id": "cus_VNDXqmgJHLByxV",
+          "created": 1791034931,
+          "api_version": "2025-11-17.clover",
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_id": "evt_1UMTCZACR9X4275e77fuHmxp",
+          "type": "customer.subscription.created",
+          "object_id": "sub_1UMTCXACR9X4275e3QDVkJDA",
+          "customer_id": "cus_VNDXqmgJHLByxV",
+          "created": 1791034930,
+          "api_version": "2025-11-17.clover",
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_id": "evt_1UMTCZACR9X4275e8K5aaG6w",
+          "type": "invoice.payment_succeeded",
+          "object_id": "in_1UMTCWACR9X4275edMHsaTUF",
+          "customer_id": "cus_VNDXqmgJHLByxV",
+          "created": 1791034930,
+          "api_version": "2025-11-17.clover",
+          "http_statuses": [
+            200
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "coaching",
+      "months": 3,
+      "checks": {
+        "session_complete": true,
+        "payment_paid": true,
+        "subscription_active": true,
+        "invoice_paid": true,
+        "amount_correct": true,
+        "test_mode": true,
+        "first_invoice": true,
+        "three_correlated_webhooks": true,
+        "no_webhook_http_errors": true,
+        "feedback_count_correct": true,
+        "local_email_count_correct": true,
+        "coach_selection_consumed": true
+      },
+      "outcome": "PASS",
+      "events": [
+        {
+          "event_id": "evt_1UMTD1ACR9X4275eH7XyKUqZ",
+          "type": "checkout.session.completed",
+          "object_id": "cs_test_b1My4YYjS69cqyiRtjoSe9CbcegRf1yLA8cGcm9PekQVw2urJkvFlPc63h",
+          "customer_id": "cus_VNDX97MDUdpYuC",
+          "created": 1791034959,
+          "api_version": "2025-11-17.clover",
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_id": "evt_1UMTD1ACR9X4275ew8miwBuG",
+          "type": "customer.subscription.created",
+          "object_id": "sub_1UMTD0ACR9X4275es03r9XGU",
+          "customer_id": "cus_VNDX97MDUdpYuC",
+          "created": 1791034959,
+          "api_version": "2025-11-17.clover",
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_id": "evt_1UMTD2ACR9X4275e4H5k77fA",
+          "type": "invoice.payment_succeeded",
+          "object_id": "in_1UMTCyACR9X4275eqivFDx8Z",
+          "customer_id": "cus_VNDX97MDUdpYuC",
+          "created": 1791034958,
+          "api_version": "2025-11-17.clover",
+          "http_statuses": [
+            200
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "coaching",
+      "months": 6,
+      "checks": {
+        "session_complete": true,
+        "payment_paid": true,
+        "subscription_active": true,
+        "invoice_paid": true,
+        "amount_correct": true,
+        "test_mode": true,
+        "first_invoice": true,
+        "three_correlated_webhooks": true,
+        "no_webhook_http_errors": true,
+        "feedback_count_correct": true,
+        "local_email_count_correct": true,
+        "coach_selection_consumed": true
+      },
+      "outcome": "PASS",
+      "events": [
+        {
+          "event_id": "evt_1UMTDbACR9X4275eS0GQjVXH",
+          "type": "checkout.session.completed",
+          "object_id": "cs_test_b1g8EP23LPOQJU6xWrfIFqHYxP3KDjCsP2phQxxirypULCQiKhBH14g3t3",
+          "customer_id": "cus_VNDXtRKM5mZdbp",
+          "created": 1791034995,
+          "api_version": "2025-11-17.clover",
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_id": "evt_1UMTDbACR9X4275esXSD7JYX",
+          "type": "customer.subscription.created",
+          "object_id": "sub_1UMTDYACR9X4275ebHb7wUFs",
+          "customer_id": "cus_VNDXtRKM5mZdbp",
+          "created": 1791034994,
+          "api_version": "2025-11-17.clover",
+          "http_statuses": [
+            200
+          ]
+        },
+        {
+          "event_id": "evt_1UMTDbACR9X4275ezdSz5fOx",
+          "type": "invoice.payment_succeeded",
+          "object_id": "in_1UMTDWACR9X4275ef0uQzKnc",
+          "customer_id": "cus_VNDXtRKM5mZdbp",
+          "created": 1791034993,
+          "api_version": "2025-11-17.clover",
+          "http_statuses": [
+            200
+          ]
+        }
+      ]
+    }
+  ],
+  "passed": 6,
+  "total": 6,
+  "event_count": 18,
+  "local_message_count": 21,
+  "test_total_eur": 295.0
+}

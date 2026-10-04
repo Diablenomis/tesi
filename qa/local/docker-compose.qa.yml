@@ -1,0 +1,60 @@
+name: fitnexus-qa
+x-backend: &backend
+  image: fitnexus-backend-qa:local
+  build:
+    context: ../..
+    dockerfile: qa/local/Dockerfile
+  working_dir: /workspace
+  entrypoint: [python, /workspace/qa/local/docker_boot.py]
+  volumes:
+    - ../..:/workspace
+  networks: [offline]
+services:
+  mysql:
+    image: mysql:8
+    environment:
+      MYSQL_DATABASE: qa
+      MYSQL_USER: qa
+      MYSQL_PASSWORD: local-qa-only
+      MYSQL_ROOT_PASSWORD: local-qa-root-only
+    volumes: [qa_mysql:/var/lib/mysql]
+    networks: [offline]
+    healthcheck:
+      test: [CMD, mysqladmin, ping, -h, localhost]
+      interval: 3s
+      timeout: 10s
+      retries: 40
+  redis:
+    image: redis:alpine
+    networks: [offline]
+  backend:
+    <<: *backend
+    command: [gunicorn]
+    environment:
+      LOCAL_QA_ACCESS_SECONDS: ${LOCAL_QA_ACCESS_SECONDS:-3600}
+      LOCAL_QA_REFRESH_SECONDS: ${LOCAL_QA_REFRESH_SECONDS:-86400}
+    depends_on:
+      mysql: {condition: service_healthy}
+      redis: {condition: service_started}
+  celery:
+    <<: *backend
+    command: [celery, worker, --loglevel=INFO, --concurrency=1]
+    depends_on: [backend]
+  celerybeat:
+    <<: *backend
+    command: [celery, beat, --loglevel=INFO, --scheduler, django_celery_beat.schedulers:DatabaseScheduler]
+    depends_on: [backend]
+  nginx:
+    image: nginx:stable-alpine
+    ports: ['127.0.0.1:3000:80', '127.0.0.1:8000:8000']
+    volumes:
+      - ../../.local-test-artifacts/frontend-build:/usr/share/nginx/html:ro
+      - ./nginx.qa.conf:/etc/nginx/conf.d/default.conf:ro
+    networks: [offline, ingress]
+    depends_on: [backend]
+volumes:
+  qa_mysql:
+networks:
+  ingress:
+  offline:
+    internal: true

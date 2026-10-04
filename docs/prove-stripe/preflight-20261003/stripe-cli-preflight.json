@@ -1,0 +1,7 @@
+{
+  "cli_connected": true,
+  "signing_secret_matches": true,
+  "webhook_api_version": "2025-11-17.clover",
+  "forwarding_enabled": false,
+  "listener_stopped": true
+}

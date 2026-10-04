@@ -20,7 +20,7 @@ from ..renderers import ViewRenderer
 from .. import services
 
 from authentication.models import User
-from ..permission_custom import StaffAllButEditOrReadOnly, IsTrainer
+from ..permission_custom import IsTrainer
 
 logger = logging.getLogger(__name__)
 
@@ -40,7 +40,9 @@ class SurveyView(generics.GenericAPIView):
     #renderer_classes = (UserRenderer,)
 
     def post(self, request):
-        req = request.data
+        serializer = self.get_serializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
+        req = serializer.validated_data
         logger.info('Studente ' + request.user.name + ' ' + request.user.surname + ' ha compilato il questionario.')
         survey = Survey.objects.create(user=request.user)
         for q in req['survey']:
@@ -120,7 +122,7 @@ class SchedaPersDetView(generics.RetrieveDestroyAPIView):
     queryset = FormSP.objects.all()
     serializer_class = FormPersSerializer
     renderer_classes = (ViewRenderer,)
-    permission_classes = (StaffAllButEditOrReadOnly, )
+    permission_classes = (IsTrainer, )
     lookup_field = 'id'
 
     @staticmethod
@@ -154,7 +156,7 @@ class SchedaPersDetView(generics.RetrieveDestroyAPIView):
 class SchedaPersPublish(generics.GenericAPIView):
     serializer_class = None
     pagination_class = None
-    permission_classes = (StaffAllButEditOrReadOnly, )
+    permission_classes = (IsTrainer, )
 
     @staticmethod
     def put(request, id_form):

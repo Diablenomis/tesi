@@ -1,0 +1,18 @@
+{
+  "unit_tests": {
+    "http-common.test.ts": 8,
+    "SchedaPersonalizzataPage.test.tsx": 3,
+    "failed": 0
+  },
+  "browser": {
+    "qa_access_seconds": 5,
+    "qa_refresh_seconds_expired_case": 25,
+    "qa_refresh_seconds_recovery_case": 600,
+    "expired_refresh": "401 without reload; answers retained",
+    "reauthentication": "same account, answers retained",
+    "automatic_refresh": "survey 401 -> refresh 200 -> survey 201",
+    "redirect": "http://localhost:3000/payment",
+    "saved_questions": 48
+  },
+  "scope": "No external providers; answers preserved in current page memory, not after manual reload or closing tab"
+}

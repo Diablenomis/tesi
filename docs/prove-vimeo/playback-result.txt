@@ -1,0 +1,7 @@
+2026-10-04
+Video 1232641850
+Scheda cliente: iframe presente, nessun controllo di riproduzione disponibile.
+Player ufficiale aperto separatamente:
+- heading "Sign in to Vimeo to watch this video" [level=1]
+- generic: You may need to allow cookies first. If asked, select Allow to continue.
+- button "Sign in"

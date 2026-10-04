@@ -1,0 +1,70 @@
+- banner:
+  - link "logo":
+    - /url: /
+    - img "logo"
+  - link "":
+    - /url: /profile
+    - generic: 
+  - link "Contattaci":
+    - /url: /#contact-us
+  - navigation:
+    - list:
+      - link "Home":
+        - /url: /
+      - link "Servizi":
+        - /url: /serveces-details
+      - link "Team":
+        - /url: /team
+      - link "Cos'è FitNexus":
+        - /url: /about-us
+- generic: Nutrizione
+- generic: COMPILARE QUESTIONARIO
+- generic: Quanto consideri importante il ruolo dell'alimentazione nel raggiungimento dei tuoi obiettivi di salute e forma fisica?
+- combobox
+- textbox
+- generic: Hai mai notato una relazione tra ciò che mangi e le tue prestazioni durante gli allenamenti o la tua capacità di recuperare?
+- combobox
+- textbox
+- generic: Hai mai avvertito difficoltà nel raggiungere i tuoi obiettivi di fitness nonostante l'impegno negli allenamenti?
+- combobox
+- textbox
+- generic: Hai mai provato a seguire una dieta specifica per raggiungere i tuoi obiettivi di fitness?
+- textbox
+- generic: Se hai riscontrato problematiche durante i test, ti chiediamo di segnalarci quali sono i tuoi punti carenti
+- textbox
+- generic: Immagine
+- button "Choose File"
+- button "Acquista": Acquista
+- navigation "pagination navigation":
+  - list:
+    - button "Go to previous page":
+    - button "Go to page 1": "1"
+    - button "Go to page 2": "2"
+    - button "Go to page 3": "3"
+    - button "Go to page 4": "4"
+    - button "Go to page 5": "5"
+    - button "page 6": "6"
+    - button "Go to next page" [disabled]:
+- img "logo"
+- heading "Contattaci" [level=3]
+- paragraph: info@fitnexus.com
+- paragraph: "P.IVA: 17723831008"
+- heading "Links" [level=5]
+- list:
+  - link "Home":
+    - /url: /
+  - link "Cos'è FitNexus":
+    - /url: /about-us
+  - link "Il nostro team":
+    - /url: /team
+  - link "Servizi":
+    - /url: /serveces-details
+- heading "Services" [level=5]
+- list:
+  - link "Schede personalizzate":
+    - /url: /serveces-details#1
+  - link "Coaching online":
+    - /url: /serveces-details#2
+- alert:
+  - text: "Sessione scaduta. Accedi di nuovo: le risposte restano in questa pagina."
+  - button "Accedi di nuovo": Accedi di nuovo

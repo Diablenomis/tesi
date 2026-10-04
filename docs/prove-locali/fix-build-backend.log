@@ -1,0 +1,400 @@
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 951B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.8-slim
+#2 DONE 1.3s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 228B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 ...
+
+#5 [1/6] FROM docker.io/library/python:3.8-slim@sha256:1d52838af602b4b5a831beb13a0e4d073280665ea7be7f69ce2382f29c5a613f
+#5 resolve docker.io/library/python:3.8-slim@sha256:1d52838af602b4b5a831beb13a0e4d073280665ea7be7f69ce2382f29c5a613f 0.1s done
+#5 DONE 0.1s
+
+#4 [internal] load build context
+#4 transferring context: 2.21MB 0.3s done
+#4 DONE 0.3s
+
+#6 [2/6] WORKDIR /app/backend
+#6 CACHED
+
+#7 [3/6] COPY ./gym-be-app/requirements.txt .
+#7 DONE 0.1s
+
+#8 [4/6] RUN pip install --no-cache-dir --upgrade pip &&     pip install --no-cache-dir -r requirements.txt gunicorn
+#8 1.926 Requirement already satisfied: pip in /usr/local/lib/python3.8/site-packages (23.0.1)
+#8 2.198 Collecting pip
+#8 2.359   Downloading pip-25.0.1-py3-none-any.whl (1.8 MB)
+#8 3.037      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.8/1.8 MB 2.8 MB/s eta 0:00:00
+#8 3.083 Installing collected packages: pip
+#8 3.083   Attempting uninstall: pip
+#8 3.084     Found existing installation: pip 23.0.1
+#8 3.276     Uninstalling pip-23.0.1:
+#8 3.531       Successfully uninstalled pip-23.0.1
+#8 4.452 Successfully installed pip-25.0.1
+#8 4.452 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 5.659 Collecting gunicorn
+#8 5.748   Downloading gunicorn-23.0.0-py3-none-any.whl.metadata (4.4 kB)
+#8 5.807 Collecting amqp==5.2.0 (from -r requirements.txt (line 1))
+#8 5.838   Downloading amqp-5.2.0-py3-none-any.whl.metadata (8.9 kB)
+#8 5.888 Collecting asgiref==3.5.2 (from -r requirements.txt (line 2))
+#8 5.929   Downloading asgiref-3.5.2-py3-none-any.whl.metadata (9.1 kB)
+#8 5.987 Collecting async-timeout==4.0.3 (from -r requirements.txt (line 3))
+#8 6.037   Downloading async_timeout-4.0.3-py3-none-any.whl.metadata (4.2 kB)
+#8 6.204 Collecting backports.zoneinfo==0.2.1 (from -r requirements.txt (line 4))
+#8 6.232   Downloading backports.zoneinfo-0.2.1-cp38-cp38-manylinux1_x86_64.whl.metadata (4.7 kB)
+#8 6.304 Collecting billiard==4.2.0 (from -r requirements.txt (line 5))
+#8 6.341   Downloading billiard-4.2.0-py3-none-any.whl.metadata (4.4 kB)
+#8 6.428 Collecting celery==5.4.0 (from -r requirements.txt (line 6))
+#8 6.461   Downloading celery-5.4.0-py3-none-any.whl.metadata (21 kB)
+#8 6.553 Collecting certifi==2022.6.15 (from -r requirements.txt (line 7))
+#8 6.594   Downloading certifi-2022.6.15-py3-none-any.whl.metadata (2.8 kB)
+#8 6.828 Collecting cffi==1.16.0 (from -r requirements.txt (line 8))
+#8 6.904   Downloading cffi-1.16.0-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (1.5 kB)
+#8 6.948 Collecting cfgv==3.3.1 (from -r requirements.txt (line 9))
+#8 7.005   Downloading cfgv-3.3.1-py2.py3-none-any.whl.metadata (9.0 kB)
+#8 7.279 Collecting charset-normalizer==2.0.12 (from -r requirements.txt (line 10))
+#8 7.315   Downloading charset_normalizer-2.0.12-py3-none-any.whl.metadata (11 kB)
+#8 7.403 Collecting click==8.1.7 (from -r requirements.txt (line 11))
+#8 7.452   Downloading click-8.1.7-py3-none-any.whl.metadata (3.0 kB)
+#8 7.495 Collecting click-didyoumean==0.3.1 (from -r requirements.txt (line 12))
+#8 7.524   Downloading click_didyoumean-0.3.1-py3-none-any.whl.metadata (3.9 kB)
+#8 7.559 Collecting click-plugins==1.1.1 (from -r requirements.txt (line 13))
+#8 7.604   Downloading click_plugins-1.1.1-py2.py3-none-any.whl.metadata (6.4 kB)
+#8 7.659 Collecting click-repl==0.3.0 (from -r requirements.txt (line 14))
+#8 7.689   Downloading click_repl-0.3.0-py3-none-any.whl.metadata (3.6 kB)
+#8 7.768 Collecting colorama==0.4.6 (from -r requirements.txt (line 15))
+#8 7.797   Downloading colorama-0.4.6-py2.py3-none-any.whl.metadata (17 kB)
+#8 7.941 Collecting contourpy==1.0.6 (from -r requirements.txt (line 16))
+#8 7.975   Downloading contourpy-1.0.6-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (3.5 kB)
+#8 8.127 Collecting coreapi==2.3.3 (from -r requirements.txt (line 17))
+#8 8.159   Downloading coreapi-2.3.3-py2.py3-none-any.whl.metadata (1.0 kB)
+#8 8.298 Collecting coreschema==0.0.4 (from -r requirements.txt (line 18))
+#8 8.336   Downloading coreschema-0.0.4.tar.gz (10 kB)
+#8 8.357   Preparing metadata (setup.py): started
+#8 8.981   Preparing metadata (setup.py): finished with status 'done'
+#8 9.038 Collecting cron-descriptor==1.4.3 (from -r requirements.txt (line 19))
+#8 9.067   Downloading cron_descriptor-1.4.3-py3-none-any.whl.metadata (5.7 kB)
+#8 9.507 Collecting cryptography==41.0.1 (from -r requirements.txt (line 20))
+#8 9.539   Downloading cryptography-41.0.1-cp37-abi3-manylinux_2_28_x86_64.whl.metadata (5.2 kB)
+#8 9.576 Collecting cycler==0.11.0 (from -r requirements.txt (line 21))
+#8 9.604   Downloading cycler-0.11.0-py3-none-any.whl.metadata (785 bytes)
+#8 9.648 Collecting decorator==5.1.1 (from -r requirements.txt (line 22))
+#8 9.678   Downloading decorator-5.1.1-py3-none-any.whl.metadata (4.0 kB)
+#8 9.713 Collecting distlib==0.3.6 (from -r requirements.txt (line 23))
+#8 9.743   Downloading distlib-0.3.6-py2.py3-none-any.whl.metadata (5.1 kB)
+#8 9.781 Collecting dj-database-url==0.5.0 (from -r requirements.txt (line 24))
+#8 9.810   Downloading dj_database_url-0.5.0-py2.py3-none-any.whl.metadata (2.7 kB)
+#8 9.924 Collecting Django==3.2.9 (from -r requirements.txt (line 25))
+#8 10.05   Downloading Django-3.2.9-py3-none-any.whl.metadata (4.0 kB)
+#8 10.10 Collecting django-appconf==1.0.5 (from -r requirements.txt (line 26))
+#8 10.15   Downloading django_appconf-1.0.5-py3-none-any.whl.metadata (5.3 kB)
+#8 10.30 Collecting django-bootstrap-form==3.4 (from -r requirements.txt (line 27))
+#8 10.33   Downloading django-bootstrap-form-3.4.tar.gz (4.4 kB)
+#8 10.34   Preparing metadata (setup.py): started
+#8 10.96   Preparing metadata (setup.py): finished with status 'done'
+#8 11.01 Collecting django-celery-beat==2.6.0 (from -r requirements.txt (line 28))
+#8 11.04   Downloading django-celery-beat-2.6.0.tar.gz (160 kB)
+#8 11.17   Preparing metadata (setup.py): started
+#8 12.04   Preparing metadata (setup.py): finished with status 'done'
+#8 12.09 Collecting django-cors-headers==3.13.0 (from -r requirements.txt (line 29))
+#8 12.12   Downloading django_cors_headers-3.13.0-py3-none-any.whl.metadata (17 kB)
+#8 12.28 Collecting django-rest-swagger==2.2.0 (from -r requirements.txt (line 30))
+#8 12.31   Downloading django_rest_swagger-2.2.0-py2.py3-none-any.whl.metadata (1.5 kB)
+#8 12.37 Collecting django-timezone-field==6.1.0 (from -r requirements.txt (line 31))
+#8 12.40   Downloading django_timezone_field-6.1.0-py3-none-any.whl.metadata (12 kB)
+#8 12.55 Collecting django-user-accounts==3.2.0 (from -r requirements.txt (line 32))
+#8 12.58   Downloading django_user_accounts-3.2.0-py3-none-any.whl.metadata (6.4 kB)
+#8 12.65 Collecting djangorestframework==3.13.1 (from -r requirements.txt (line 33))
+#8 12.68   Downloading djangorestframework-3.13.1-py3-none-any.whl.metadata (10 kB)
+#8 12.73 Collecting djangorestframework-simplejwt==5.2.2 (from -r requirements.txt (line 34))
+#8 12.76   Downloading djangorestframework_simplejwt-5.2.2-py3-none-any.whl.metadata (4.1 kB)
+#8 12.83 Collecting drf-yasg==1.20.0 (from -r requirements.txt (line 35))
+#8 12.87   Downloading drf_yasg-1.20.0-py2.py3-none-any.whl.metadata (14 kB)
+#8 12.98 Collecting filelock==3.9.0 (from -r requirements.txt (line 36))
+#8 13.01   Downloading filelock-3.9.0-py3-none-any.whl.metadata (2.3 kB)
+#8 13.51 Collecting fonttools==4.38.0 (from -r requirements.txt (line 37))
+#8 13.55   Downloading fonttools-4.38.0-py3-none-any.whl.metadata (138 kB)
+#8 13.82 Collecting generics==6.0.0 (from -r requirements.txt (line 38))
+#8 13.86   Downloading generics-6.0.0-py2.py3-none-any.whl.metadata (3.7 kB)
+#8 14.08 Collecting identify==2.5.17 (from -r requirements.txt (line 39))
+#8 14.13   Downloading identify-2.5.17-py2.py3-none-any.whl.metadata (4.4 kB)
+#8 14.22 Collecting idna==3.3 (from -r requirements.txt (line 40))
+#8 14.30   Downloading idna-3.3-py3-none-any.whl.metadata (9.8 kB)
+#8 14.46 Collecting inflection==0.5.1 (from -r requirements.txt (line 41))
+#8 14.54   Downloading inflection-0.5.1-py2.py3-none-any.whl.metadata (1.7 kB)
+#8 14.73 Collecting itypes==1.2.0 (from -r requirements.txt (line 42))
+#8 14.84   Downloading itypes-1.2.0-py2.py3-none-any.whl.metadata (4.9 kB)
+#8 15.00 Collecting Jinja2==3.1.2 (from -r requirements.txt (line 43))
+#8 15.12   Downloading Jinja2-3.1.2-py3-none-any.whl.metadata (3.5 kB)
+#8 15.86 Collecting kiwisolver==1.4.4 (from -r requirements.txt (line 44))
+#8 16.07   Downloading kiwisolver-1.4.4-cp38-cp38-manylinux_2_5_x86_64.manylinux1_x86_64.whl.metadata (6.3 kB)
+#8 16.51 Collecting kombu==5.3.7 (from -r requirements.txt (line 45))
+#8 16.62   Downloading kombu-5.3.7-py3-none-any.whl.metadata (3.1 kB)
+#8 16.91 Collecting mailersend==0.5.0 (from -r requirements.txt (line 46))
+#8 17.01   Downloading mailersend-0.5.0-py3-none-any.whl.metadata (41 kB)
+#8 17.27 Collecting nodeenv==1.7.0 (from -r requirements.txt (line 47))
+#8 17.33   Downloading nodeenv-1.7.0-py2.py3-none-any.whl.metadata (21 kB)
+#8 19.91 Collecting numpy==1.23.5 (from -r requirements.txt (line 48))
+#8 19.99   Downloading numpy-1.23.5-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (2.3 kB)
+#8 20.16 Collecting openapi-codec==1.3.2 (from -r requirements.txt (line 49))
+#8 20.22   Downloading openapi-codec-1.3.2.tar.gz (6.3 kB)
+#8 20.28   Preparing metadata (setup.py): started
+#8 23.33   Preparing metadata (setup.py): finished with status 'done'
+#8 23.50 Collecting packaging==21.3 (from -r requirements.txt (line 50))
+#8 23.55   Downloading packaging-21.3-py3-none-any.whl.metadata (15 kB)
+#8 23.76 Collecting Paginator==0.5.1 (from -r requirements.txt (line 51))
+#8 23.86   Downloading Paginator-0.5.1.tar.gz (5.1 kB)
+#8 23.91   Preparing metadata (setup.py): started
+#8 26.88   Preparing metadata (setup.py): finished with status 'done'
+#8 28.09 Collecting Pillow==9.3.0 (from -r requirements.txt (line 52))
+#8 28.13   Downloading Pillow-9.3.0-cp38-cp38-manylinux_2_28_x86_64.whl.metadata (9.2 kB)
+#8 28.29 Collecting pinax-templates==2.0.6 (from -r requirements.txt (line 53))
+#8 28.32   Downloading pinax_templates-2.0.6-py2.py3-none-any.whl.metadata (3.0 kB)
+#8 28.38 Collecting platformdirs==3.0.0 (from -r requirements.txt (line 54))
+#8 28.42   Downloading platformdirs-3.0.0-py3-none-any.whl.metadata (9.5 kB)
+#8 28.52 Collecting pre-commit==2.21.0 (from -r requirements.txt (line 55))
+#8 28.55   Downloading pre_commit-2.21.0-py2.py3-none-any.whl.metadata (1.6 kB)
+#8 28.64 Collecting prompt-toolkit==3.0.43 (from -r requirements.txt (line 56))
+#8 28.67   Downloading prompt_toolkit-3.0.43-py3-none-any.whl.metadata (6.5 kB)
+#8 28.85 Collecting psycopg2-binary==2.9.3 (from -r requirements.txt (line 57))
+#8 28.88   Downloading psycopg2_binary-2.9.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.4 kB)
+#8 29.03 Collecting pyactiveresource==2.2.2 (from -r requirements.txt (line 58))
+#8 29.07   Downloading pyactiveresource-2.2.2.tar.gz (19 kB)
+#8 29.09   Preparing metadata (setup.py): started
+#8 29.92   Preparing metadata (setup.py): finished with status 'done'
+#8 29.96 Collecting pycparser==2.22 (from -r requirements.txt (line 59))
+#8 30.00   Downloading pycparser-2.22-py3-none-any.whl.metadata (943 bytes)
+#8 30.06 Collecting PyJWT==2.4.0 (from -r requirements.txt (line 60))
+#8 30.10   Downloading PyJWT-2.4.0-py3-none-any.whl.metadata (4.1 kB)
+#8 30.16 Collecting PyMySQL==1.0.2 (from -r requirements.txt (line 61))
+#8 30.20   Downloading PyMySQL-1.0.2-py3-none-any.whl.metadata (5.1 kB)
+#8 30.27 Collecting pyparsing==3.0.9 (from -r requirements.txt (line 62))
+#8 30.31   Downloading pyparsing-3.0.9-py3-none-any.whl.metadata (4.2 kB)
+#8 30.36 Collecting python-crontab==3.0.0 (from -r requirements.txt (line 63))
+#8 30.39   Downloading python_crontab-3.0.0-py3-none-any.whl.metadata (17 kB)
+#8 30.44 Collecting python-dateutil==2.8.2 (from -r requirements.txt (line 64))
+#8 30.47   Downloading python_dateutil-2.8.2-py2.py3-none-any.whl.metadata (8.2 kB)
+#8 30.52 Collecting python-dotenv==0.20.0 (from -r requirements.txt (line 65))
+#8 30.55   Downloading python_dotenv-0.20.0-py3-none-any.whl.metadata (19 kB)
+#8 30.66 Collecting pytz==2022.1 (from -r requirements.txt (line 66))
+#8 30.70   Downloading pytz-2022.1-py2.py3-none-any.whl.metadata (21 kB)
+#8 30.81 Collecting PyYAML==6.0 (from -r requirements.txt (line 67))
+#8 30.84   Downloading PyYAML-6.0-cp38-cp38-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_12_x86_64.manylinux2010_x86_64.whl.metadata (2.0 kB)
+#8 31.00 Collecting redis==5.0.4 (from -r requirements.txt (line 68))
+#8 31.07   Downloading redis-5.0.4-py3-none-any.whl.metadata (9.3 kB)
+#8 31.16 Collecting requests==2.28.0 (from -r requirements.txt (line 69))
+#8 31.20   Downloading requests-2.28.0-py3-none-any.whl.metadata (4.6 kB)
+#8 31.33 Collecting response==0.5.0 (from -r requirements.txt (line 70))
+#8 31.37   Downloading response-0.5.0-py3-none-any.whl.metadata (2.8 kB)
+#8 31.80 Collecting ruamel.yaml==0.17.21 (from -r requirements.txt (line 71))
+#8 31.87   Downloading ruamel.yaml-0.17.21-py3-none-any.whl.metadata (13 kB)
+#8 32.01 Collecting ruamel.yaml.clib==0.2.6 (from -r requirements.txt (line 72))
+#8 32.04   Downloading ruamel.yaml.clib-0.2.6-cp38-cp38-manylinux1_x86_64.whl.metadata (2.1 kB)
+#8 32.37 Collecting scipy==1.9.3 (from -r requirements.txt (line 73))
+#8 32.41   Downloading scipy-1.9.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (58 kB)
+#8 32.58 Collecting Serialize==0.2.1 (from -r requirements.txt (line 74))
+#8 32.61   Downloading Serialize-0.2.1.tar.gz (14 kB)
+#8 32.64   Preparing metadata (setup.py): started
+#8 48.29   Preparing metadata (setup.py): finished with status 'done'
+#8 48.93 Collecting simplejson==3.17.6 (from -r requirements.txt (line 75))
+#8 49.26   Downloading simplejson-3.17.6-cp38-cp38-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_12_x86_64.manylinux2010_x86_64.whl.metadata (3.0 kB)
+#8 49.50 Collecting six==1.16.0 (from -r requirements.txt (line 76))
+#8 49.65   Downloading six-1.16.0-py2.py3-none-any.whl.metadata (1.8 kB)
+#8 49.90 Collecting sqlparse==0.4.2 (from -r requirements.txt (line 77))
+#8 49.94   Downloading sqlparse-0.4.2-py3-none-any.whl.metadata (3.4 kB)
+#8 50.83 Collecting stripe==5.2.0 (from -r requirements.txt (line 78))
+#8 51.06   Downloading stripe-5.2.0-py2.py3-none-any.whl.metadata (2.6 kB)
+#8 51.21 Collecting typing_extensions==4.11.0 (from -r requirements.txt (line 79))
+#8 51.35   Downloading typing_extensions-4.11.0-py3-none-any.whl.metadata (3.0 kB)
+#8 51.57 Collecting tzdata==2024.1 (from -r requirements.txt (line 80))
+#8 51.73   Downloading tzdata-2024.1-py2.py3-none-any.whl.metadata (1.4 kB)
+#8 51.78 Collecting uritemplate==4.1.1 (from -r requirements.txt (line 81))
+#8 51.82   Downloading uritemplate-4.1.1-py2.py3-none-any.whl.metadata (2.9 kB)
+#8 51.92 Collecting urllib3==1.26.9 (from -r requirements.txt (line 82))
+#8 51.95   Downloading urllib3-1.26.9-py2.py3-none-any.whl.metadata (46 kB)
+#8 52.02 Collecting vine==5.1.0 (from -r requirements.txt (line 83))
+#8 52.05   Downloading vine-5.1.0-py3-none-any.whl.metadata (2.7 kB)
+#8 52.30 Collecting virtualenv==20.19.0 (from -r requirements.txt (line 84))
+#8 52.35   Downloading virtualenv-20.19.0-py3-none-any.whl.metadata (4.1 kB)
+#8 52.48 Collecting wcwidth==0.2.13 (from -r requirements.txt (line 85))
+#8 52.61   Downloading wcwidth-0.2.13-py2.py3-none-any.whl.metadata (14 kB)
+#8 52.79 Collecting whitenoise==6.2.0 (from -r requirements.txt (line 86))
+#8 52.82   Downloading whitenoise-6.2.0-py3-none-any.whl.metadata (3.3 kB)
+#8 54.43 Collecting MarkupSafe>=2.0 (from Jinja2==3.1.2->-r requirements.txt (line 43))
+#8 54.49   Downloading MarkupSafe-2.1.5-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (3.0 kB)
+#8 55.24 Collecting setuptools<66.0.0,>=65.0.0 (from mailersend==0.5.0->-r requirements.txt (line 46))
+#8 55.27   Downloading setuptools-65.7.0-py3-none-any.whl.metadata (6.2 kB)
+#8 56.86 Collecting matplotlib>=2.2.0 (from response==0.5.0->-r requirements.txt (line 70))
+#8 56.89   Downloading matplotlib-3.7.5-cp38-cp38-manylinux_2_12_x86_64.manylinux2010_x86_64.whl.metadata (5.7 kB)
+#8 57.44 Collecting importlib-resources>=3.2.0 (from matplotlib>=2.2.0->response==0.5.0->-r requirements.txt (line 70))
+#8 57.48   Downloading importlib_resources-6.4.5-py3-none-any.whl.metadata (4.0 kB)
+#8 57.59 Collecting zipp>=3.1.0 (from importlib-resources>=3.2.0->matplotlib>=2.2.0->response==0.5.0->-r requirements.txt (line 70))
+#8 57.63   Downloading zipp-3.20.2-py3-none-any.whl.metadata (3.7 kB)
+#8 57.71 Downloading amqp-5.2.0-py3-none-any.whl (50 kB)
+#8 57.80 Downloading asgiref-3.5.2-py3-none-any.whl (22 kB)
+#8 57.88 Downloading async_timeout-4.0.3-py3-none-any.whl (5.7 kB)
+#8 57.96 Downloading backports.zoneinfo-0.2.1-cp38-cp38-manylinux1_x86_64.whl (74 kB)
+#8 58.06 Downloading billiard-4.2.0-py3-none-any.whl (86 kB)
+#8 58.14 Downloading celery-5.4.0-py3-none-any.whl (425 kB)
+#8 58.50 Downloading certifi-2022.6.15-py3-none-any.whl (160 kB)
+#8 58.80 Downloading cffi-1.16.0-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (444 kB)
+#8 59.18 Downloading cfgv-3.3.1-py2.py3-none-any.whl (7.3 kB)
+#8 59.33 Downloading charset_normalizer-2.0.12-py3-none-any.whl (39 kB)
+#8 59.57 Downloading click-8.1.7-py3-none-any.whl (97 kB)
+#8 59.90 Downloading click_didyoumean-0.3.1-py3-none-any.whl (3.6 kB)
+#8 60.00 Downloading click_plugins-1.1.1-py2.py3-none-any.whl (7.5 kB)
+#8 60.08 Downloading click_repl-0.3.0-py3-none-any.whl (10 kB)
+#8 60.13 Downloading colorama-0.4.6-py2.py3-none-any.whl (25 kB)
+#8 60.30 Downloading contourpy-1.0.6-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (295 kB)
+#8 60.50 Downloading coreapi-2.3.3-py2.py3-none-any.whl (25 kB)
+#8 60.60 Downloading cron_descriptor-1.4.3-py3-none-any.whl (49 kB)
+#8 60.70 Downloading cryptography-41.0.1-cp37-abi3-manylinux_2_28_x86_64.whl (4.3 MB)
+#8 62.97    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.3/4.3 MB 1.9 MB/s eta 0:00:00
+#8 63.02 Downloading cycler-0.11.0-py3-none-any.whl (6.4 kB)
+#8 63.05 Downloading decorator-5.1.1-py3-none-any.whl (9.1 kB)
+#8 63.09 Downloading distlib-0.3.6-py2.py3-none-any.whl (468 kB)
+#8 63.39 Downloading dj_database_url-0.5.0-py2.py3-none-any.whl (5.5 kB)
+#8 63.54 Downloading Django-3.2.9-py3-none-any.whl (7.9 MB)
+#8 67.47    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.9/7.9 MB 2.0 MB/s eta 0:00:00
+#8 67.51 Downloading django_appconf-1.0.5-py3-none-any.whl (6.4 kB)
+#8 67.54 Downloading django_cors_headers-3.13.0-py3-none-any.whl (13 kB)
+#8 67.58 Downloading django_rest_swagger-2.2.0-py2.py3-none-any.whl (495 kB)
+#8 67.75 Downloading django_timezone_field-6.1.0-py3-none-any.whl (12 kB)
+#8 67.79 Downloading django_user_accounts-3.2.0-py3-none-any.whl (110 kB)
+#8 67.85 Downloading djangorestframework-3.13.1-py3-none-any.whl (958 kB)
+#8 68.12    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 958.3/958.3 kB 3.8 MB/s eta 0:00:00
+#8 68.15 Downloading djangorestframework_simplejwt-5.2.2-py3-none-any.whl (85 kB)
+#8 68.20 Downloading drf_yasg-1.20.0-py2.py3-none-any.whl (1.6 MB)
+#8 68.70    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.6/1.6 MB 3.0 MB/s eta 0:00:00
+#8 68.74 Downloading filelock-3.9.0-py3-none-any.whl (9.7 kB)
+#8 68.79 Downloading fonttools-4.38.0-py3-none-any.whl (965 kB)
+#8 69.18    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 965.4/965.4 kB 2.3 MB/s eta 0:00:00
+#8 69.32 Downloading generics-6.0.0-py2.py3-none-any.whl (5.9 kB)
+#8 69.48 Downloading identify-2.5.17-py2.py3-none-any.whl (98 kB)
+#8 69.55 Downloading idna-3.3-py3-none-any.whl (61 kB)
+#8 69.59 Downloading inflection-0.5.1-py2.py3-none-any.whl (9.5 kB)
+#8 69.63 Downloading itypes-1.2.0-py2.py3-none-any.whl (4.8 kB)
+#8 69.66 Downloading Jinja2-3.1.2-py3-none-any.whl (133 kB)
+#8 69.73 Downloading kiwisolver-1.4.4-cp38-cp38-manylinux_2_5_x86_64.manylinux1_x86_64.whl (1.2 MB)
+#8 70.08    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 3.1 MB/s eta 0:00:00
+#8 70.12 Downloading kombu-5.3.7-py3-none-any.whl (200 kB)
+#8 70.31 Downloading mailersend-0.5.0-py3-none-any.whl (24 kB)
+#8 70.35 Downloading nodeenv-1.7.0-py2.py3-none-any.whl (21 kB)
+#8 70.49 Downloading numpy-1.23.5-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (17.1 MB)
+#8 76.41    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 17.1/17.1 MB 2.9 MB/s eta 0:00:00
+#8 76.44 Downloading packaging-21.3-py3-none-any.whl (40 kB)
+#8 76.50 Downloading Pillow-9.3.0-cp38-cp38-manylinux_2_28_x86_64.whl (3.3 MB)
+#8 77.35    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.3/3.3 MB 3.8 MB/s eta 0:00:00
+#8 77.58 Downloading pinax_templates-2.0.6-py2.py3-none-any.whl (83 kB)
+#8 77.76 Downloading platformdirs-3.0.0-py3-none-any.whl (14 kB)
+#8 77.79 Downloading pre_commit-2.21.0-py2.py3-none-any.whl (201 kB)
+#8 77.87 Downloading prompt_toolkit-3.0.43-py3-none-any.whl (386 kB)
+#8 78.09 Downloading psycopg2_binary-2.9.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.0 MB)
+#8 79.46    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.0/3.0 MB 2.1 MB/s eta 0:00:00
+#8 79.63 Downloading pycparser-2.22-py3-none-any.whl (117 kB)
+#8 79.78 Downloading PyJWT-2.4.0-py3-none-any.whl (18 kB)
+#8 79.97 Downloading PyMySQL-1.0.2-py3-none-any.whl (43 kB)
+#8 80.08 Downloading pyparsing-3.0.9-py3-none-any.whl (98 kB)
+#8 80.21 Downloading python_crontab-3.0.0-py3-none-any.whl (27 kB)
+#8 80.29 Downloading python_dateutil-2.8.2-py2.py3-none-any.whl (247 kB)
+#8 80.46 Downloading python_dotenv-0.20.0-py3-none-any.whl (17 kB)
+#8 80.53 Downloading pytz-2022.1-py2.py3-none-any.whl (503 kB)
+#8 80.70 Downloading PyYAML-6.0-cp38-cp38-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_12_x86_64.manylinux2010_x86_64.whl (701 kB)
+#8 80.90    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 701.2/701.2 kB 3.2 MB/s eta 0:00:00
+#8 80.97 Downloading redis-5.0.4-py3-none-any.whl (251 kB)
+#8 81.08 Downloading requests-2.28.0-py3-none-any.whl (62 kB)
+#8 81.13 Downloading response-0.5.0-py3-none-any.whl (14 kB)
+#8 81.16 Downloading ruamel.yaml-0.17.21-py3-none-any.whl (109 kB)
+#8 81.22 Downloading ruamel.yaml.clib-0.2.6-cp38-cp38-manylinux1_x86_64.whl (570 kB)
+#8 81.34    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 570.4/570.4 kB 5.4 MB/s eta 0:00:00
+#8 81.51 Downloading scipy-1.9.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (33.8 MB)
+#8 90.68    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 33.8/33.8 MB 3.7 MB/s eta 0:00:00
+#8 90.71 Downloading simplejson-3.17.6-cp38-cp38-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_12_x86_64.manylinux2010_x86_64.whl (139 kB)
+#8 90.76 Downloading six-1.16.0-py2.py3-none-any.whl (11 kB)
+#8 90.80 Downloading sqlparse-0.4.2-py3-none-any.whl (42 kB)
+#8 90.95 Downloading stripe-5.2.0-py2.py3-none-any.whl (253 kB)
+#8 91.04 Downloading typing_extensions-4.11.0-py3-none-any.whl (34 kB)
+#8 91.09 Downloading tzdata-2024.1-py2.py3-none-any.whl (345 kB)
+#8 91.19 Downloading uritemplate-4.1.1-py2.py3-none-any.whl (10 kB)
+#8 91.22 Downloading urllib3-1.26.9-py2.py3-none-any.whl (138 kB)
+#8 91.29 Downloading vine-5.1.0-py3-none-any.whl (9.6 kB)
+#8 91.45 Downloading virtualenv-20.19.0-py3-none-any.whl (8.7 MB)
+#8 93.57    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.7/8.7 MB 4.1 MB/s eta 0:00:00
+#8 93.62 Downloading wcwidth-0.2.13-py2.py3-none-any.whl (34 kB)
+#8 93.65 Downloading whitenoise-6.2.0-py3-none-any.whl (19 kB)
+#8 93.68 Downloading gunicorn-23.0.0-py3-none-any.whl (85 kB)
+#8 93.74 Downloading MarkupSafe-2.1.5-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (26 kB)
+#8 93.77 Downloading matplotlib-3.7.5-cp38-cp38-manylinux_2_12_x86_64.manylinux2010_x86_64.whl (9.2 MB)
+#8 95.92    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 9.2/9.2 MB 4.3 MB/s eta 0:00:00
+#8 95.95 Downloading setuptools-65.7.0-py3-none-any.whl (1.2 MB)
+#8 96.24    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 4.5 MB/s eta 0:00:00
+#8 96.26 Downloading importlib_resources-6.4.5-py3-none-any.whl (36 kB)
+#8 96.30 Downloading zipp-3.20.2-py3-none-any.whl (9.2 kB)
+#8 96.94 Building wheels for collected packages: coreschema, django-bootstrap-form, django-celery-beat, openapi-codec, Paginator, pyactiveresource, Serialize
+#8 96.94   Building wheel for coreschema (setup.py): started
+#8 98.20   Building wheel for coreschema (setup.py): finished with status 'done'
+#8 98.20   Created wheel for coreschema: filename=coreschema-0.0.4-py3-none-any.whl size=15031 sha256=71088dcccffae67cd8e0d4fd5bcc0706d44ca78d81775542f32e0a51b5e3dd6c
+#8 98.20   Stored in directory: /tmp/pip-ephem-wheel-cache-3swdub59/wheels/37/21/45/2ce3dd0189e3d2fb7a325b9d3e6491acb7882c8275466d5401
+#8 98.21   Building wheel for django-bootstrap-form (setup.py): started
+#8 99.69   Building wheel for django-bootstrap-form (setup.py): finished with status 'done'
+#8 99.69   Created wheel for django-bootstrap-form: filename=django_bootstrap_form-3.4-py2.py3-none-any.whl size=5858 sha256=37e02d3fda06cb870a49ae35083629fcf58eb2a3b2f2595b1c131ca26ad577b8
+#8 99.69   Stored in directory: /tmp/pip-ephem-wheel-cache-3swdub59/wheels/95/1f/25/3e76918e10750882d91560cb60c6b0d2407240ee3349531ec3
+#8 99.70   Building wheel for django-celery-beat (setup.py): started
+#8 101.8   Building wheel for django-celery-beat (setup.py): finished with status 'done'
+#8 101.8   Created wheel for django-celery-beat: filename=django_celery_beat-2.6.0-py3-none-any.whl size=92823 sha256=a7262cfefd7c75e59c8a422f1e543651dbf835db529bd81cc8ac34058a4b5a35
+#8 101.8   Stored in directory: /tmp/pip-ephem-wheel-cache-3swdub59/wheels/06/6c/5d/165004084efb908e54992ffc79b549ef0d0b8f265ea8108926
+#8 101.8   Building wheel for openapi-codec (setup.py): started
+#8 103.1   Building wheel for openapi-codec (setup.py): finished with status 'done'
+#8 103.1   Created wheel for openapi-codec: filename=openapi_codec-1.3.2-py3-none-any.whl size=7303 sha256=e60f1befe2b8d57cc65e94a2a67886333564a87a882f512b6037325360b17bec
+#8 103.1   Stored in directory: /tmp/pip-ephem-wheel-cache-3swdub59/wheels/a8/5d/ee/28bdfd9af08f953c9b003abcf5eb4a50d15026053947802703
+#8 103.1   Building wheel for Paginator (setup.py): started
+#8 104.5   Building wheel for Paginator (setup.py): finished with status 'done'
+#8 104.5   Created wheel for Paginator: filename=Paginator-0.5.1-py3-none-any.whl size=3944 sha256=9d6fe26b5bcaeffcecf03f30c83b6ecb7ebab08f7ad55f5f73ec7acae21e6788
+#8 104.5   Stored in directory: /tmp/pip-ephem-wheel-cache-3swdub59/wheels/85/d8/f2/056993a3f76891ae47c19770daeec528e546c7e01f7f2e5b86
+#8 104.5   Building wheel for pyactiveresource (setup.py): started
+#8 106.2   Building wheel for pyactiveresource (setup.py): finished with status 'done'
+#8 106.2   Created wheel for pyactiveresource: filename=pyactiveresource-2.2.2-py3-none-any.whl size=23335 sha256=61bf65a28ac37f59b8039b286d1bb28522e4d801170083c5495c8274b4f984b5
+#8 106.2   Stored in directory: /tmp/pip-ephem-wheel-cache-3swdub59/wheels/99/a6/55/85b9fc7579cc3202b477dd86bd66c4057844ca87e2b9ae7c20
+#8 106.2   Building wheel for Serialize (setup.py): started
+#8 107.8   Building wheel for Serialize (setup.py): finished with status 'done'
+#8 107.8   Created wheel for Serialize: filename=Serialize-0.2.1-py3-none-any.whl size=18000 sha256=56012d6d21571450abc6fbf36c25da6374929bfc1c16fb5b8d033de897bfeb1d
+#8 107.8   Stored in directory: /tmp/pip-ephem-wheel-cache-3swdub59/wheels/bd/b8/56/90767553d4e8c48336b98bebb494158b5ecfce5c2862204f8a
+#8 107.8 Successfully built coreschema django-bootstrap-form django-celery-beat openapi-codec Paginator pyactiveresource Serialize
+#8 108.4 Installing collected packages: wcwidth, pytz, itypes, generics, dj-database-url, distlib, cron-descriptor, zipp, whitenoise, vine, urllib3, uritemplate, tzdata, typing_extensions, sqlparse, six, simplejson, setuptools, Serialize, ruamel.yaml.clib, PyYAML, python-dotenv, pyparsing, PyMySQL, PyJWT, pycparser, psycopg2-binary, prompt-toolkit, platformdirs, Pillow, numpy, MarkupSafe, kiwisolver, inflection, idna, identify, fonttools, filelock, decorator, cycler, colorama, click, charset-normalizer, cfgv, certifi, billiard, backports.zoneinfo, async-timeout, asgiref, virtualenv, scipy, ruamel.yaml, requests, redis, python-dateutil, pyactiveresource, Paginator, packaging, nodeenv, Jinja2, importlib-resources, Django, contourpy, click-repl, click-plugins, click-didyoumean, cffi, amqp, stripe, python-crontab, pre-commit, matplotlib, kombu, gunicorn, djangorestframework, django-timezone-field, django-cors-headers, django-bootstrap-form, django-appconf, cryptography, coreschema, response, pinax-templates, mailersend, djangorestframework-simplejwt, django-user-accounts, coreapi, celery, openapi-codec, drf-yasg, django-celery-beat, django-rest-swagger
+#8 109.6   Attempting uninstall: setuptools
+#8 109.6     Found existing installation: setuptools 57.5.0
+#8 109.6     Uninstalling setuptools-57.5.0:
+#8 109.8       Successfully uninstalled setuptools-57.5.0
+#8 136.4 Successfully installed Django-3.2.9 Jinja2-3.1.2 MarkupSafe-2.1.5 Paginator-0.5.1 Pillow-9.3.0 PyJWT-2.4.0 PyMySQL-1.0.2 PyYAML-6.0 Serialize-0.2.1 amqp-5.2.0 asgiref-3.5.2 async-timeout-4.0.3 backports.zoneinfo-0.2.1 billiard-4.2.0 celery-5.4.0 certifi-2022.6.15 cffi-1.16.0 cfgv-3.3.1 charset-normalizer-2.0.12 click-8.1.7 click-didyoumean-0.3.1 click-plugins-1.1.1 click-repl-0.3.0 colorama-0.4.6 contourpy-1.0.6 coreapi-2.3.3 coreschema-0.0.4 cron-descriptor-1.4.3 cryptography-41.0.1 cycler-0.11.0 decorator-5.1.1 distlib-0.3.6 dj-database-url-0.5.0 django-appconf-1.0.5 django-bootstrap-form-3.4 django-celery-beat-2.6.0 django-cors-headers-3.13.0 django-rest-swagger-2.2.0 django-timezone-field-6.1.0 django-user-accounts-3.2.0 djangorestframework-3.13.1 djangorestframework-simplejwt-5.2.2 drf-yasg-1.20.0 filelock-3.9.0 fonttools-4.38.0 generics-6.0.0 gunicorn-23.0.0 identify-2.5.17 idna-3.3 importlib-resources-6.4.5 inflection-0.5.1 itypes-1.2.0 kiwisolver-1.4.4 kombu-5.3.7 mailersend-0.5.0 matplotlib-3.7.5 nodeenv-1.7.0 numpy-1.23.5 openapi-codec-1.3.2 packaging-21.3 pinax-templates-2.0.6 platformdirs-3.0.0 pre-commit-2.21.0 prompt-toolkit-3.0.43 psycopg2-binary-2.9.3 pyactiveresource-2.2.2 pycparser-2.22 pyparsing-3.0.9 python-crontab-3.0.0 python-dateutil-2.8.2 python-dotenv-0.20.0 pytz-2022.1 redis-5.0.4 requests-2.28.0 response-0.5.0 ruamel.yaml-0.17.21 ruamel.yaml.clib-0.2.6 scipy-1.9.3 setuptools-65.7.0 simplejson-3.17.6 six-1.16.0 sqlparse-0.4.2 stripe-5.2.0 typing_extensions-4.11.0 tzdata-2024.1 uritemplate-4.1.1 urllib3-1.26.9 vine-5.1.0 virtualenv-20.19.0 wcwidth-0.2.13 whitenoise-6.2.0 zipp-3.20.2
+#8 136.4 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+#8 DONE 138.5s
+
+#9 [5/6] COPY ./gym-be-app/app /app/backend
+#9 DONE 0.7s
+
+#10 [6/6] COPY ./docker /app/docker
+#10 DONE 0.3s
+
+#11 exporting to image
+#11 exporting layers
+#11 exporting layers 34.3s done
+#11 exporting manifest sha256:f1a189b348b06b949c2634bf16583cae486c8e2c1060bebf514352803a97a651 0.1s done
+#11 exporting config sha256:4101240b78f79b904d70a9a83999ed2b3fb1189f44d38b7b5dc3ebbfc1491411 0.0s done
+#11 exporting attestation manifest sha256:6e7dbb061d44c38f667087888eef72d7b8b92afd369bd48a45962ce17414c94b
+#11 exporting attestation manifest sha256:6e7dbb061d44c38f667087888eef72d7b8b92afd369bd48a45962ce17414c94b 0.1s done
+#11 exporting manifest list sha256:d20dc40557efad461b4658d5b12cd6bc6dae0a95c7ef042ac4ffc12fb30e2405 0.1s done
+#11 naming to docker.io/library/fitnexus-backend-buildcheck:local
+#11 naming to docker.io/library/fitnexus-backend-buildcheck:local 0.0s done
+#11 unpacking to docker.io/library/fitnexus-backend-buildcheck:local
+#11 unpacking to docker.io/library/fitnexus-backend-buildcheck:local 11.4s done
+#11 DONE 46.0s
+
+View build details: docker-desktop://dashboard/build/desktop-linux/desktop-linux/wf5s1vv3a9pa3cm7391qu4tlv

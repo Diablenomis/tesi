@@ -1,0 +1,271 @@
+{
+  "run": "20261003T095617Z",
+  "started_utc": "2026-10-03T09:56:17.607020+00:00",
+  "environment": {
+    "host": "Windows 11 Home 10.0.22000",
+    "cpu": "Intel Core i7-8550U @ 1.80GHz",
+    "physical_cores": 4,
+    "logical_processors": 8,
+    "docker_kernel": "6.18.40.1-microsoft-standard-WSL2",
+    "docker_cpus": 8,
+    "docker_memory_bytes": 16718872576,
+    "docker_server": "29.0.1"
+  },
+  "method": {
+    "target": "http://127.0.0.1:8000",
+    "model": "closed loop, no think time",
+    "connection": "one HTTPConnection per virtual user, keep-alive when supported",
+    "timeout_seconds": 10,
+    "duration_per_phase_seconds": 30,
+    "read_concurrency": [
+      1,
+      5,
+      10,
+      20
+    ],
+    "login_concurrency": [
+      1,
+      5,
+      10
+    ],
+    "warmup_seconds_per_scenario": 5,
+    "recovery_seconds": 10,
+    "percentile": "nearest rank",
+    "dataset": "one existing QA customer and one published single-day sheet",
+    "latency": "request start through full response body; excludes validation and think time",
+    "throughput": "completed requests / elapsed time including drain",
+    "error_guard": "stop phase and remaining load if >=20% errors after 50 completed requests"
+  },
+  "phases": [
+    {
+      "label": "read_warmup",
+      "scenario": "read",
+      "concurrency": 1,
+      "started_utc": "2026-10-03T09:56:18.981540+00:00",
+      "planned_seconds": 5,
+      "elapsed_seconds": 5.009,
+      "requests": 230,
+      "errors": 0,
+      "errors_by_type": {},
+      "status_counts": {
+        "200": 230
+      },
+      "rps": 45.921,
+      "mean_ms": 21.73,
+      "p50_ms": 19.025,
+      "p95_ms": 24.131,
+      "p99_ms": 35.413,
+      "max_ms": 501.517,
+      "generator_cpu_percent_one_core": 1.56,
+      "aborted": false
+    },
+    {
+      "label": "read_1",
+      "scenario": "read",
+      "concurrency": 1,
+      "started_utc": "2026-10-03T09:56:24.041887+00:00",
+      "planned_seconds": 30,
+      "elapsed_seconds": 30.026,
+      "requests": 1402,
+      "errors": 0,
+      "errors_by_type": {},
+      "status_counts": {
+        "200": 1402
+      },
+      "rps": 46.692,
+      "mean_ms": 21.37,
+      "p50_ms": 20.563,
+      "p95_ms": 27.204,
+      "p99_ms": 39.377,
+      "max_ms": 59.548,
+      "generator_cpu_percent_one_core": 1.98,
+      "aborted": false
+    },
+    {
+      "label": "read_5",
+      "scenario": "read",
+      "concurrency": 5,
+      "started_utc": "2026-10-03T09:56:54.086545+00:00",
+      "planned_seconds": 30,
+      "elapsed_seconds": 30.064,
+      "requests": 2156,
+      "errors": 0,
+      "errors_by_type": {},
+      "status_counts": {
+        "200": 2156
+      },
+      "rps": 71.713,
+      "mean_ms": 69.604,
+      "p50_ms": 64.561,
+      "p95_ms": 114.838,
+      "p99_ms": 148.42,
+      "max_ms": 232.454,
+      "generator_cpu_percent_one_core": 4.26,
+      "aborted": false
+    },
+    {
+      "label": "read_10",
+      "scenario": "read",
+      "concurrency": 10,
+      "started_utc": "2026-10-03T09:57:24.167591+00:00",
+      "planned_seconds": 30,
+      "elapsed_seconds": 30.169,
+      "requests": 1990,
+      "errors": 0,
+      "errors_by_type": {},
+      "status_counts": {
+        "200": 1990
+      },
+      "rps": 65.962,
+      "mean_ms": 151.097,
+      "p50_ms": 149.762,
+      "p95_ms": 260.856,
+      "p99_ms": 314.039,
+      "max_ms": 369.185,
+      "generator_cpu_percent_one_core": 4.76,
+      "aborted": false
+    },
+    {
+      "label": "read_20",
+      "scenario": "read",
+      "concurrency": 20,
+      "started_utc": "2026-10-03T09:57:54.350671+00:00",
+      "planned_seconds": 30,
+      "elapsed_seconds": 30.338,
+      "requests": 2109,
+      "errors": 0,
+      "errors_by_type": {},
+      "status_counts": {
+        "200": 2109
+      },
+      "rps": 69.517,
+      "mean_ms": 285.932,
+      "p50_ms": 284.38,
+      "p95_ms": 500.675,
+      "p99_ms": 580.719,
+      "max_ms": 669.41,
+      "generator_cpu_percent_one_core": 4.38,
+      "aborted": false
+    },
+    {
+      "label": "login_warmup",
+      "scenario": "login",
+      "concurrency": 1,
+      "started_utc": "2026-10-03T09:58:24.708480+00:00",
+      "planned_seconds": 5,
+      "elapsed_seconds": 5.17,
+      "requests": 22,
+      "errors": 0,
+      "errors_by_type": {},
+      "status_counts": {
+        "200": 22
+      },
+      "rps": 4.256,
+      "mean_ms": 234.915,
+      "p50_ms": 230.065,
+      "p95_ms": 291.782,
+      "p99_ms": 305.973,
+      "max_ms": 305.973,
+      "generator_cpu_percent_one_core": 0.0,
+      "aborted": false
+    },
+    {
+      "label": "login_1",
+      "scenario": "login",
+      "concurrency": 1,
+      "started_utc": "2026-10-03T09:58:29.880576+00:00",
+      "planned_seconds": 30,
+      "elapsed_seconds": 30.059,
+      "requests": 137,
+      "errors": 0,
+      "errors_by_type": {},
+      "status_counts": {
+        "200": 137
+      },
+      "rps": 4.558,
+      "mean_ms": 219.36,
+      "p50_ms": 205.336,
+      "p95_ms": 297.268,
+      "p99_ms": 394.519,
+      "max_ms": 432.487,
+      "generator_cpu_percent_one_core": 0.31,
+      "aborted": false
+    },
+    {
+      "label": "login_5",
+      "scenario": "login",
+      "concurrency": 5,
+      "started_utc": "2026-10-03T09:58:59.942937+00:00",
+      "planned_seconds": 30,
+      "elapsed_seconds": 30.342,
+      "requests": 309,
+      "errors": 0,
+      "errors_by_type": {},
+      "status_counts": {
+        "200": 309
+      },
+      "rps": 10.184,
+      "mean_ms": 488.222,
+      "p50_ms": 433.388,
+      "p95_ms": 778.985,
+      "p99_ms": 873.283,
+      "max_ms": 965.211,
+      "generator_cpu_percent_one_core": 1.18,
+      "aborted": false
+    },
+    {
+      "label": "login_10",
+      "scenario": "login",
+      "concurrency": 10,
+      "started_utc": "2026-10-03T09:59:30.290701+00:00",
+      "planned_seconds": 30,
+      "elapsed_seconds": 30.823,
+      "requests": 306,
+      "errors": 0,
+      "errors_by_type": {},
+      "status_counts": {
+        "200": 306
+      },
+      "rps": 9.928,
+      "mean_ms": 993.924,
+      "p50_ms": 967.034,
+      "p95_ms": 1681.134,
+      "p99_ms": 1991.992,
+      "max_ms": 2123.286,
+      "generator_cpu_percent_one_core": 1.06,
+      "aborted": false
+    },
+    {
+      "label": "read_recovery",
+      "scenario": "read",
+      "concurrency": 1,
+      "started_utc": "2026-10-03T10:00:01.120677+00:00",
+      "planned_seconds": 10,
+      "elapsed_seconds": 10.001,
+      "requests": 446,
+      "errors": 0,
+      "errors_by_type": {},
+      "status_counts": {
+        "200": 446
+      },
+      "rps": 44.594,
+      "mean_ms": 22.375,
+      "p50_ms": 21.329,
+      "p95_ms": 27.683,
+      "p99_ms": 42.429,
+      "max_ms": 71.353,
+      "generator_cpu_percent_one_core": 1.72,
+      "aborted": false
+    }
+  ],
+  "preflight": {
+    "login_status": 200,
+    "read_status": 200,
+    "weeks": 1,
+    "days": 1,
+    "response_bytes": 479
+  },
+  "status": "completed",
+  "finished_utc": "2026-10-03T10:00:11.415269+00:00",
+  "resource_samples": 47
+}

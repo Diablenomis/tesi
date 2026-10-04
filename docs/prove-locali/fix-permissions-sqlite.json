@@ -1,0 +1,601 @@
+{
+  "date": "2026-10-02T17:41:54.065441",
+  "engine": "sqlite",
+  "fixture_cleanup": "transaction rolled back",
+  "results": [
+    {
+      "case": "customer create",
+      "actual": 403,
+      "expected": 403,
+      "outcome": "PASS"
+    },
+    {
+      "case": "customer create persistence",
+      "actual": 0,
+      "expected": 0,
+      "outcome": "PASS"
+    },
+    {
+      "case": "customer management read",
+      "actual": 403,
+      "expected": 403,
+      "outcome": "PASS"
+    },
+    {
+      "case": "customer update",
+      "actual": 403,
+      "expected": 403,
+      "outcome": "PASS"
+    },
+    {
+      "case": "customer name persistence",
+      "actual": "Original QA",
+      "expected": "Original QA",
+      "outcome": "PASS"
+    },
+    {
+      "case": "customer nested persistence",
+      "actual": 0,
+      "expected": 0,
+      "outcome": "PASS"
+    },
+    {
+      "case": "customer publish",
+      "actual": 403,
+      "expected": 403,
+      "outcome": "PASS"
+    },
+    {
+      "case": "customer publish state",
+      "actual": false,
+      "expected": false,
+      "outcome": "PASS"
+    },
+    {
+      "case": "customer publish feedback",
+      "actual": 0,
+      "expected": 0,
+      "outcome": "PASS"
+    },
+    {
+      "case": "customer publish emails",
+      "actual": 0,
+      "expected": 0,
+      "outcome": "PASS"
+    },
+    {
+      "case": "customer withdraw",
+      "actual": 403,
+      "expected": 403,
+      "outcome": "PASS"
+    },
+    {
+      "case": "customer withdraw state",
+      "actual": true,
+      "expected": true,
+      "outcome": "PASS"
+    },
+    {
+      "case": "customer withdraw feedback",
+      "actual": 0,
+      "expected": 0,
+      "outcome": "PASS"
+    },
+    {
+      "case": "customer withdraw emails",
+      "actual": 0,
+      "expected": 0,
+      "outcome": "PASS"
+    },
+    {
+      "case": "customer delete",
+      "actual": 403,
+      "expected": 403,
+      "outcome": "PASS"
+    },
+    {
+      "case": "customer delete persistence",
+      "actual": true,
+      "expected": true,
+      "outcome": "PASS"
+    },
+    {
+      "case": "other create",
+      "actual": 403,
+      "expected": 403,
+      "outcome": "PASS"
+    },
+    {
+      "case": "other create persistence",
+      "actual": 0,
+      "expected": 0,
+      "outcome": "PASS"
+    },
+    {
+      "case": "other management read",
+      "actual": 403,
+      "expected": 403,
+      "outcome": "PASS"
+    },
+    {
+      "case": "other update",
+      "actual": 403,
+      "expected": 403,
+      "outcome": "PASS"
+    },
+    {
+      "case": "other name persistence",
+      "actual": "Original QA",
+      "expected": "Original QA",
+      "outcome": "PASS"
+    },
+    {
+      "case": "other nested persistence",
+      "actual": 0,
+      "expected": 0,
+      "outcome": "PASS"
+    },
+    {
+      "case": "other publish",
+      "actual": 403,
+      "expected": 403,
+      "outcome": "PASS"
+    },
+    {
+      "case": "other publish state",
+      "actual": false,
+      "expected": false,
+      "outcome": "PASS"
+    },
+    {
+      "case": "other publish feedback",
+      "actual": 0,
+      "expected": 0,
+      "outcome": "PASS"
+    },
+    {
+      "case": "other publish emails",
+      "actual": 0,
+      "expected": 0,
+      "outcome": "PASS"
+    },
+    {
+      "case": "other withdraw",
+      "actual": 403,
+      "expected": 403,
+      "outcome": "PASS"
+    },
+    {
+      "case": "other withdraw state",
+      "actual": true,
+      "expected": true,
+      "outcome": "PASS"
+    },
+    {
+      "case": "other withdraw feedback",
+      "actual": 0,
+      "expected": 0,
+      "outcome": "PASS"
+    },
+    {
+      "case": "other withdraw emails",
+      "actual": 0,
+      "expected": 0,
+      "outcome": "PASS"
+    },
+    {
+      "case": "other delete",
+      "actual": 403,
+      "expected": 403,
+      "outcome": "PASS"
+    },
+    {
+      "case": "other delete persistence",
+      "actual": true,
+      "expected": true,
+      "outcome": "PASS"
+    },
+    {
+      "case": "staff create",
+      "actual": 403,
+      "expected": 403,
+      "outcome": "PASS"
+    },
+    {
+      "case": "staff create persistence",
+      "actual": 0,
+      "expected": 0,
+      "outcome": "PASS"
+    },
+    {
+      "case": "staff management read",
+      "actual": 403,
+      "expected": 403,
+      "outcome": "PASS"
+    },
+    {
+      "case": "staff update",
+      "actual": 403,
+      "expected": 403,
+      "outcome": "PASS"
+    },
+    {
+      "case": "staff name persistence",
+      "actual": "Original QA",
+      "expected": "Original QA",
+      "outcome": "PASS"
+    },
+    {
+      "case": "staff nested persistence",
+      "actual": 0,
+      "expected": 0,
+      "outcome": "PASS"
+    },
+    {
+      "case": "staff publish",
+      "actual": 403,
+      "expected": 403,
+      "outcome": "PASS"
+    },
+    {
+      "case": "staff publish state",
+      "actual": false,
+      "expected": false,
+      "outcome": "PASS"
+    },
+    {
+      "case": "staff publish feedback",
+      "actual": 0,
+      "expected": 0,
+      "outcome": "PASS"
+    },
+    {
+      "case": "staff publish emails",
+      "actual": 0,
+      "expected": 0,
+      "outcome": "PASS"
+    },
+    {
+      "case": "staff withdraw",
+      "actual": 403,
+      "expected": 403,
+      "outcome": "PASS"
+    },
+    {
+      "case": "staff withdraw state",
+      "actual": true,
+      "expected": true,
+      "outcome": "PASS"
+    },
+    {
+      "case": "staff withdraw feedback",
+      "actual": 0,
+      "expected": 0,
+      "outcome": "PASS"
+    },
+    {
+      "case": "staff withdraw emails",
+      "actual": 0,
+      "expected": 0,
+      "outcome": "PASS"
+    },
+    {
+      "case": "staff delete",
+      "actual": 403,
+      "expected": 403,
+      "outcome": "PASS"
+    },
+    {
+      "case": "staff delete persistence",
+      "actual": true,
+      "expected": true,
+      "outcome": "PASS"
+    },
+    {
+      "case": "trainer create",
+      "actual": 201,
+      "expected": 201,
+      "outcome": "PASS"
+    },
+    {
+      "case": "trainer create persistence",
+      "actual": 1,
+      "expected": 1,
+      "outcome": "PASS"
+    },
+    {
+      "case": "trainer management read",
+      "actual": 200,
+      "expected": 200,
+      "outcome": "PASS"
+    },
+    {
+      "case": "trainer update",
+      "actual": 200,
+      "expected": 200,
+      "outcome": "PASS"
+    },
+    {
+      "case": "trainer name persistence",
+      "actual": "Permissions regression",
+      "expected": "Permissions regression",
+      "outcome": "PASS"
+    },
+    {
+      "case": "trainer nested persistence",
+      "actual": 1,
+      "expected": 1,
+      "outcome": "PASS"
+    },
+    {
+      "case": "trainer publish",
+      "actual": 200,
+      "expected": 200,
+      "outcome": "PASS"
+    },
+    {
+      "case": "trainer publish state",
+      "actual": true,
+      "expected": true,
+      "outcome": "PASS"
+    },
+    {
+      "case": "trainer publish feedback",
+      "actual": 1,
+      "expected": 1,
+      "outcome": "PASS"
+    },
+    {
+      "case": "trainer publish emails",
+      "actual": 1,
+      "expected": 1,
+      "outcome": "PASS"
+    },
+    {
+      "case": "trainer withdraw",
+      "actual": 200,
+      "expected": 200,
+      "outcome": "PASS"
+    },
+    {
+      "case": "trainer withdraw state",
+      "actual": false,
+      "expected": false,
+      "outcome": "PASS"
+    },
+    {
+      "case": "trainer withdraw feedback",
+      "actual": 0,
+      "expected": 0,
+      "outcome": "PASS"
+    },
+    {
+      "case": "trainer withdraw emails",
+      "actual": 0,
+      "expected": 0,
+      "outcome": "PASS"
+    },
+    {
+      "case": "trainer delete",
+      "actual": 204,
+      "expected": 204,
+      "outcome": "PASS"
+    },
+    {
+      "case": "trainer delete persistence",
+      "actual": false,
+      "expected": false,
+      "outcome": "PASS"
+    },
+    {
+      "case": "admin create",
+      "actual": 201,
+      "expected": 201,
+      "outcome": "PASS"
+    },
+    {
+      "case": "admin create persistence",
+      "actual": 1,
+      "expected": 1,
+      "outcome": "PASS"
+    },
+    {
+      "case": "admin management read",
+      "actual": 200,
+      "expected": 200,
+      "outcome": "PASS"
+    },
+    {
+      "case": "admin update",
+      "actual": 200,
+      "expected": 200,
+      "outcome": "PASS"
+    },
+    {
+      "case": "admin name persistence",
+      "actual": "Permissions regression",
+      "expected": "Permissions regression",
+      "outcome": "PASS"
+    },
+    {
+      "case": "admin nested persistence",
+      "actual": 1,
+      "expected": 1,
+      "outcome": "PASS"
+    },
+    {
+      "case": "admin publish",
+      "actual": 200,
+      "expected": 200,
+      "outcome": "PASS"
+    },
+    {
+      "case": "admin publish state",
+      "actual": true,
+      "expected": true,
+      "outcome": "PASS"
+    },
+    {
+      "case": "admin publish feedback",
+      "actual": 1,
+      "expected": 1,
+      "outcome": "PASS"
+    },
+    {
+      "case": "admin publish emails",
+      "actual": 1,
+      "expected": 1,
+      "outcome": "PASS"
+    },
+    {
+      "case": "admin withdraw",
+      "actual": 200,
+      "expected": 200,
+      "outcome": "PASS"
+    },
+    {
+      "case": "admin withdraw state",
+      "actual": false,
+      "expected": false,
+      "outcome": "PASS"
+    },
+    {
+      "case": "admin withdraw feedback",
+      "actual": 0,
+      "expected": 0,
+      "outcome": "PASS"
+    },
+    {
+      "case": "admin withdraw emails",
+      "actual": 0,
+      "expected": 0,
+      "outcome": "PASS"
+    },
+    {
+      "case": "admin delete",
+      "actual": 204,
+      "expected": 204,
+      "outcome": "PASS"
+    },
+    {
+      "case": "admin delete persistence",
+      "actual": false,
+      "expected": false,
+      "outcome": "PASS"
+    },
+    {
+      "case": "anonymous create",
+      "actual": 401,
+      "expected": 401,
+      "outcome": "PASS"
+    },
+    {
+      "case": "anonymous create persistence",
+      "actual": 0,
+      "expected": 0,
+      "outcome": "PASS"
+    },
+    {
+      "case": "anonymous management read",
+      "actual": 401,
+      "expected": 401,
+      "outcome": "PASS"
+    },
+    {
+      "case": "anonymous update",
+      "actual": 401,
+      "expected": 401,
+      "outcome": "PASS"
+    },
+    {
+      "case": "anonymous name persistence",
+      "actual": "Original QA",
+      "expected": "Original QA",
+      "outcome": "PASS"
+    },
+    {
+      "case": "anonymous nested persistence",
+      "actual": 0,
+      "expected": 0,
+      "outcome": "PASS"
+    },
+    {
+      "case": "anonymous publish",
+      "actual": 401,
+      "expected": 401,
+      "outcome": "PASS"
+    },
+    {
+      "case": "anonymous publish state",
+      "actual": false,
+      "expected": false,
+      "outcome": "PASS"
+    },
+    {
+      "case": "anonymous publish feedback",
+      "actual": 0,
+      "expected": 0,
+      "outcome": "PASS"
+    },
+    {
+      "case": "anonymous publish emails",
+      "actual": 0,
+      "expected": 0,
+      "outcome": "PASS"
+    },
+    {
+      "case": "anonymous withdraw",
+      "actual": 401,
+      "expected": 401,
+      "outcome": "PASS"
+    },
+    {
+      "case": "anonymous withdraw state",
+      "actual": true,
+      "expected": true,
+      "outcome": "PASS"
+    },
+    {
+      "case": "anonymous withdraw feedback",
+      "actual": 0,
+      "expected": 0,
+      "outcome": "PASS"
+    },
+    {
+      "case": "anonymous withdraw emails",
+      "actual": 0,
+      "expected": 0,
+      "outcome": "PASS"
+    },
+    {
+      "case": "anonymous delete",
+      "actual": 401,
+      "expected": 401,
+      "outcome": "PASS"
+    },
+    {
+      "case": "anonymous delete persistence",
+      "actual": true,
+      "expected": true,
+      "outcome": "PASS"
+    },
+    {
+      "case": "owner personal read",
+      "actual": 200,
+      "expected": 200,
+      "outcome": "PASS"
+    },
+    {
+      "case": "other personal read",
+      "actual": 404,
+      "expected": 404,
+      "outcome": "PASS"
+    },
+    {
+      "case": "anonymous personal read",
+      "actual": 401,
+      "expected": 401,
+      "outcome": "PASS"
+    }
+  ]
+}

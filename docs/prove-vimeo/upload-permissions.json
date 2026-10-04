@@ -1,0 +1,43 @@
+{
+  "passed": 9,
+  "checks": [
+    {
+      "check": "anonymous rejected",
+      "status": 401
+    },
+    {
+      "check": "customer rejected",
+      "status": 403
+    },
+    {
+      "check": "empty size rejected",
+      "status": 400
+    },
+    {
+      "check": "missing name rejected",
+      "status": 400
+    },
+    {
+      "check": "oversize rejected",
+      "status": 400
+    },
+    {
+      "check": "missing token rejected",
+      "status": 503
+    },
+    {
+      "check": "trainer ticket, TUS and token isolation",
+      "status": 201
+    },
+    {
+      "check": "Vimeo HTTP 200 upload ticket accepted",
+      "status": 201
+    },
+    {
+      "check": "Vimeo denial surfaced",
+      "status": 502
+    }
+  ],
+  "vimeo_calls": "mocked",
+  "uploads_created": 0
+}
